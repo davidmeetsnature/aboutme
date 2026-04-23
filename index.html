@@ -12,17 +12,18 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🔥 DAS IST WICHTIG */
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
 }
 
 /* NAV */
 nav {
   position: absolute;
   width: 100%;
-  padding: 25px 40px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   z-index: 10;
@@ -35,23 +36,31 @@ nav {
 
 /* HERO */
 .hero {
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 0 8%;
-  color: white;
 
   background:
-    linear-gradient(to right, rgba(0,0,0,0.65) 30%, rgba(0,0,0,0.2) 60%, transparent 100%),
+    linear-gradient(to right, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.2) 60%, transparent 100%),
     url('Hintergrund.png') center/cover no-repeat;
+}
+
+/* INNER CONTAINER */
+.hero-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* 🔥 verhindert overflow */
 }
 
 /* CONTENT */
 .hero-content {
   max-width: 550px;
+  color: white;
 }
 
-/* KLEINE ZEILE OBEN */
+/* LABEL */
 .label {
   font-size: 12px;
   letter-spacing: 2px;
@@ -61,7 +70,7 @@ nav {
 /* HEADLINE */
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 52px;
+  font-size: 48px;
   line-height: 1.2;
   margin: 20px 0;
 }
@@ -69,7 +78,7 @@ nav {
 /* TEXT */
 .hero p {
   font-size: 16px;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 /* BUTTONS */
@@ -97,12 +106,8 @@ nav {
 
 /* MOBILE */
 @media(max-width: 768px) {
-  .hero {
-    padding: 0 20px;
-  }
-
   .hero h1 {
-    font-size: 36px;
+    font-size: 34px;
   }
 }
 </style>
@@ -115,26 +120,28 @@ nav {
 </nav>
 
 <section class="hero">
-  <div class="hero-content">
+  <div class="hero-inner">
+    <div class="hero-content">
 
-    <div class="label">DAVID MÜLLER</div>
+      <div class="label">DAVID MÜLLER</div>
 
-    <h1>
-      Klarheit leben.<br>
-      Freiheit aufbauen.<br>
-      Wirkung entfalten.
-    </h1>
+      <h1>
+        Klarheit leben.<br>
+        Freiheit aufbauen.<br>
+        Wirkung entfalten.
+      </h1>
 
-    <p>
-      Für Menschen, die spüren, dass mehr möglich ist –
-      und ihren eigenen Weg gehen wollen.
-    </p>
+      <p>
+        Für Menschen, die spüren, dass mehr möglich ist –
+        und ihren eigenen Weg gehen wollen.
+      </p>
 
-    <div class="buttons">
-      <a href="#termin" class="btn btn-primary">Strategiegespräch</a>
-      <a href="#about" class="btn btn-secondary">Mehr erfahren</a>
+      <div class="buttons">
+        <a href="#termin" class="btn btn-primary">Strategiegespräch</a>
+        <a href="#about" class="btn btn-secondary">Mehr erfahren</a>
+      </div>
+
     </div>
-
   </div>
 </section>
 
