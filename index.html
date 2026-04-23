@@ -5,10 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>David | Gesundheit & Business</title>
 
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: white;
 }
 
@@ -28,7 +31,7 @@ nav a {
   margin-left: 20px;
 }
 
-/* HERO MIT BACKGROUND */
+/* HERO */
 .hero {
   height: 100vh;
   display: flex;
@@ -38,14 +41,19 @@ nav a {
               url('Hintergrund.png') center/cover no-repeat;
 }
 
-/* CONTENT */
+/* HERO CONTENT */
 .hero-content {
   max-width: 600px;
 }
 
-.hero h1 {
-  font-size: 42px;
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 44px;
   line-height: 1.3;
+  font-weight: 600;
 }
 
 .hero p {
@@ -57,11 +65,12 @@ nav a {
 .btn {
   display: inline-block;
   margin-top: 30px;
-  padding: 15px 30px;
+  padding: 16px 32px;
   background: #2f5d50;
   color: white;
   text-decoration: none;
   border-radius: 6px;
+  font-weight: 600;
   transition: 0.3s;
 }
 
@@ -76,6 +85,7 @@ nav a {
   max-width: 900px;
   margin: auto;
   color: #2f3e34;
+  background: #f7f7f5;
 }
 
 /* CTA */
@@ -86,11 +96,32 @@ nav a {
   color: #2f3e34;
 }
 
+/* ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+  color: #777;
+  background: #f7f7f5;
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <div><strong>David</strong></div>
   <div>
@@ -100,7 +131,7 @@ nav a {
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
+  <div class="hero-content fade-in">
     <h1>
       Klarheit für deinen Weg.<br>
       Gesundheit. Freiheit. Selbstbestimmung.
@@ -116,24 +147,62 @@ nav a {
 </section>
 
 <!-- SECTION -->
-<section class="section">
+<section class="section fade-in">
   <h2>Du spürst, dass mehr möglich ist.</h2>
   <p>
     Mehr Freiheit. Mehr Sinn. Mehr Selbstbestimmung.
+    Aber du willst keinen klassischen Hustle-Weg.
+  </p>
+</section>
+
+<!-- SECTION -->
+<section class="section fade-in">
+  <h2>Mein Weg</h2>
+  <p>
+    Ich komme aus der Bankenwelt und habe erlebt,
+    was passiert, wenn Menschen unter Druck arbeiten.
+  </p>
+  <p>
+    Heute begleite ich Menschen dabei,
+    ihren eigenen Weg zu gehen – strukturiert und klar.
   </p>
 </section>
 
 <!-- CTA -->
-<section class="cta" id="termin">
+<section class="cta fade-in" id="termin">
   <h2>
     Wenn du dich hier wiedererkennst,<br>
     dann lass uns sprechen.
   </h2>
 
+  <p>
+    Wir schauen gemeinsam, ob dieser Weg zu dir passt.
+  </p>
+
   <a href="https://calendly.com/DEIN-LINK" class="btn">
     Termin buchen
   </a>
 </section>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 David
+</div>
+
+<!-- ANIMATION SCRIPT -->
+<script>
+const elements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
