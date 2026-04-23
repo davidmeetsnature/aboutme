@@ -19,16 +19,29 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 25px 40px;
   position: absolute;
   width: 100%;
   z-index: 10;
 }
 
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
 nav a {
   text-decoration: none;
   color: white;
-  margin-left: 20px;
+  margin-left: 25px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.7;
 }
 
 /* HERO */
@@ -123,14 +136,16 @@ h1 {
 
 <!-- NAV -->
 <nav>
-  <div><strong>David</strong></div>
+  <div class="logo">David Müller</div>
   <div>
+    <a href="#start">Start</a>
+    <a href="#about">Über mich</a>
     <a href="#termin">Termin</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="start">
   <div class="hero-content fade-in">
     <h1>
       Klarheit für deinen Weg.<br>
@@ -147,7 +162,7 @@ h1 {
 </section>
 
 <!-- SECTION -->
-<section class="section fade-in">
+<section class="section fade-in" id="about">
   <h2>Du spürst, dass mehr möglich ist.</h2>
   <p>
     Mehr Freiheit. Mehr Sinn. Mehr Selbstbestimmung.
@@ -186,7 +201,7 @@ h1 {
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2026 David
+  © 2026 David Müller
 </div>
 
 <!-- ANIMATION SCRIPT -->
