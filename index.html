@@ -15,50 +15,64 @@
 }
 
 html, body {
-  width: 100%;
-  overflow-x: hidden; /* 🔥 zwingt alles rein */
+  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
 }
 
-/* NAV */
+/* NAV DEFAULT (transparent) */
 nav {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  max-width: 100%;
-  padding: 20px;
+  padding: 25px 40px;
   display: flex;
   justify-content: space-between;
-  z-index: 10;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
   color: white;
 }
 
+/* NAV SCROLL STATE */
+nav.scrolled {
+  background: white;
+  color: #2f3e34;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* LOGO */
 .logo {
   font-weight: 600;
 }
 
+/* MENU */
+.menu a {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 25px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  opacity: 0.6;
+}
+
 /* HERO */
 .hero {
-  width: 100vw;          /* 🔥 wichtig */
-  max-width: 100%;       /* 🔥 verhindert overflow */
+  width: 100%;
   min-height: 100vh;
-
   display: flex;
   align-items: center;
 
-  background-image:
-    linear-gradient(to right, rgba(0,0,0,0.7) 20%, rgba(0,0,0,0.2) 60%, transparent 100%),
-    url('Hintergrund.png');
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.7) 25%, rgba(0,0,0,0.2) 60%, transparent 100%),
+    url('Hintergrund.png') center/cover no-repeat;
 }
 
 /* INNER */
 .hero-inner {
-  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 0 20px;
 }
 
@@ -68,48 +82,41 @@ nav {
   color: white;
 }
 
-/* LABEL */
-.label {
-  font-size: 12px;
-  letter-spacing: 2px;
-  opacity: 0.7;
-}
-
 /* HEADLINE */
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
-  line-height: 1.2;
   margin: 20px 0;
 }
 
 /* TEXT */
 .hero p {
   font-size: 16px;
-  opacity: 0.9;
 }
 
-/* BUTTONS */
-.buttons {
-  margin-top: 30px;
-}
-
+/* BUTTON */
 .btn {
-  padding: 14px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-right: 10px;
   display: inline-block;
-}
-
-.btn-primary {
+  margin-top: 30px;
+  padding: 14px 28px;
   background: #2f5d50;
   color: white;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
-.btn-secondary {
-  border: 1px solid white;
-  color: white;
+/* SECTION */
+.section {
+  padding: 100px 20px;
+  max-width: 800px;
+  margin: auto;
+  color: #2f3e34;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 100px 20px;
 }
 
 /* MOBILE */
@@ -117,21 +124,31 @@ nav {
   .hero h1 {
     font-size: 32px;
   }
+
+  .menu {
+    display: none;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
+<nav id="navbar">
   <div class="logo">David Müller</div>
+
+  <div class="menu">
+    <a href="#start">Start</a>
+    <a href="#about">Über mich</a>
+    <a href="#angebot">Zusammenarbeit</a>
+    <a href="#termin">Termin</a>
+  </div>
 </nav>
 
-<section class="hero">
+<!-- HERO -->
+<section class="hero" id="start">
   <div class="hero-inner">
     <div class="hero-content">
-
-      <div class="label">DAVID MÜLLER</div>
 
       <h1>
         Klarheit leben.<br>
@@ -144,14 +161,42 @@ nav {
         und ihren eigenen Weg gehen wollen.
       </p>
 
-      <div class="buttons">
-        <a href="#" class="btn btn-primary">Strategiegespräch</a>
-        <a href="#" class="btn btn-secondary">Mehr erfahren</a>
-      </div>
+      <a href="#termin" class="btn">Strategiegespräch</a>
 
     </div>
   </div>
 </section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <h2>Über mich</h2>
+  <p>
+    Ich komme aus der Bankenwelt und habe erlebt,
+    was passiert, wenn Menschen unter Druck arbeiten.
+  </p>
+</section>
+
+<!-- ANGEBOT -->
+<section class="section" id="angebot">
+  <h2>Zusammenarbeit</h2>
+  <p>
+    Ich begleite Menschen dabei, sich im Gesundheitsbereich
+    ein eigenes Standbein aufzubauen – strukturiert und klar.
+  </p>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="termin">
+  <h2>Wenn du dich hier wiedererkennst, lass uns sprechen.</h2>
+  <a href="https://calendly.com/DEIN-LINK" class="btn">Termin buchen</a>
+</section>
+
+<script>
+window.addEventListener("scroll", function() {
+  const nav = document.getElementById("navbar");
+  nav.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 
 </body>
 </html>
