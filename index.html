@@ -19,7 +19,7 @@ html, body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* NAV DEFAULT (transparent) */
+/* NAV */
 nav {
   position: fixed;
   width: 100%;
@@ -32,19 +32,16 @@ nav {
   color: white;
 }
 
-/* NAV SCROLL STATE */
 nav.scrolled {
   background: white;
   color: #2f3e34;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* LOGO */
 .logo {
   font-weight: 600;
 }
 
-/* MENU */
 .menu a {
   text-decoration: none;
   color: inherit;
@@ -69,27 +66,23 @@ nav.scrolled {
     url('Hintergrund.png') center/cover no-repeat;
 }
 
-/* INNER */
 .hero-inner {
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
 }
 
-/* CONTENT */
 .hero-content {
   max-width: 550px;
   color: white;
 }
 
-/* HEADLINE */
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   margin: 20px 0;
 }
 
-/* TEXT */
 .hero p {
   font-size: 16px;
 }
@@ -134,13 +127,14 @@ nav.scrolled {
 
 <body>
 
+<!-- NAV -->
 <nav id="navbar">
   <div class="logo">David Müller</div>
 
   <div class="menu">
-    <a href="#start">Start</a>
+    <a href="#analyse">Nährstoffanalyse</a>
+    <a href="#zusammenarbeit">Zusammenarbeit</a>
     <a href="#about">Über mich</a>
-    <a href="#angebot">Zusammenarbeit</a>
     <a href="#termin">Termin</a>
   </div>
 </nav>
@@ -167,21 +161,38 @@ nav.scrolled {
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-  <h2>Über mich</h2>
+<!-- NÄHRSTOFFANALYSE -->
+<section class="section" id="analyse">
+  <h2>Nährstoffanalyse</h2>
   <p>
-    Ich komme aus der Bankenwelt und habe erlebt,
-    was passiert, wenn Menschen unter Druck arbeiten.
+    Viele Menschen leben scheinbar gesund – und fühlen sich trotzdem müde,
+    erschöpft oder nicht in ihrer vollen Energie.
+  </p>
+  <p>
+    Eine gezielte Nährstoffanalyse kann dir zeigen, wo du wirklich stehst
+    und welche Stellschrauben du verändern kannst.
   </p>
 </section>
 
-<!-- ANGEBOT -->
-<section class="section" id="angebot">
+<!-- ZUSAMMENARBEIT -->
+<section class="section" id="zusammenarbeit">
   <h2>Zusammenarbeit</h2>
   <p>
-    Ich begleite Menschen dabei, sich im Gesundheitsbereich
-    ein eigenes Standbein aufzubauen – strukturiert und klar.
+    Ich begleite Menschen dabei, sich im Gesundheitsbereich ein eigenes
+    Standbein aufzubauen – mit klarer Struktur und ohne Druck.
+  </p>
+</section>
+
+<!-- ÜBER MICH -->
+<section class="section" id="about">
+  <h2>Über mich</h2>
+  <p>
+    Ich komme aus der Bankenwelt und habe erlebt, was passiert,
+    wenn Menschen unter Druck arbeiten.
+  </p>
+  <p>
+    Heute gehe ich einen anderen Weg – und begleite Menschen dabei,
+    ihren eigenen zu finden.
   </p>
 </section>
 
@@ -191,6 +202,7 @@ nav.scrolled {
   <a href="https://calendly.com/DEIN-LINK" class="btn">Termin buchen</a>
 </section>
 
+<!-- SCRIPT -->
 <script>
 window.addEventListener("scroll", function() {
   const nav = document.getElementById("navbar");
