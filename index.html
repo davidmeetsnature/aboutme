@@ -47,11 +47,6 @@ nav.scrolled {
   color: inherit;
   margin-left: 25px;
   font-size: 14px;
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  opacity: 0.6;
 }
 
 /* HERO */
@@ -62,7 +57,7 @@ nav.scrolled {
   align-items: center;
 
   background:
-    linear-gradient(to right, rgba(0,0,0,0.7) 25%, rgba(0,0,0,0.2) 60%, transparent 100%),
+    linear-gradient(to right, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0.2) 70%, transparent 100%),
     url('Hintergrund.png') center/cover no-repeat;
 }
 
@@ -73,49 +68,46 @@ nav.scrolled {
 }
 
 .hero-content {
-  max-width: 550px;
+  max-width: 620px;
   color: white;
 }
 
+/* HEADLINE */
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 48px;
+  font-size: 46px;
+  line-height: 1.2;
   margin: 20px 0;
 }
 
+/* TEXT */
 .hero p {
-  font-size: 16px;
+  font-size: 18px;
+  margin-top: 20px;
+  opacity: 0.95;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 30px;
-  padding: 14px 28px;
+  padding: 16px 32px;
   background: #2f5d50;
   color: white;
   text-decoration: none;
   border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-/* SECTION */
-.section {
-  padding: 100px 20px;
-  max-width: 800px;
-  margin: auto;
-  color: #2f3e34;
-}
-
-/* CTA */
-.cta {
-  text-align: center;
-  padding: 100px 20px;
+.btn:hover {
+  background: #1f4037;
 }
 
 /* MOBILE */
 @media(max-width: 768px) {
   .hero h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .menu {
@@ -127,7 +119,6 @@ nav.scrolled {
 
 <body>
 
-<!-- NAV -->
 <nav id="navbar">
   <div class="logo">David Müller</div>
 
@@ -139,70 +130,28 @@ nav.scrolled {
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="start">
+<section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
 
       <h1>
-        Klarheit leben.<br>
-        Freiheit aufbauen.<br>
-        Wirkung entfalten.
+        Baue dir ein zweites Einkommen im Gesundheitsbereich auf –
+        ohne Druck und ohne klassischen Hustle.
       </h1>
 
       <p>
-        Für Menschen, die spüren, dass mehr möglich ist –
-        und ihren eigenen Weg gehen wollen.
+        Ich begleite Menschen dabei, mit Nährstoffkonzepten
+        ein eigenes Standbein aufzubauen – strukturiert und ehrlich.
       </p>
 
-      <a href="#termin" class="btn">Strategiegespräch</a>
+      <a href="#termin" class="btn">
+        Kostenloses Erstgespräch
+      </a>
 
     </div>
   </div>
 </section>
 
-<!-- NÄHRSTOFFANALYSE -->
-<section class="section" id="analyse">
-  <h2>Nährstoffanalyse</h2>
-  <p>
-    Viele Menschen leben scheinbar gesund – und fühlen sich trotzdem müde,
-    erschöpft oder nicht in ihrer vollen Energie.
-  </p>
-  <p>
-    Eine gezielte Nährstoffanalyse kann dir zeigen, wo du wirklich stehst
-    und welche Stellschrauben du verändern kannst.
-  </p>
-</section>
-
-<!-- ZUSAMMENARBEIT -->
-<section class="section" id="zusammenarbeit">
-  <h2>Zusammenarbeit</h2>
-  <p>
-    Ich begleite Menschen dabei, sich im Gesundheitsbereich ein eigenes
-    Standbein aufzubauen – mit klarer Struktur und ohne Druck.
-  </p>
-</section>
-
-<!-- ÜBER MICH -->
-<section class="section" id="about">
-  <h2>Über mich</h2>
-  <p>
-    Ich komme aus der Bankenwelt und habe erlebt, was passiert,
-    wenn Menschen unter Druck arbeiten.
-  </p>
-  <p>
-    Heute gehe ich einen anderen Weg – und begleite Menschen dabei,
-    ihren eigenen zu finden.
-  </p>
-</section>
-
-<!-- CTA -->
-<section class="cta" id="termin">
-  <h2>Wenn du dich hier wiedererkennst, lass uns sprechen.</h2>
-  <a href="https://calendly.com/DEIN-LINK" class="btn">Termin buchen</a>
-</section>
-
-<!-- SCRIPT -->
 <script>
 window.addEventListener("scroll", function() {
   const nav = document.getElementById("navbar");
