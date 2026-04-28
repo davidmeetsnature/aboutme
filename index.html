@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>David Müller</title>
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -52,18 +51,15 @@ nav.scrolled {
 
 /* HERO */
 .hero {
-  width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
 
-  /* 🔥 stärkeres Overlay für Lesbarkeit */
   background:
     linear-gradient(to right, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.2) 100%),
     url('Hintergrund.png') center/cover no-repeat;
 }
 
-/* CONTENT */
 .hero-inner {
   max-width: 1200px;
   margin: auto;
@@ -75,57 +71,67 @@ nav.scrolled {
   color: white;
 }
 
-/* HEADLINE (klarer, lesbarer) */
 .hero h1 {
   font-size: 42px;
   line-height: 1.3;
   font-weight: 700;
 }
 
-/* TEXT (gekürzt) */
 .hero p {
   font-size: 18px;
   margin-top: 20px;
-  opacity: 0.95;
 }
 
-/* BUTTON (stärker) */
 .btn {
   display: inline-block;
   margin-top: 30px;
   padding: 18px 36px;
-  background: #1f4037; /* dunkler für mehr Kontrast */
+  background: #1f4037;
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 700;
-  font-size: 16px;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  background: #163029;
-  transform: translateY(-2px);
+/* SECTION */
+.section {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: auto;
+  color: #2f3e34;
+}
+
+/* ANALYSE GRID */
+.grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+  background: #f7f7f5;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 /* MOBILE */
 @media(max-width: 768px) {
-  nav {
-    padding: 15px 20px;
-  }
-
   .hero h1 {
     font-size: 28px;
   }
 
-  .hero p {
-    font-size: 16px;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-    padding: 16px;
+  .grid {
+    flex-direction: column;
   }
 
   .menu {
@@ -137,6 +143,7 @@ nav.scrolled {
 
 <body>
 
+<!-- NAV -->
 <nav id="navbar">
   <div class="logo">David Müller</div>
 
@@ -148,6 +155,7 @@ nav.scrolled {
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
@@ -170,6 +178,52 @@ nav.scrolled {
   </div>
 </section>
 
+<!-- NÄHRSTOFFANALYSE -->
+<section class="section" id="analyse">
+
+  <h2>Nährstoffanalyse</h2>
+
+  <p style="margin-top:20px;">
+    Viele Menschen achten auf ihre Ernährung –
+    und fühlen sich trotzdem nicht in ihrer vollen Energie.
+  </p>
+
+  <p style="margin-top:10px;">
+    Der Grund ist oft nicht sichtbar:
+    ein Ungleichgewicht im Körper.
+  </p>
+
+  <p style="margin-top:20px;">
+    Mit gezielten Nährstoffanalysen bekommst du Klarheit:
+    Wo stehst du wirklich? Was fehlt deinem Körper?
+  </p>
+
+  <!-- GRID -->
+  <div class="grid">
+
+    <div class="card">
+      <img src="TestOmega.jpg" alt="Omega 3 Test">
+      <h3>Omega-3 Analyse</h3>
+      <p>Zeigt dir dein Fettsäure-Verhältnis im Körper.</p>
+    </div>
+
+    <div class="card">
+      <img src="Test K2D3.jpg" alt="Vitamin Test">
+      <h3>Vitamin K2 + D3 Test</h3>
+      <p>Gibt dir Einblick in deinen Vitaminstatus.</p>
+    </div>
+
+    <div class="card">
+      <img src="Öle.jpg" alt="Öle">
+      <h3>Umsetzung</h3>
+      <p>Individuelle Lösungen basierend auf deinen Ergebnissen.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SCRIPT -->
 <script>
 window.addEventListener("scroll", function() {
   const nav = document.getElementById("navbar");
