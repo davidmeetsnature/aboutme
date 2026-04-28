@@ -18,22 +18,16 @@
             serif: ['Cormorant Garamond', 'Georgia', 'serif'],
           },
           colors: {
-            // Warm cream background inspired by sunset glow
             background: '#FAF8F5',
             foreground: '#2C3E35',
-            // Soft warm white cards
             card: '#FFFFFF',
             'card-foreground': '#2C3E35',
-            // Deep forest teal - matching the button in hero
             primary: '#4A6B5D',
             'primary-foreground': '#FFFFFF',
-            // Warm beige secondary
             secondary: '#F5F1EB',
             'secondary-foreground': '#3D4F44',
-            // Muted sage tones
             muted: '#EDE9E3',
             'muted-foreground': '#6B7C72',
-            // Warm amber accent from sunset
             accent: '#C9A86C',
             'accent-foreground': '#2C3E35',
             border: '#E5DFD7',
@@ -70,7 +64,6 @@
 
   <!-- Hero Section mit Original-Hintergrundbild -->
   <section class="min-h-screen flex items-center relative overflow-hidden">
-    <!-- Hintergrundbild -->
     <div class="absolute inset-0 z-0">
       <img src="Hintergrund.png" alt="Sonnenuntergang über der Küstenlandschaft" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent"></div>
@@ -223,13 +216,35 @@
 
   <!-- Über mich Section -->
   <section id="ueber" class="py-24 px-6 bg-secondary">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-secondary-foreground mb-8">Über mich</h2>
-      <p class="text-lg text-muted-foreground leading-relaxed">
-        Ich bin David, und ich glaube daran, dass echte Veränderung mit kleinen, bewussten Schritten beginnt. 
-        Mein Ziel ist es, Menschen zu helfen, ihre Gesundheit in die eigene Hand zu nehmen und gleichzeitig 
-        die Freiheit zu gewinnen, selbstbestimmt zu arbeiten.
-      </p>
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Bild -->
+        <div class="flex justify-center md:justify-end order-1 md:order-1">
+          <div class="relative">
+            <div class="w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
+              <img src="David Müller.jpg" alt="David Müller - Gesundheitsberater" class="w-full h-full object-cover object-top">
+            </div>
+            <!-- Dekorativer Rahmen -->
+            <div class="absolute -bottom-4 -right-4 w-72 h-72 md:w-80 md:h-80 border-2 border-primary/30 rounded-2xl -z-10"></div>
+          </div>
+        </div>
+        <!-- Text -->
+        <div class="order-2 md:order-2 text-center md:text-left">
+          <h2 class="font-serif text-3xl md:text-4xl font-semibold text-secondary-foreground mb-6">Über mich</h2>
+          <div class="space-y-4 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Ich bin David, und ich glaube daran, dass echte Veränderung mit kleinen, bewussten Schritten beginnt.
+            </p>
+            <p>
+              Mein Ziel ist es, Menschen zu helfen, ihre Gesundheit in die eigene Hand zu nehmen und gleichzeitig 
+              die Freiheit zu gewinnen, selbstbestimmt zu arbeiten.
+            </p>
+            <p class="text-foreground font-medium">
+              Lass uns gemeinsam herausfinden, was für dich möglich ist.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -272,7 +287,6 @@
       const navbar = document.getElementById('navbar');
       const navText = document.querySelector('.nav-text');
       const navLinks = document.querySelectorAll('.nav-link');
-      const navBtn = document.querySelector('.nav-btn');
       
       if (window.scrollY > 50) {
         navbar.classList.add('bg-background/95', 'shadow-sm', 'backdrop-blur-md');
