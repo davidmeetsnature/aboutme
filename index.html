@@ -33,13 +33,34 @@ html { scroll-behavior: smooth; }
 
 <body class="bg-[#FAF8F5] text-[#2C3E35] font-sans">
 
+<!-- NAVIGATION -->
+<header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-5">
+
+    <div id="logo" class="text-white font-serif text-xl">
+      David Müller
+    </div>
+
+    <nav class="hidden md:flex gap-8 text-white text-sm">
+      <a href="#zusammenarbeit" class="nav-link">Zusammenarbeit</a>
+      <a href="#ueber" class="nav-link">Über mich</a>
+      <a href="#analyse" class="nav-link">Nährstoffanalyse</a>
+    </nav>
+
+    <a href="#kontakt" class="bg-primary px-5 py-2 rounded-lg text-white text-sm">
+      Termin
+    </a>
+
+  </div>
+</header>
+
 <!-- HERO -->
 <section class="min-h-screen flex items-center relative">
 
 <img src="Hintergrund.png" class="absolute w-full h-full object-cover">
 <div class="absolute inset-0 bg-black/50"></div>
 
-<div class="relative z-10 max-w-5xl mx-auto px-6 text-white">
+<div class="relative z-10 max-w-5xl mx-auto px-6 text-white pt-32">
 
 <h1 class="font-serif text-4xl md:text-6xl leading-tight mb-6">
 Die meisten arbeiten ihr ganzes Leben<br>
@@ -61,23 +82,19 @@ Lass uns sprechen
 </div>
 </section>
 
-<!-- ZUSAMMENARBEIT FINAL -->
+<!-- ZUSAMMENARBEIT -->
 <section id="zusammenarbeit" class="py-36 px-6 text-center">
 <div class="max-w-3xl mx-auto">
 
-<p class="text-gray-500 mb-4">
-Was viele Menschen nicht hinterfragen:
-</p>
+<p class="text-gray-500 mb-4">Was viele Menschen nicht hinterfragen:</p>
 
-<h2 class="font-serif text-5xl md:text-6xl leading-tight mb-20">
+<h2 class="font-serif text-5xl leading-tight mb-20">
 Sie arbeiten für Ziele,<br>
 die nicht ihre eigenen sind.
 </h2>
 
 <div class="mb-24">
-<p class="text-gray-500 mb-6">
-Die meisten Wege bedeuten:
-</p>
+<p class="text-gray-500 mb-6">Die meisten Wege bedeuten:</p>
 
 <div class="font-serif text-3xl space-y-2">
 <p>Zeit gegen Geld.</p>
@@ -87,16 +104,13 @@ Die meisten Wege bedeuten:
 </div>
 
 <div class="mb-24">
-<h3 class="font-serif text-4xl leading-snug">
-Ich habe mich bewusst<br>
-dagegen entschieden.
+<h3 class="font-serif text-4xl">
+Ich habe mich bewusst dagegen entschieden.
 </h3>
 </div>
 
 <div class="mb-24">
-<h3 class="font-serif text-5xl mb-6">
-Menschen sind mein Investment.
-</h3>
+<h3 class="font-serif text-5xl mb-6">Menschen sind mein Investment.</h3>
 
 <p class="text-gray-600 text-lg">
 Nicht ein Produkt.<br>
@@ -107,65 +121,42 @@ Sondern der Mensch.
 
 <div class="mb-24">
 <p class="text-gray-600 mb-6">
-In diesem Modell geht es nicht darum,
-möglichst schnell Geld zu verdienen.
+Es geht nicht darum, möglichst schnell Geld zu verdienen.
 </p>
 
-<p class="font-serif text-3xl leading-snug">
-Sondern darum,<br>
-etwas aufzubauen,<br>
+<p class="font-serif text-3xl">
+Sondern darum, etwas aufzubauen,<br>
 das mit dir wächst.
 </p>
 </div>
 
 <div class="mb-24">
-<p class="text-gray-600 mb-4">
-Das passiert nicht über Nacht.
-</p>
+<p class="text-gray-600 mb-4">Das passiert nicht über Nacht.</p>
 
-<p class="font-serif text-2xl">
-Und es ist nicht bequem.
-</p>
+<p class="font-serif text-2xl">Und es ist nicht bequem.</p>
 
-<p class="text-gray-600 mt-4">
-Aber es ist echt.
-</p>
+<p class="text-gray-600 mt-4">Aber es ist echt.</p>
 </div>
 
 <div class="mb-24">
-<p class="font-serif text-3xl mb-6">
-Du gehst diesen Weg nicht alleine.
-</p>
+<p class="font-serif text-3xl mb-6">Du gehst diesen Weg nicht alleine.</p>
 
 <p class="text-gray-600">
-Du wirst Teil einer Community,<br>
-die sich gegenseitig trägt,<br>
-fordert und wachsen lässt.
+Community. Wachstum. Entwicklung.
 </p>
 </div>
 
 <div class="mb-24">
-<p class="text-gray-600 mb-6">
-Du brauchst kein Vorwissen.
-</p>
+<p class="text-gray-600 mb-6">Du brauchst kein Vorwissen.</p>
 
 <p class="font-serif text-3xl">
-Nur Neugier.<br>
-Und die Bereitschaft,<br>
-dich zu entwickeln.
+Nur Neugier und die Bereitschaft zu wachsen.
 </p>
 </div>
 
-<div class="mt-16">
-<h3 class="font-serif text-4xl mb-6">
-Wenn du spürst,<br>
-dass da mehr für dich möglich ist –
-</h3>
-
-<a href="#kontakt" class="inline-block bg-primary text-white px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary/90 transition-all">
+<a href="#kontakt" class="bg-primary text-white px-8 py-4 rounded-lg">
 Lass uns sprechen
 </a>
-</div>
 
 </div>
 </section>
@@ -204,7 +195,6 @@ Und herauszufinden, was wirklich möglich ist.
 <img src="TestOmega.jpg">
 <div class="p-6">
 <h3 class="font-serif text-xl mb-2">Omega-3 Analyse</h3>
-<p class="text-sm text-gray-600">Verstehe deinen Körper wirklich.</p>
 </div>
 </div>
 
@@ -212,7 +202,6 @@ Und herauszufinden, was wirklich möglich ist.
 <img src="Test K2D3.jpg">
 <div class="p-6">
 <h3 class="font-serif text-xl mb-2">Vitamin Test</h3>
-<p class="text-sm text-gray-600">Klarheit statt raten.</p>
 </div>
 </div>
 
@@ -220,7 +209,6 @@ Und herauszufinden, was wirklich möglich ist.
 <img src="Öle.jpg">
 <div class="p-6">
 <h3 class="font-serif text-xl mb-2">Umsetzung</h3>
-<p class="text-sm text-gray-600">Individuell angepasst.</p>
 </div>
 </div>
 
@@ -237,6 +225,36 @@ Wenn du spürst, dass da mehr möglich ist
 Termin vereinbaren
 </a>
 </section>
+
+<!-- SCRIPT NAV -->
+<script>
+window.addEventListener('scroll', function() {
+  const nav = document.getElementById('navbar');
+  const links = document.querySelectorAll('.nav-link');
+  const logo = document.getElementById('logo');
+
+  if (window.scrollY > 50) {
+    nav.classList.add('bg-white/90', 'backdrop-blur', 'shadow-sm');
+    logo.classList.remove('text-white');
+    logo.classList.add('text-black');
+
+    links.forEach(link => {
+      link.classList.remove('text-white');
+      link.classList.add('text-gray-700');
+    });
+
+  } else {
+    nav.classList.remove('bg-white/90', 'backdrop-blur', 'shadow-sm');
+    logo.classList.add('text-white');
+    logo.classList.remove('text-black');
+
+    links.forEach(link => {
+      link.classList.add('text-white');
+      link.classList.remove('text-gray-700');
+    });
+  }
+});
+</script>
 
 </body>
 </html>
