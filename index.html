@@ -3,310 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David Müller - Gesundheit &amp; Nebeneinkommen</title>
-  <meta name="description" content="Baue dir ein zweites Einkommen im Gesundheitsbereich auf – ohne Druck und ohne klassischen Hustle.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>David Müller - Gesundheit & Nebeneinkommen</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Inter'],
+            serif: ['Cormorant Garamond']
           },
           colors: {
-            background: '#FAF8F5',
-            foreground: '#2C3E35',
-            card: '#FFFFFF',
-            'card-foreground': '#2C3E35',
             primary: '#4A6B5D',
-            'primary-foreground': '#FFFFFF',
-            secondary: '#F5F1EB',
-            'secondary-foreground': '#3D4F44',
-            muted: '#EDE9E3',
-            'muted-foreground': '#6B7C72',
-            accent: '#C9A86C',
-            'accent-foreground': '#2C3E35',
-            border: '#E5DFD7',
-          },
-          borderRadius: {
-            'xl': '1rem',
-            '2xl': '1.5rem',
+            accent: '#C9A86C'
           }
         }
       }
     }
   </script>
+
   <style>
     html { scroll-behavior: smooth; }
-    body { background-color: #FAF8F5; }
   </style>
 </head>
-<body class="font-sans antialiased text-foreground">
 
-  <!-- Navigation -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-      <span class="font-serif font-semibold text-xl text-white nav-text transition-colors duration-300">David Müller</span>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#analyse" class="text-white/90 hover:text-white nav-link transition-colors text-sm font-medium">Nährstoffanalyse</a>
-        <a href="#zusammenarbeit" class="text-white/90 hover:text-white nav-link transition-colors text-sm font-medium">Zusammenarbeit</a>
-        <a href="#ueber" class="text-white/90 hover:text-white nav-link transition-colors text-sm font-medium">Über mich</a>
-      </div>
-      <a href="#kontakt" class="nav-btn bg-primary/90 backdrop-blur-sm text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-primary transition-all">
-        Termin
-      </a>
-    </nav>
-  </header>
+<body class="font-sans text-[#2C3E35] bg-[#FAF8F5]">
 
-  <!-- Hero Section mit Original-Hintergrundbild -->
-  <section class="min-h-screen flex items-center relative overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <img src="Hintergrund.png" alt="Sonnenuntergang über der Küstenlandschaft" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent"></div>
+<!-- NAV -->
+<header class="fixed w-full z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-5">
+    <div class="text-white font-serif text-xl">David Müller</div>
+    <div class="hidden md:flex gap-8 text-white">
+      <a href="#analyse">Nährstoffanalyse</a>
+      <a href="#zusammenarbeit">Zusammenarbeit</a>
+      <a href="#ueber">Über mich</a>
     </div>
-    
-    <div class="max-w-6xl mx-auto px-6 relative z-20 pt-32 pb-24">
-      <div class="max-w-2xl">
-        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.15] mb-6 text-balance">
-          Baue dir ein zweites Einkommen im Gesundheitsbereich auf – ohne Druck und ohne klassischen Hustle.
-        </h1>
-        <p class="text-lg md:text-xl text-white/85 leading-relaxed mb-10 max-w-xl">
-          Ich begleite Menschen dabei, mit Nährstoffkonzepten ein eigenes Standbein aufzubauen – strukturiert und ehrlich.
-        </p>
-        <a href="#kontakt" class="inline-flex items-center justify-center bg-primary text-white px-7 py-4 rounded-lg font-medium hover:bg-primary/90 transition-all text-base">
-          Kostenloses Erstgespräch
-        </a>
-      </div>
-    </div>
-  </section>
+  </div>
+</header>
 
-  <!-- Nährstoffanalyse Section -->
-  <section id="analyse" class="py-24 px-6 bg-secondary">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="font-serif text-3xl md:text-4xl font-semibold text-secondary-foreground mb-5">Nährstoffanalyse</h2>
-        <p class="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-          Viele Menschen achten auf ihre Ernährung – und fühlen sich trotzdem nicht in ihrer vollen Energie.
-          Mit gezielten Analysen bekommst du Klarheit: Wo stehst du wirklich?
-        </p>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Card 1: Omega-3 -->
-        <div class="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
-          <div class="overflow-hidden">
-            <img src="TestOmega.jpg" alt="Omega-3 Analyse" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-semibold text-card-foreground mb-2">Omega-3 Analyse</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              Entdecke deinen aktuellen Omega-3 Index und optimiere deine Fettsäuren-Balance.
-            </p>
-          </div>
-        </div>
+<!-- HERO -->
+<section class="min-h-screen flex items-center relative">
 
-        <!-- Card 2: Vitamin Test -->
-        <div class="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
-          <div class="overflow-hidden">
-            <img src="Test K2D3.jpg" alt="Vitamin Test" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-semibold text-card-foreground mb-2">Vitamin Test</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              Erhalte einen umfassenden Überblick über deinen Vitaminstatus.
-            </p>
-          </div>
-        </div>
+  <img src="Hintergrund.png" class="absolute w-full h-full object-cover">
+  <div class="absolute inset-0 bg-black/50"></div>
 
-        <!-- Card 3: Individuelle Umsetzung -->
-        <div class="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group">
-          <div class="overflow-hidden">
-            <img src="Öle.jpg" alt="Individuelle Umsetzung" class="w-full h-auto group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="p-6">
-            <h3 class="font-serif text-xl font-semibold text-card-foreground mb-2">Individuelle Umsetzung</h3>
-            <p class="text-muted-foreground text-sm leading-relaxed">
-              Persönlich abgestimmte Empfehlungen basierend auf deinen Analyseergebnissen.
-            </p>
-          </div>
-        </div>
+  <div class="relative z-10 max-w-5xl px-6 mx-auto text-white">
+
+    <h1 class="font-serif text-4xl md:text-6xl leading-tight mb-6">
+      Die meisten arbeiten ihr ganzes Leben<br>
+      für Ziele, die nicht ihre eigenen sind.<br><br>
+      Ich habe mich entschieden,<br>
+      einen anderen Weg zu gehen.
+    </h1>
+
+    <p class="text-lg md:text-xl mb-10 max-w-xl text-white/80">
+      Ich begleite Menschen dabei,
+      mit Nährstoffkonzepten ein eigenes Standbein aufzubauen –
+      strukturiert, ehrlich und ohne Druck.
+    </p>
+
+    <a href="#kontakt" class="bg-primary px-8 py-4 rounded-lg text-white">
+      Lass uns sprechen
+    </a>
+
+  </div>
+</section>
+
+<!-- ANALYSE -->
+<section id="analyse" class="py-24 px-6 bg-[#F5F1EB]">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+
+    <div class="bg-white rounded-2xl overflow-hidden">
+      <img src="TestOmega.jpg">
+      <div class="p-6">
+        <h3 class="font-serif text-xl mb-2">Omega-3 Analyse</h3>
+        <p class="text-sm text-gray-600">Verstehe deinen Körper wirklich.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Zusammenarbeit Section -->
-  <section id="zusammenarbeit" class="py-24 px-6 bg-background">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-12 text-center">Zusammenarbeit</h2>
-      
-      <div class="space-y-6 text-lg text-muted-foreground leading-relaxed">
-        <p>
-          Ich wollte nie einfach nur arbeiten, um Ziele von anderen zu erfüllen.
-          Ich wollte etwas aufbauen, das Sinn macht.
-        </p>
-        <p>
-          Heute arbeite ich mit Menschen, die genau das auch wollen:
-        </p>
-        <p class="font-serif text-foreground font-medium text-2xl leading-snug py-4">
-          Mehr Gesundheit. Mehr Selbstbestimmung.<br>
-          Und die Möglichkeit, sich ein eigenes Einkommen aufzubauen.
-        </p>
-        <p>
-          Vom Nebeneinkommen bis hin zu einem eigenen Business ist alles möglich – 
-          Schritt für Schritt und in deinem Tempo.
-        </p>
+    <div class="bg-white rounded-2xl overflow-hidden">
+      <img src="Test K2D3.jpg">
+      <div class="p-6">
+        <h3 class="font-serif text-xl mb-2">Vitamin Test</h3>
+        <p class="text-sm text-gray-600">Klarheit statt raten.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Benefits Section mit warmem Teal -->
-  <section class="py-20 px-6 bg-primary text-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-14">
-        <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-4">Was dich erwartet</h2>
-        <p class="text-white/80 text-lg">
-          Du gehst diesen Weg nicht alleine.
-        </p>
-      </div>
-      
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white/10 rounded-xl p-6">
-          <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-            <svg class="h-5 w-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-            </svg>
-          </div>
-          <p class="font-semibold mb-2">Community</p>
-          <p class="text-sm text-white/70 leading-relaxed">Teil einer wachsenden Community von Menschen, die sich gegenseitig unterstützen</p>
-        </div>
-        <div class="bg-white/10 rounded-xl p-6">
-          <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-            <svg class="h-5 w-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
-            </svg>
-          </div>
-          <p class="font-semibold mb-2">Klares Onboarding</p>
-          <p class="text-sm text-white/70 leading-relaxed">Schritt-für-Schritt-Begleitung von Anfang an</p>
-        </div>
-        <div class="bg-white/10 rounded-xl p-6">
-          <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-            <svg class="h-5 w-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-            </svg>
-          </div>
-          <p class="font-semibold mb-2">Kein Vorwissen nötig</p>
-          <p class="text-sm text-white/70 leading-relaxed">Nur die Bereitschaft, dich damit zu beschäftigen</p>
-        </div>
-        <div class="bg-white/10 rounded-xl p-6">
-          <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-            <svg class="h-5 w-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-            </svg>
-          </div>
-          <p class="font-semibold mb-2">Persönliche Begleitung</p>
-          <p class="text-sm text-white/70 leading-relaxed">Individuelle Unterstützung auf deinem Weg</p>
-        </div>
+    <div class="bg-white rounded-2xl overflow-hidden">
+      <img src="Öle.jpg">
+      <div class="p-6">
+        <h3 class="font-serif text-xl mb-2">Umsetzung</h3>
+        <p class="text-sm text-gray-600">Individuell angepasst.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Über mich Section -->
-  <section id="ueber" class="py-24 px-6 bg-secondary">
-    <div class="max-w-5xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Bild -->
-        <div class="flex justify-center md:justify-end order-1 md:order-1">
-          <div class="relative">
-            <div class="w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
-              <img src="David Müller.jpg" alt="David Müller - Gesundheitsberater" class="w-full h-full object-cover object-top">
-            </div>
-            <!-- Dekorativer Rahmen -->
-            <div class="absolute -bottom-4 -right-4 w-72 h-72 md:w-80 md:h-80 border-2 border-primary/30 rounded-2xl -z-10"></div>
-          </div>
-        </div>
-        <!-- Text -->
-        <div class="order-2 md:order-2 text-center md:text-left">
-          <h2 class="font-serif text-3xl md:text-4xl font-semibold text-secondary-foreground mb-6">Über mich</h2>
-          <div class="space-y-4 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              Ich bin David, und ich glaube daran, dass echte Veränderung mit kleinen, bewussten Schritten beginnt.
-            </p>
-            <p>
-              Mein Ziel ist es, Menschen zu helfen, ihre Gesundheit in die eigene Hand zu nehmen und gleichzeitig 
-              die Freiheit zu gewinnen, selbstbestimmt zu arbeiten.
-            </p>
-            <p class="text-foreground font-medium">
-              Lass uns gemeinsam herausfinden, was für dich möglich ist.
-            </p>
-          </div>
-        </div>
+  </div>
+</section>
+
+<!-- ZUSAMMENARBEIT -->
+<section id="zusammenarbeit" class="py-32 px-6 text-center">
+
+  <div class="max-w-4xl mx-auto">
+
+    <p class="text-gray-500 mb-4">Was viele Menschen nicht verstehen:</p>
+
+    <h2 class="font-serif text-4xl md:text-5xl mb-16">
+      Es geht nicht nur um Geld.
+    </h2>
+
+    <div class="space-y-6 text-gray-600 mb-20">
+      <p>Es geht um das System dahinter.</p>
+      <p>Um die Art, wie du arbeitest.</p>
+      <p>Und worauf du wirklich Einfluss hast.</p>
+    </div>
+
+    <div class="mb-24">
+      <p class="text-gray-500 mb-6">Viele Wege bedeuten:</p>
+      <div class="font-serif text-2xl space-y-2">
+        <p>Zeit gegen Geld.</p>
+        <p>Abhängigkeit.</p>
+        <p>Wenig Einfluss.</p>
       </div>
     </div>
-  </section>
 
-  <!-- CTA Section -->
-  <section id="kontakt" class="py-24 px-6 bg-background">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6 text-balance">
-        Wenn du das Gefühl hast, dass da mehr für dich möglich ist
-      </h2>
-      <p class="text-lg text-muted-foreground mb-10 leading-relaxed">
-        Dann lass uns sprechen. In einem kostenlosen Erstgespräch klären wir gemeinsam, 
-        ob und wie wir zusammenarbeiten können.
+    <div class="mb-24">
+      <h3 class="font-serif text-3xl">
+        Ich habe mich für einen anderen Weg entschieden.
+      </h3>
+    </div>
+
+    <div class="mb-24">
+      <h3 class="font-serif text-4xl mb-4">Menschen sind mein Investment.</h3>
+      <p class="text-gray-600">Weil dort echte Entwicklung entsteht.</p>
+    </div>
+
+    <div class="mb-24 text-gray-600 space-y-4">
+      <p>Du baust dir nicht nur Einkommen auf.</p>
+      <p class="font-serif text-2xl text-black">
+        Du baust dir etwas auf, das mit dir wächst.
       </p>
-      <a href="mailto:kontakt@example.com" class="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-primary/90 transition-all">
-        Kostenloses Erstgespräch vereinbaren
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-        </svg>
-      </a>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="py-10 px-6 bg-muted border-t border-border">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-      <span class="font-serif font-semibold text-lg text-foreground">David Müller</span>
-      <p class="text-sm text-muted-foreground">
-        &copy; 2025 David Müller. Alle Rechte vorbehalten.
+    <div class="mb-24">
+      <p class="text-gray-600">Kein schneller Weg.</p>
+      <p class="font-serif text-2xl">Aber ein ehrlicher.</p>
+    </div>
+
+    <div class="mb-24 text-gray-600">
+      <p class="font-serif text-2xl text-black mb-4">Du gehst ihn nicht alleine.</p>
+      <p>Community. Wachstum. Entwicklung.</p>
+    </div>
+
+    <div class="mb-24 text-gray-600">
+      <p>Kein Vorwissen nötig.</p>
+      <p class="font-serif text-2xl text-black">
+        Nur die Bereitschaft zu wachsen.
       </p>
-      <div class="flex gap-6 text-sm">
-        <a href="#" class="text-muted-foreground hover:text-foreground transition-colors">Impressum</a>
-        <a href="#" class="text-muted-foreground hover:text-foreground transition-colors">Datenschutz</a>
-      </div>
     </div>
-  </footer>
 
-  <!-- Scroll Script für Navigation -->
-  <script>
-    window.addEventListener('scroll', function() {
-      const navbar = document.getElementById('navbar');
-      const navText = document.querySelector('.nav-text');
-      const navLinks = document.querySelectorAll('.nav-link');
-      
-      if (window.scrollY > 50) {
-        navbar.classList.add('bg-background/95', 'shadow-sm', 'backdrop-blur-md');
-        navText.classList.remove('text-white');
-        navText.classList.add('text-foreground');
-        navLinks.forEach(link => {
-          link.classList.remove('text-white/90', 'hover:text-white');
-          link.classList.add('text-muted-foreground', 'hover:text-foreground');
-        });
-      } else {
-        navbar.classList.remove('bg-background/95', 'shadow-sm', 'backdrop-blur-md');
-        navText.classList.add('text-white');
-        navText.classList.remove('text-foreground');
-        navLinks.forEach(link => {
-          link.classList.add('text-white/90', 'hover:text-white');
-          link.classList.remove('text-muted-foreground', 'hover:text-foreground');
-        });
-      }
-    });
-  </script>
+    <a href="#kontakt" class="bg-primary text-white px-8 py-4 rounded-lg">
+      Lass uns sprechen
+    </a>
+
+  </div>
+</section>
+
+<!-- ÜBER MICH -->
+<section id="ueber" class="py-24 px-6 bg-[#F5F1EB]">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+    <img src="David Müller.jpg" class="rounded-2xl">
+
+    <div>
+      <h2 class="font-serif text-3xl mb-6">Über mich</h2>
+      <p class="text-gray-600 mb-4">
+        Ich begleite Menschen zu mehr Energie, Klarheit und Selbstbestimmung.
+      </p>
+      <p class="font-medium">
+        Lass uns herausfinden, was für dich möglich ist.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="kontakt" class="py-24 text-center">
+  <h2 class="font-serif text-3xl mb-6">
+    Wenn du spürst, dass da mehr möglich ist
+  </h2>
+  <a href="mailto:kontakt@example.com" class="bg-primary text-white px-8 py-4 rounded-lg">
+    Termin vereinbaren
+  </a>
+</section>
 
 </body>
 </html>
