@@ -27,6 +27,35 @@ primary: '#4A6B5D'
 
 <style>
 html { scroll-behavior: smooth; }
+
+.fade-in {
+opacity: 0;
+transform: translateY(40px);
+transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+.btn {
+transition: all 0.3s ease;
+}
+
+.btn:hover {
+transform: translateY(-2px) scale(1.02);
+box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card-hover {
+transition: all 0.4s ease;
+}
+
+.card-hover:hover {
+transform: scale(1.03);
+box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
 </style>
 
 </head>
@@ -35,27 +64,28 @@ html { scroll-behavior: smooth; }
 
 <!-- NAVIGATION -->
 <header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-5">
-    <div id="logo" class="text-white font-serif text-xl">David Müller</div>
+<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-5">
+<div id="logo" class="text-white font-serif text-xl">David Müller</div>
 
-    <nav class="hidden md:flex gap-8 text-white text-sm">
-      <a href="#zusammenarbeit" class="nav-link">Zusammenarbeit</a>
-      <a href="#ueber" class="nav-link">Über mich</a>
-      <a href="#analyse" class="nav-link">Nährstoffanalyse</a>
-    </nav>
+<nav class="hidden md:flex gap-8 text-white text-sm">
+<a href="#zusammenarbeit" class="nav-link">Zusammenarbeit</a>
+<a href="#ueber" class="nav-link">Über mich</a>
+<a href="#analyse" class="nav-link">Nährstoffanalyse</a>
+</nav>
 
-    <a href="#kontakt" class="bg-primary px-5 py-2 rounded-lg text-white text-sm">
-      Termin
-    </a>
-  </div>
+<a href="#kontakt" class="bg-primary px-5 py-2 rounded-lg text-white text-sm btn">
+Termin
+</a>
+</div>
 </header>
 
 <!-- HERO -->
 <section class="min-h-screen flex items-center relative">
-<img src="Hintergrund.png" class="absolute w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/50"></div>
 
-<div class="relative z-10 max-w-5xl mx-auto px-6 text-white pt-32">
+<img src="Hintergrund.png" class="absolute w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+
+<div class="relative z-10 max-w-5xl mx-auto px-6 text-white pt-32 fade-in">
 
 <h1 class="font-serif text-4xl md:text-6xl leading-tight mb-6">
 Die meisten arbeiten ihr ganzes Leben<br>
@@ -70,58 +100,38 @@ mit Nährstoffkonzepten ein eigenes Standbein aufzubauen –
 strukturiert, ehrlich und ohne Druck.
 </p>
 
-<a href="#kontakt" class="bg-primary px-8 py-4 rounded-lg text-white">
+<a href="#kontakt" class="bg-primary px-8 py-4 rounded-lg text-white btn">
 Lass uns sprechen
 </a>
 
 </div>
 </section>
 
-<!-- ZUSAMMENARBEIT (NEU: RUHIG & KLAR) -->
-<section id="zusammenarbeit" class="py-28 px-6 text-center">
+<!-- ZUSAMMENARBEIT -->
+<section id="zusammenarbeit" class="py-28 px-6 text-center fade-in">
 <div class="max-w-2xl mx-auto">
 
 <h2 class="font-serif text-4xl md:text-5xl mb-12">
 Es geht nicht nur um Geld.
 </h2>
 
-<div class="space-y-6 text-lg text-gray-600 leading-relaxed mb-16">
-<p>
-Viele Menschen tauschen Zeit gegen Geld –
-und haben wenig Einfluss auf ihr eigenes Ergebnis.
-</p>
-
-<p>
-Ich habe mich bewusst für einen anderen Weg entschieden.
-</p>
-
-<p>
-Einen Weg, bei dem der Mensch im Mittelpunkt steht.
-</p>
+<div class="space-y-6 text-lg text-gray-600 mb-16">
+<p>Viele Menschen tauschen Zeit gegen Geld und haben wenig Einfluss.</p>
+<p>Ich habe mich bewusst für einen anderen Weg entschieden.</p>
+<p>Einen Weg, bei dem der Mensch im Mittelpunkt steht.</p>
 </div>
 
 <h3 class="font-serif text-3xl mb-10">
 Menschen sind mein Investment.
 </h3>
 
-<div class="space-y-6 text-lg text-gray-600 leading-relaxed mb-16">
-<p>
-Es geht nicht darum, möglichst schnell Geld zu verdienen,
-sondern darum, etwas aufzubauen, das mit dir wächst.
-</p>
-
-<p>
-Du gehst diesen Weg nicht alleine.
-Du wirst Teil einer Community, die sich gegenseitig unterstützt.
-</p>
-
-<p>
-Du brauchst kein Vorwissen –
-nur die Bereitschaft, dich zu entwickeln.
-</p>
+<div class="space-y-6 text-lg text-gray-600 mb-16">
+<p>Es geht nicht um schnellen Erfolg, sondern um nachhaltigen Aufbau.</p>
+<p>Du gehst diesen Weg nicht alleine.</p>
+<p>Kein Vorwissen nötig – nur die Bereitschaft zu wachsen.</p>
 </div>
 
-<a href="#kontakt" class="bg-primary text-white px-8 py-4 rounded-lg">
+<a href="#kontakt" class="bg-primary text-white px-8 py-4 rounded-lg btn">
 Lass uns sprechen
 </a>
 
@@ -129,111 +139,59 @@ Lass uns sprechen
 </section>
 
 <!-- ÜBER MICH -->
-<section id="ueber" class="py-24 px-6 bg-[#F5F1EB]">
+<section id="ueber" class="py-24 px-6 bg-[#F5F1EB] fade-in">
 <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
 <img src="David Müller.jpg" class="rounded-2xl">
 
 <div>
 <h2 class="font-serif text-3xl mb-6">Über mich</h2>
-
 <p class="text-gray-600 mb-4">Ich komme aus der Bankenwelt.</p>
-
-<p class="text-gray-600 mb-4">
-Fast 20 Jahre habe ich dort gearbeitet,
-Menschen geführt und Verantwortung getragen.
-</p>
-
-<p class="text-gray-600 mb-4">
-Irgendwann habe ich gemerkt:
-Es ging immer mehr um Zahlen –
-und immer weniger um Menschen.
-</p>
-
-<p class="text-gray-600 mb-4">
-Der Wendepunkt kam,
-als Entscheidungen nicht mehr zu meinen Werten gepasst haben.
-</p>
-
-<p class="text-gray-600 mb-4">
-Heute begleite ich Menschen dabei,
-mehr Klarheit für ihre Gesundheit zu bekommen
-und sich gleichzeitig ein eigenes Standbein aufzubauen.
-</p>
-
-<p class="font-medium">
-Ehrlich. Ohne Druck. Auf Augenhöhe.
-</p>
-
+<p class="text-gray-600 mb-4">Fast 20 Jahre habe ich dort gearbeitet...</p>
+<p class="text-gray-600 mb-4">Irgendwann habe ich gemerkt...</p>
+<p class="text-gray-600 mb-4">Der Wendepunkt kam...</p>
+<p class="text-gray-600 mb-4">Heute begleite ich Menschen...</p>
+<p class="font-medium">Ehrlich. Ohne Druck. Auf Augenhöhe.</p>
 </div>
+
 </div>
 </section>
 
-<!-- NÄHRSTOFFANALYSE (NEU: ERKLÄREND) -->
-<section id="analyse" class="py-24 px-6 bg-[#F5F1EB]">
-
-<div class="max-w-3xl mx-auto text-center mb-16">
-
-<h2 class="font-serif text-4xl mb-6">
-Gesundheit beginnt mit Klarheit
-</h2>
-
-<p class="text-lg text-gray-600 leading-relaxed mb-6">
-Viele Menschen achten auf ihre Ernährung –
-und fühlen sich trotzdem nicht in ihrer vollen Energie.
-</p>
-
-<p class="text-lg text-gray-600 leading-relaxed mb-6">
-Das Problem ist oft nicht der Wille,
-sondern fehlende Klarheit darüber,
-was dem Körper wirklich fehlt.
-</p>
-
-<p class="text-lg text-gray-600 leading-relaxed">
-Genau hier setze ich an:
-Nicht mit Vermutungen,
-sondern mit messbaren Werten und einfachen Routinen für den Alltag.
-</p>
-
-</div>
-
+<!-- ANALYSE -->
+<section id="analyse" class="py-24 px-6 bg-[#F5F1EB] fade-in">
 <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
 
-<div class="bg-white rounded-2xl overflow-hidden">
+<div class="bg-white rounded-2xl overflow-hidden card-hover">
 <img src="TestOmega.jpg">
 <div class="p-6">
 <h3 class="font-serif text-xl mb-2">Omega-3 Analyse</h3>
-<p class="text-sm text-gray-600">Verstehe deinen aktuellen Fettsäure-Status.</p>
 </div>
 </div>
 
-<div class="bg-white rounded-2xl overflow-hidden">
+<div class="bg-white rounded-2xl overflow-hidden card-hover">
 <img src="Test K2D3.jpg">
 <div class="p-6">
-<h3 class="font-serif text-xl mb-2">Vitamin Analyse</h3>
-<p class="text-sm text-gray-600">Erhalte Klarheit über deine Versorgung.</p>
+<h3 class="font-serif text-xl mb-2">Vitamin Test</h3>
 </div>
 </div>
 
-<div class="bg-white rounded-2xl overflow-hidden">
+<div class="bg-white rounded-2xl overflow-hidden card-hover">
 <img src="Öle.jpg">
 <div class="p-6">
-<h3 class="font-serif text-xl mb-2">Individuelle Umsetzung</h3>
-<p class="text-sm text-gray-600">Einfache Routinen für deinen Alltag.</p>
+<h3 class="font-serif text-xl mb-2">Umsetzung</h3>
 </div>
 </div>
 
 </div>
-
 </section>
 
 <!-- CTA -->
-<section id="kontakt" class="py-24 text-center">
+<section id="kontakt" class="py-24 text-center fade-in">
 <h2 class="font-serif text-3xl mb-6">
 Wenn du spürst, dass da mehr möglich ist
 </h2>
 
-<a href="mailto:eq-david@gmx.de" class="bg-primary text-white px-8 py-4 rounded-lg">
+<a href="mailto:eq-david@gmx.de" class="bg-primary text-white px-8 py-4 rounded-lg btn">
 Termin anfragen
 </a>
 </section>
@@ -245,80 +203,19 @@ Termin anfragen
 <a href="#datenschutz">Datenschutz</a>
 </footer>
 
-<!-- IMPRESSUM -->
-<section id="impressum" class="py-24 px-6 bg-white">
-<div class="max-w-3xl mx-auto">
-<h2 class="font-serif text-3xl mb-6">Impressum</h2>
-
-<p>
-David Müller<br>
-Trillerstr. 10<br>
-08066 Zwickau
-</p>
-
-<p class="mt-4">
-E-Mail: eq-david@gmx.de
-</p>
-</div>
-</section>
-
-<!-- DATENSCHUTZ -->
-<section id="datenschutz" class="py-24 px-6 bg-[#F5F1EB]">
-<div class="max-w-3xl mx-auto">
-<h2 class="font-serif text-3xl mb-6">Datenschutzerklärung</h2>
-
-<p class="mb-4">
-Die Nutzung dieser Website ist in der Regel ohne Angabe personenbezogener Daten möglich.
-</p>
-
-<p class="mb-4">
-Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben zwecks Bearbeitung der Anfrage gespeichert.
-</p>
-
-<p class="mb-4">
-Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben.
-</p>
-
-<p class="mb-4">
-Verantwortlicher:
-<br><br>
-David Müller<br>
-Trillerstr. 10<br>
-08066 Zwickau<br>
-E-Mail: eq-david@gmx.de
-</p>
-
-</div>
-</section>
-
-<!-- NAV SCRIPT -->
+<!-- SCRIPT -->
 <script>
-window.addEventListener('scroll', function() {
-  const nav = document.getElementById('navbar');
-  const links = document.querySelectorAll('.nav-link');
-  const logo = document.getElementById('logo');
+const elements = document.querySelectorAll('.fade-in');
 
-  if (window.scrollY > 50) {
-    nav.classList.add('bg-white/90', 'backdrop-blur', 'shadow-sm');
-    logo.classList.remove('text-white');
-    logo.classList.add('text-black');
-
-    links.forEach(link => {
-      link.classList.remove('text-white');
-      link.classList.add('text-gray-700');
-    });
-
-  } else {
-    nav.classList.remove('bg-white/90', 'backdrop-blur', 'shadow-sm');
-    logo.classList.add('text-white');
-    logo.classList.remove('text-black');
-
-    links.forEach(link => {
-      link.classList.add('text-white');
-      link.classList.remove('text-gray-700');
-    });
-  }
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
 });
+});
+
+elements.forEach(el => observer.observe(el));
 </script>
 
 </body>
