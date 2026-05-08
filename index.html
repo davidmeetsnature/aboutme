@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -297,13 +298,16 @@ body.menu-open { overflow: hidden; }
 .analyse__card-tag { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mist); margin-bottom: 0.4rem; }
 .analyse__card-body h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--dark); margin-bottom: 0.5rem; }
 .analyse__card-body p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.75; }
+.card-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
 .card-link {
-  display: inline-flex; align-items: center; margin-top: 1rem;
+  display: inline-flex; align-items: center;
   font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
   color: var(--sage); border-bottom: 1px solid var(--mist); padding-bottom: 2px;
   transition: color 0.25s, border-color 0.25s; min-height: auto;
 }
 .card-link:hover { color: var(--forest); border-color: var(--forest); }
+.card-link--info { color: var(--text-mid); border-color: rgba(143,169,158,0.4); }
+.card-link--info:hover { color: var(--forest); border-color: var(--forest); }
 
 /* ══ CTA ══ */
 .cta {
@@ -443,10 +447,12 @@ body.menu-open { overflow: hidden; }
   .modal-backdrop { align-items: center; }
 }
 </style>
+
 </head>
 <body>
 
 <!-- ══ IMPRESSUM MODAL ══ -->
+
 <div class="modal-backdrop" id="impressumBackdrop">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="impressumTitle">
     <div class="modal__header">
@@ -472,6 +478,7 @@ body.menu-open { overflow: hidden; }
 </div>
 
 <!-- ══ DATENSCHUTZ MODAL ══ -->
+
 <div class="modal-backdrop" id="datenschutzBackdrop">
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="datenschutzTitle">
     <div class="modal__header">
@@ -483,35 +490,39 @@ body.menu-open { overflow: hidden; }
       <p>David Müller, Trillerstraße 10, 08066 Zwickau<br>
       E-Mail: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a></p>
 
-      <h3>2. Erhebung und Speicherung personenbezogener Daten</h3>
-      <p>Diese Website erhebt beim Besuch automatisch technische Daten (sog. Server-Logfiles), die Ihr Browser übermittelt. Dazu gehören IP-Adresse, Datum/Uhrzeit, aufgerufene Seite, Browsertyp und Betriebssystem. Diese Daten sind nicht bestimmten Personen zuordenbar und werden nicht mit anderen Datenquellen zusammengeführt.</p>
+```
+  <h3>2. Erhebung und Speicherung personenbezogener Daten</h3>
+  <p>Diese Website erhebt beim Besuch automatisch technische Daten (sog. Server-Logfiles), die Ihr Browser übermittelt. Dazu gehören IP-Adresse, Datum/Uhrzeit, aufgerufene Seite, Browsertyp und Betriebssystem. Diese Daten sind nicht bestimmten Personen zuordenbar und werden nicht mit anderen Datenquellen zusammengeführt.</p>
 
-      <h3>3. Kontaktaufnahme per E-Mail oder WhatsApp</h3>
-      <p>Wenn Sie mich per E-Mail oder WhatsApp kontaktieren, werden die von Ihnen übermittelten Daten (Name, Nachricht, Kontaktdaten) zur Bearbeitung Ihrer Anfrage gespeichert. Eine Weitergabe an Dritte erfolgt nicht. Sie können der Speicherung jederzeit widersprechen.</p>
+  <h3>3. Kontaktaufnahme per E-Mail oder WhatsApp</h3>
+  <p>Wenn Sie mich per E-Mail oder WhatsApp kontaktieren, werden die von Ihnen übermittelten Daten (Name, Nachricht, Kontaktdaten) zur Bearbeitung Ihrer Anfrage gespeichert. Eine Weitergabe an Dritte erfolgt nicht. Sie können der Speicherung jederzeit widersprechen.</p>
 
-      <h3>4. Terminbuchung</h3>
-      <p>Für die Terminbuchung wird perspektivisch ein externes Tool eingebunden. Sobald dieses aktiv ist, werden die dabei erhobenen Daten entsprechend der Datenschutzerklärung des jeweiligen Anbieters verarbeitet. Hierüber informieren wir gesondert.</p>
+  <h3>4. Terminbuchung</h3>
+  <p>Für die Terminbuchung wird perspektivisch ein externes Tool eingebunden. Sobald dieses aktiv ist, werden die dabei erhobenen Daten entsprechend der Datenschutzerklärung des jeweiligen Anbieters verarbeitet. Hierüber informieren wir gesondert.</p>
 
-      <h3>5. Affiliate-Links (Partnerlinks)</h3>
-      <p>Diese Website enthält Links zum Eqology-Partnerprogramm. Beim Klick auf einen Partnerlink werden technische Daten (z. B. IP-Adresse) an Eqology übertragen, um die Provision nachvollziehen zu können. Weitere Informationen entnehmen Sie der Datenschutzerklärung von Eqology unter <a href="https://www.eqology.com" target="_blank" rel="noopener">eqology.com</a>.</p>
+  <h3>5. Affiliate-Links (Partnerlinks)</h3>
+  <p>Diese Website enthält Links zum Eqology-Partnerprogramm. Beim Klick auf einen Partnerlink werden technische Daten (z. B. IP-Adresse) an Eqology übertragen, um die Provision nachvollziehen zu können. Weitere Informationen entnehmen Sie der Datenschutzerklärung von Eqology unter <a href="https://www.eqology.com" target="_blank" rel="noopener">eqology.com</a>.</p>
 
-      <h3>6. Google Fonts</h3>
-      <p>Diese Website lädt Schriftarten von Google Fonts (Google LLC, USA). Dabei wird Ihre IP-Adresse an Google übertragen. Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einheitlicher Darstellung). Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+  <h3>6. Google Fonts</h3>
+  <p>Diese Website lädt Schriftarten von Google Fonts (Google LLC, USA). Dabei wird Ihre IP-Adresse an Google übertragen. Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einheitlicher Darstellung). Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
 
-      <h3>7. Ihre Rechte</h3>
-      <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Datenübertragbarkeit. Wenden Sie sich dazu an: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a></p>
-      <p>Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
+  <h3>7. Ihre Rechte</h3>
+  <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Datenübertragbarkeit. Wenden Sie sich dazu an: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a></p>
+  <p>Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
 
-      <h3>8. Keine Cookies / kein Tracking</h3>
-      <p>Diese Website verwendet derzeit keine eigenen Cookies und kein Tracking durch Analyse-Dienste wie Google Analytics.</p>
+  <h3>8. Keine Cookies / kein Tracking</h3>
+  <p>Diese Website verwendet derzeit keine eigenen Cookies und kein Tracking durch Analyse-Dienste wie Google Analytics.</p>
 
-      <h3>9. Aktualität</h3>
-      <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Mai 2025. Bei Weiterentwicklung der Website (z. B. Einbindung eines Termintools) wird diese Erklärung aktualisiert.</p>
-    </div>
+  <h3>9. Aktualität</h3>
+  <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Mai 2025. Bei Weiterentwicklung der Website (z. B. Einbindung eines Termintools) wird diese Erklärung aktualisiert.</p>
+</div>
+```
+
   </div>
 </div>
 
 <!-- ══ MOBILE MENU ══ -->
+
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <p class="mobile-menu__label">Navigation</p>
   <ul class="mobile-menu__nav">
@@ -527,6 +538,7 @@ body.menu-open { overflow: hidden; }
 </div>
 
 <!-- ══ NAV ══ -->
+
 <nav class="nav" id="nav">
   <div class="nav__logo">David Müller</div>
   <ul class="nav__links">
@@ -542,6 +554,7 @@ body.menu-open { overflow: hidden; }
 </nav>
 
 <!-- ══ HERO ══ -->
+
 <section class="hero">
   <img src="Hintergrund.png" alt="Natur" class="hero__bg">
   <div class="hero__overlay"></div>
@@ -571,6 +584,7 @@ body.menu-open { overflow: hidden; }
 </section>
 
 <!-- ══ ZUSAMMENARBEIT ══ -->
+
 <section class="collab" id="zusammenarbeit">
   <div class="collab__intro reveal">
     <div class="section-tag section-tag--center">Zusammenarbeit</div>
@@ -607,17 +621,17 @@ body.menu-open { overflow: hidden; }
     <div class="collab__card reveal">
       <div class="collab__card-num">01</div>
       <h4>Du startest, wo du stehst.</h4>
-      <p>Kein Vorwissen nötig. Ein einmaliges Starterkit – keine laufenden Kosten. Nur die Bereitschaft, etwas aufzubauen, das dir gehört.</p>
+      <p>Kein Vorwissen nötig. Ein einmaliges Starterkit – keine laufenden Kosten. Dazu eine kostenlose Lernplattform und regelmäßige Seminare rund um Nährstoffe. Alles, was du brauchst, um wirklich loszulegen.</p>
     </div>
     <div class="collab__card reveal reveal-d1">
       <div class="collab__card-num">02</div>
-      <h4>Du bist nicht allein.</h4>
-      <p>Ich begleite dich persönlich – mit Struktur, Ehrlichkeit und einem Netzwerk, das wirklich trägt.</p>
+      <h4>Deine Ziele. Dein Tempo.</h4>
+      <p>Was willst du erreichen? Mehr Zeit, mehr Einkommen, mehr Sinn? Ich begleite dich persönlich – mit Struktur, Ehrlichkeit und einem Netzwerk, das wirklich trägt. Wir arbeiten an deinen Zielen, nicht an meinen.</p>
     </div>
     <div class="collab__card reveal reveal-d2">
       <div class="collab__card-num">03</div>
-      <h4>Es wächst mit dir.</h4>
-      <p>Was du aufbaust, gehört dir. Nicht deinem Arbeitgeber. Nicht dem System. Dir.</p>
+      <h4>Freiheit durch stabiles Einkommen.</h4>
+      <p>Was du aufbaust, wächst mit dir und gehört dir. Das Ziel: ein stabiles, wiederkehrendes Einkommen – das dir echte Freiheit gibt. Nicht von heute auf morgen, aber Schritt für Schritt.</p>
     </div>
   </div>
 
@@ -629,6 +643,7 @@ body.menu-open { overflow: hidden; }
 </section>
 
 <!-- ══ ÜBER MICH ══ -->
+
 <section class="about" id="ueber">
   <div class="about__inner">
     <div class="reveal">
@@ -647,81 +662,86 @@ body.menu-open { overflow: hidden; }
 </section>
 
 <!-- ══ GRATIS WEBINARE ══ -->
+
 <section class="webinare" id="webinare">
   <div class="webinare__inner">
     <div class="webinare__layout">
 
-      <div class="reveal">
-        <div class="section-tag">Kostenloses Wissen</div>
-        <div class="webinare__badge">🎁 100 % kostenlos · Keine Verpflichtung</div>
-        <h2>Hochwertige Webinare –<br><em>komplett gratis.</em></h2>
-        <p class="webinare__desc">Diese Webinare würden anderswo viel Geld kosten. Wir verschenken sie, weil wir überzeugt sind: Die Gesellschaft braucht mehr Bewusstsein für Gesundheit.</p>
-        <p class="webinare__desc">Kein Haken. Keine Verpflichtung. Nur echtes Wissen – von Experten, für Menschen wie dich.</p>
-      </div>
+```
+  <div class="reveal">
+    <div class="section-tag">Kostenloses Wissen</div>
+    <div class="webinare__badge">🎁 100 % kostenlos · Keine Verpflichtung</div>
+    <h2>Hochwertige Webinare –<br><em>komplett gratis.</em></h2>
+    <p class="webinare__desc">Diese Webinare würden anderswo viel Geld kosten. Wir verschenken sie, weil wir überzeugt sind: Die Gesellschaft braucht mehr Bewusstsein für Gesundheit.</p>
+    <p class="webinare__desc">Kein Haken. Keine Verpflichtung. Nur echtes Wissen – von Experten, für Menschen wie dich.</p>
+  </div>
 
-      <div class="reveal reveal-d1">
-        <div class="webinare__topics">
-          <div class="webinare__topic">
-            <div class="webinare__topic-icon">❤️</div>
-            <div>
-              <h4>Herz & Energie mit Omega-3</h4>
-              <p>Wie Fettsäuren dein Herz schützen und deine Energie nachhaltig steigern.</p>
-            </div>
-          </div>
-          <div class="webinare__topic">
-            <div class="webinare__topic-icon">🧠</div>
-            <div>
-              <h4>Mehr Energie im Alltag</h4>
-              <p>Wissenschaftlich fundierte Strategien für spürbar mehr Vitalität.</p>
-            </div>
-          </div>
-          <div class="webinare__topic">
-            <div class="webinare__topic-icon">🌿</div>
-            <div>
-              <h4>Darmgesundheit</h4>
-              <p>Warum dein Darm das Zentrum deiner Gesundheit ist – und was du tun kannst.</p>
-            </div>
-          </div>
-          <div class="webinare__topic">
-            <div class="webinare__topic-icon">🦋</div>
-            <div>
-              <h4>Schilddrüsengesundheit</h4>
-              <p>Symptome verstehen, Ursachen erkennen, natürlich unterstützen.</p>
-            </div>
-          </div>
-          <div class="webinare__topic">
-            <div class="webinare__topic-icon">🩺</div>
-            <div>
-              <h4>Bluthochdruck & Nährstoffe</h4>
-              <p>Wie gezielte Nährstoffversorgung den Blutdruck positiv beeinflussen kann.</p>
-            </div>
-          </div>
-          <div class="webinare__topic">
-            <div class="webinare__topic-icon">🏃</div>
-            <div>
-              <h4>Gesunde Gelenke & Bewegung</h4>
-              <p>Nährstoffe für Gelenke, Muskeln und langfristige Bewegungsfreiheit.</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="webinare__more">… und viele weitere Themen: Migräne, Rheuma, Wechseljahre, Schwangerschaft, Kinder & Nährstoffe, Nordic Health, Kollagen, Darmgesundheit u.v.m.</p>
-
-        <div class="webinare__cta-box">
-          <h3>Welches Thema bewegt dich?</h3>
-          <p>Schreib mir einfach auf WhatsApp – ich schicke dir das passende Webinar kostenlos und ohne jede Verpflichtung.</p>
-          <a href="https://wa.me/4917622247477" class="btn-whatsapp" target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Jetzt auf WhatsApp schreiben
-          </a>
+  <div class="reveal reveal-d1">
+    <div class="webinare__topics">
+      <div class="webinare__topic">
+        <div class="webinare__topic-icon">❤️</div>
+        <div>
+          <h4>Herz & Energie mit Omega-3</h4>
+          <p>Wie Fettsäuren dein Herz schützen und deine Energie nachhaltig steigern.</p>
         </div>
       </div>
-
+      <div class="webinare__topic">
+        <div class="webinare__topic-icon">🧠</div>
+        <div>
+          <h4>Mehr Energie im Alltag</h4>
+          <p>Wissenschaftlich fundierte Strategien für spürbar mehr Vitalität.</p>
+        </div>
+      </div>
+      <div class="webinare__topic">
+        <div class="webinare__topic-icon">🌿</div>
+        <div>
+          <h4>Darmgesundheit</h4>
+          <p>Warum dein Darm das Zentrum deiner Gesundheit ist – und was du tun kannst.</p>
+        </div>
+      </div>
+      <div class="webinare__topic">
+        <div class="webinare__topic-icon">🦋</div>
+        <div>
+          <h4>Schilddrüsengesundheit</h4>
+          <p>Symptome verstehen, Ursachen erkennen, natürlich unterstützen.</p>
+        </div>
+      </div>
+      <div class="webinare__topic">
+        <div class="webinare__topic-icon">🩺</div>
+        <div>
+          <h4>Bluthochdruck & Nährstoffe</h4>
+          <p>Wie gezielte Nährstoffversorgung den Blutdruck positiv beeinflussen kann.</p>
+        </div>
+      </div>
+      <div class="webinare__topic">
+        <div class="webinare__topic-icon">🏃</div>
+        <div>
+          <h4>Gesunde Gelenke & Bewegung</h4>
+          <p>Nährstoffe für Gelenke, Muskeln und langfristige Bewegungsfreiheit.</p>
+        </div>
+      </div>
     </div>
+
+    <p class="webinare__more">… und viele weitere Themen: Migräne, Rheuma, Wechseljahre, Schwangerschaft, Kinder & Nährstoffe, Nordic Health, Kollagen, Darmgesundheit u.v.m.</p>
+
+    <div class="webinare__cta-box">
+      <h3>Welches Thema bewegt dich?</h3>
+      <p>Schreib mir einfach auf WhatsApp – ich schicke dir das passende Webinar kostenlos und ohne jede Verpflichtung.</p>
+      <a href="https://wa.me/4917622247477" class="btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Jetzt auf WhatsApp schreiben
+      </a>
+    </div>
+  </div>
+
+</div>
+```
+
   </div>
 </section>
 
 <!-- ══ NÄHRSTOFFANALYSE ══ -->
+
 <section class="analyse" id="analyse">
   <div class="analyse__inner">
     <div class="analyse__intro reveal">
@@ -736,39 +756,46 @@ body.menu-open { overflow: hidden; }
       </div>
     </div>
 
-    <div class="analyse__cards">
-      <div class="analyse__card reveal">
-        <div class="analyse__card-img"><img src="TestOmega.jpg" alt="Omega-3 Analyse"></div>
-        <div class="analyse__card-body">
-          <div class="analyse__card-tag">Schritt 1</div>
-          <h3>Omega-3 Analyse</h3>
-          <p>Misst deinen persönlichen Omega-3-Status – die Basis für Zellgesundheit, Entzündungsregulation und mentale Klarheit.</p>
-          <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Mehr erfahren →</a>
-        </div>
-      </div>
-      <div class="analyse__card reveal reveal-d1">
-        <div class="analyse__card-img"><img src="Test K2D3.jpg" alt="Vitamin D3 & K2 Test"></div>
-        <div class="analyse__card-body">
-          <div class="analyse__card-tag">Schritt 2</div>
-          <h3>Vitamin D3 &amp; K2 Test</h3>
-          <p>D3 und K2 – zwei Nährstoffe, die selten im Fokus stehen, aber entscheidend für Knochen, Immunsystem und Energie sind.</p>
-          <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Mehr erfahren →</a>
-        </div>
-      </div>
-      <div class="analyse__card reveal reveal-d2">
-        <div class="analyse__card-img"><img src="Öle.jpg" alt="Umsetzung"></div>
-        <div class="analyse__card-body">
-          <div class="analyse__card-tag">Schritt 3</div>
-          <h3>Umsetzung</h3>
-          <p>Klare, alltagstaugliche Routinen – damit aus Wissen echte Veränderung wird. Kein Aufwand, aber spürbare Wirkung.</p>
-          <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Mehr erfahren →</a>
-        </div>
+```
+<div class="analyse__cards">
+  <div class="analyse__card reveal">
+    <div class="analyse__card-img"><img src="TestOmega.jpg" alt="Omega-3 Analyse"></div>
+    <div class="analyse__card-body">
+      <div class="analyse__card-tag">Schritt 1</div>
+      <h3>Omega-3 Analyse</h3>
+      <p>Misst deinen persönlichen Omega-3-Status – die Basis für Zellgesundheit, Entzündungsregulation und mentale Klarheit.</p>
+      <div class="card-links">
+        <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Produkt ansehen →</a>
+        <a href="https://eqology.com/de/lifestyle/theme/omega-3-more-info" target="_blank" rel="noopener" class="card-link card-link--info">Was ist Omega-3?</a>
       </div>
     </div>
+  </div>
+  <div class="analyse__card reveal reveal-d1">
+    <div class="analyse__card-img"><img src="Test K2D3.jpg" alt="Vitamin D3 & K2 Test"></div>
+    <div class="analyse__card-body">
+      <div class="analyse__card-tag">Schritt 2</div>
+      <h3>Vitamin D3 &amp; K2 Test</h3>
+      <p>D3 und K2 – zwei Nährstoffe, die selten im Fokus stehen, aber entscheidend für Knochen, Immunsystem und Energie sind.</p>
+      <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Mehr erfahren →</a>
+    </div>
+  </div>
+  <div class="analyse__card reveal reveal-d2">
+    <div class="analyse__card-img"><img src="Öle.jpg" alt="Umsetzung"></div>
+    <div class="analyse__card-body">
+      <div class="analyse__card-tag">Schritt 3</div>
+      <h3>Umsetzung</h3>
+      <p>Klare, alltagstaugliche Routinen – damit aus Wissen echte Veränderung wird. Kein Aufwand, aber spürbare Wirkung.</p>
+      <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Mehr erfahren →</a>
+    </div>
+  </div>
+</div>
+```
+
   </div>
 </section>
 
 <!-- ══ CTA ══ -->
+
 <section class="cta" id="kontakt">
   <div class="cta__label">Nächster Schritt</div>
   <h2>Wenn du spürst, dass da<br>mehr möglich ist</h2>
@@ -777,6 +804,7 @@ body.menu-open { overflow: hidden; }
 </section>
 
 <!-- ══ FOOTER ══ -->
+
 <footer class="footer">
   <p>© 2025 David Müller · Gesundheitscoach &amp; Business Partner</p>
   <div class="footer__nav">
