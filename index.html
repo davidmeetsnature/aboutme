@@ -1,1 +1,805 @@
-<!DOCTYPE html> <html lang="de"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>David Müller – Gesundheit, Natur & Freiheit</title> <meta name="description" content="David Müller – Gesundheitscoach & Business Partner. Ein ehrlicher Weg zu mehr Gesundheit und Freiheit."> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"> <style> :root { --forest: #2E4A3E; --sage: #4A6B5D; --mist: #8FA99E; --cream: #F7F4EF; --warm: #EDE8DF; --dark: #1A2E26; --gold: #C4A882; --text: #2C3830; --text-mid: #5A6E65; --text-soft: #8FA99E; --serif: "Playfair Display", Georgia, serif; --sans: "DM Sans", sans-serif; } *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; } body { background: var(--cream); color: var(--text); font-family: var(--sans); line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; } img { display: block; width: 100%; } a { text-decoration: none; color: inherit; } a, button { min-height: 44px; } /* NAV */ .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 300; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 1.25rem; transition: background 0.35s, padding 0.35s; } .nav.scrolled { background: rgba(26,46,38,0.97); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 0.85rem 1.25rem; box-shadow: 0 2px 20px rgba(0,0,0,0.2); } .nav__logo { font-family: var(--serif); font-size: 1.1rem; color: #fff; z-index: 310; position: relative; } .nav__links { display: none; } .nav__cta-desktop { display: none; } .nav__burger { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; padding: 10px; background: none; border: none; cursor: pointer; z-index: 310; } .nav__burger span { display: block; width: 22px; height: 1.5px; background: #fff; border-radius: 2px; transition: transform 0.35s ease, opacity 0.35s ease; transform-origin: center; } .nav__burger.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); } .nav__burger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); } .nav__burger.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); } /* MOBILE MENU */ .mobile-menu { position: fixed; inset: 0; z-index: 200; background: var(--dark); display: flex; flex-direction: column; justify-content: center; padding: 2rem 2rem 4rem; opacity: 0; pointer-events: none; transform: translateY(-12px); transition: opacity 0.4s ease, transform 0.4s ease; } .mobile-menu.open { opacity: 1; pointer-events: all; transform: translateY(0); } body.menu-open { overflow: hidden; } .mobile-menu__label { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mist); margin-bottom: 2.5rem; } .mobile-menu__nav { list-style: none; } .mobile-menu__nav li { border-bottom: 1px solid rgba(255,255,255,0.07); opacity: 0; transform: translateX(-16px); transition: opacity 0.35s ease, transform 0.35s ease; } .mobile-menu__nav li:first-child { border-top: 1px solid rgba(255,255,255,0.07); } .mobile-menu.open .mobile-menu__nav li:nth-child(1) { opacity:1; transform:none; transition-delay:0.10s; } .mobile-menu.open .mobile-menu__nav li:nth-child(2) { opacity:1; transform:none; transition-delay:0.17s; } .mobile-menu.open .mobile-menu__nav li:nth-child(3) { opacity:1; transform:none; transition-delay:0.24s; } .mobile-menu.open .mobile-menu__nav li:nth-child(4) { opacity:1; transform:none; transition-delay:0.31s; } .mobile-menu__nav a { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; font-family: var(--serif); font-size: 1.55rem; color: rgba(255,255,255,0.85); transition: color 0.25s; } .mobile-menu__nav a:hover { color: var(--gold); } .mobile-menu__nav .arrow { font-size: 1rem; color: var(--mist); transition: transform 0.25s, color 0.25s; } .mobile-menu__nav a:hover .arrow { transform: translateX(4px); color: var(--gold); } .mobile-menu__cta-wrap { opacity:0; transform:translateY(8px); transition: opacity 0.35s ease 0.35s, transform 0.35s ease 0.35s; } .mobile-menu.open .mobile-menu__cta-wrap { opacity:1; transform:none; } .mobile-menu__cta { margin-top: 2.5rem; display: inline-flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 1rem 2rem; border-radius: 2px; min-height: 52px; transition: background 0.3s; align-self: flex-start; } .mobile-menu__footer { margin-top: auto; padding-top: 2rem; font-size: 0.75rem; color: rgba(255,255,255,0.2); } /* HERO */ .hero { min-height: 100svh; position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 4.5rem; } .hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; } .hero__overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,36,28,0.4) 0%, rgba(18,36,28,0.72) 45%, rgba(18,36,28,0.93) 100%); } .hero__content { position: relative; z-index: 2; padding: 0 1.25rem; } .hero__words { display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 1.1rem; } .hero__word { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); } .hero__word + .hero__word::before { content: " · "; color: var(--gold); } .hero__title { font-family: var(--serif); font-size: clamp(1.7rem, 6.5vw, 2.4rem); font-weight: 400; line-height: 1.22; color: #fff; margin-bottom: 1.25rem; } .hero__title .break { display: block; margin: 1.2rem 0; } .hero__title em { font-style: italic; color: rgba(255,255,255,0.65); } .hero__sub { font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.6); margin-bottom: 2rem; line-height: 1.8; max-width: 340px; } .btn-gold { display: inline-flex; align-items: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 0.9rem 1.8rem; border-radius: 2px; min-height: 48px; transition: all 0.3s; } .btn-gold:hover { background: #d4b892; transform: translateY(-2px); } .scroll-hint { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 0.4rem; color: rgba(255,255,255,0.28); font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; } .scroll-hint__line { width: 1px; height: 2.5rem; background: linear-gradient(to bottom, rgba(255,255,255,0.28), transparent); animation: pulse 2s ease-in-out infinite; } @keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} } /* UTILITIES */ .section-tag { font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-soft); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem; } .section-tag::before { content: ""; display: block; width: 1.25rem; height: 1px; background: var(--text-soft); flex-shrink: 0; } .section-tag--light { color: var(--mist); } .section-tag--light::before { background: var(--mist); } .section-tag--center { justify-content: center; } .section-tag--center::before { display: none; } /* REALITY STRIP */ .reality { background: var(--dark); padding: 3rem 1.25rem; } .reality__label { font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist); margin-bottom: 2rem; } .reality__items { display: flex; flex-direction: column; gap: 1.25rem; } .reality__item { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: rgba(255,255,255,0.82); line-height: 1.3; padding-left: 1rem; border-left: 2px solid var(--gold); } /* ÜBER MICH */ .about { background: var(--cream); padding: 4rem 1.25rem; } .about__img { width: 100%; height: 300px; border-radius: 4px; object-fit: cover; object-position: top; margin-bottom: 2rem; } .about h2 { font-family: var(--serif); font-size: clamp(1.6rem,5.5vw,2.2rem); font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1.25rem; } .about p { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 1rem; line-height: 1.9; } .about p strong { color: var(--dark); font-weight: 600; } .about__quote { margin-top: 1.75rem; padding-top: 1.75rem; border-top: 1px solid rgba(46,74,62,0.12); font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--sage); line-height: 1.6; } /* VISION */ .vision { background: var(--warm); padding: 4rem 1.25rem; } .vision__story-img { width: 100%; height: 220px; border-radius: 4px; object-fit: cover; object-position: center 40%; margin-bottom: 2rem; display: block; } .vision__intro { text-align: center; margin-bottom: 2.5rem; } .vision__headline { font-family: var(--serif); font-size: clamp(1.65rem,6vw,2.2rem); font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1rem; } .vision__headline em { font-style: italic; color: var(--sage); } .vision__lead { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; max-width: 300px; margin: 0 auto; } .vision__cards { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; } .vision__card { background: #fff; border-radius: 4px; padding: 1.75rem 1.5rem; border-left: 3px solid var(--gold); box-shadow: 0 2px 12px rgba(46,74,62,0.05); } .vision__card-num { font-family: var(--serif); font-size: 1.6rem; color: rgba(143,169,158,0.22); font-weight: 600; line-height: 1; margin-bottom: 0.75rem; } .vision__card h4 { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--dark); margin-bottom: 0.6rem; } .vision__card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.82; } .vision__close { background: var(--dark); border-radius: 4px; padding: 2.25rem 1.5rem; text-align: center; } .vision__close h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; line-height: 1.35; color: #fff; margin-bottom: 0.85rem; } .vision__close h3 em { font-style: italic; color: var(--gold); } .vision__close p { font-size: 0.88rem; color: rgba(255,255,255,0.52); line-height: 1.85; margin-bottom: 1.5rem; } .btn-outline-light { display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; border: 1.5px solid rgba(255,255,255,0.35); padding: 0.85rem 1.75rem; border-radius: 2px; min-height: 48px; transition: all 0.3s; } .btn-outline-light:hover { background: rgba(255,255,255,0.1); border-color: #fff; } /* NÄHRSTOFFANALYSE */ .analyse { background: var(--cream); padding: 4rem 1.25rem; } .analyse__intro { margin-bottom: 2rem; } .analyse h2 { font-family: var(--serif); font-size: clamp(1.65rem,6vw,2.3rem); font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1rem; } .analyse h2 em { font-style: italic; color: var(--sage); } .analyse__lead { font-size: 0.93rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 0.65rem; } .analyse__cards { display: flex; flex-direction: column; gap: 1.25rem; } .analyse__card { background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 16px rgba(46,74,62,0.07); } .analyse__card-img { width: 100%; height: 190px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 1rem; overflow: hidden; } .analyse__card-img img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s ease; } .analyse__card:hover .analyse__card-img img { transform: scale(1.04); } .analyse__card-body { padding: 1.3rem; } .analyse__card-tag { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mist); margin-bottom: 0.35rem; } .analyse__card-body h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--dark); margin-bottom: 0.45rem; } .analyse__card-body p { font-size: 0.84rem; color: var(--text-mid); line-height: 1.75; } .card-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.85rem; } .card-link { display: inline-flex; align-items: center; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.06em; color: var(--sage); border-bottom: 1px solid var(--mist); padding-bottom: 1px; transition: color 0.25s, border-color 0.25s; min-height: auto; } .card-link:hover { color: var(--forest); border-color: var(--forest); } .card-link--info { color: var(--text-mid); border-color: rgba(143,169,158,0.35); } .card-link--info:hover { color: var(--forest); border-color: var(--forest); } /* WEBINARE */ .webinare { background: var(--forest); padding: 4rem 1.25rem; color: #fff; } .webinare .section-tag { color: var(--mist); } .webinare .section-tag::before { background: var(--mist); } .webinare__badge { display: inline-block; font-size: 0.7rem; font-weight: 600; background: rgba(196,168,130,0.15); color: var(--gold); border: 1px solid rgba(196,168,130,0.3); padding: 0.3rem 0.85rem; border-radius: 20px; margin-bottom: 1.1rem; } .webinare h2 { font-family: var(--serif); font-size: clamp(1.6rem,6vw,2.3rem); font-weight: 400; line-height: 1.28; color: #fff; margin-bottom: 1rem; } .webinare h2 em { font-style: italic; color: var(--gold); } .webinare__desc { font-size: 0.93rem; color: rgba(255,255,255,0.58); line-height: 1.85; margin-bottom: 2rem; } .webinare__topics { display: flex; flex-direction: column; } .webinare__topic { display: flex; gap: 0.85rem; align-items: flex-start; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); } .webinare__topic:first-child { border-top: 1px solid rgba(255,255,255,0.07); } .webinare__topic-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.05rem; } .webinare__topic h4 { font-family: var(--serif); font-size: 0.97rem; font-weight: 600; color: #fff; margin-bottom: 0.15rem; } .webinare__topic p { font-size: 0.81rem; color: rgba(255,255,255,0.48); line-height: 1.6; } .webinare__more { font-size: 0.8rem; color: rgba(255,255,255,0.35); font-style: italic; margin: 1.5rem 0 2rem; line-height: 1.7; } .webinare__cta { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1.5rem; text-align: center; } .webinare__cta h3 { font-family: var(--serif); font-size: 1.2rem; color: #fff; margin-bottom: 0.6rem; font-weight: 400; } .webinare__cta p { font-size: 0.86rem; color: rgba(255,255,255,0.52); line-height: 1.8; margin-bottom: 1.25rem; } .btn-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: #25D366; padding: 1rem 1.5rem; border-radius: 2px; min-height: 52px; transition: all 0.3s; width: 100%; } .btn-whatsapp:hover { background: #1fb855; transform: translateY(-2px); } /* CTA */ .cta { background: var(--sage); padding: 4rem 1.25rem; text-align: center; position: relative; overflow: hidden; } .cta::before { content: ""; position: absolute; top: -40%; left: -30%; width: 80%; height: 180%; background: radial-gradient(ellipse, rgba(196,168,130,0.1) 0%, transparent 65%); pointer-events: none; } .cta__label { font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; } .cta__label::before, .cta__label::after { content: ""; display: block; width: 1.25rem; height: 1px; background: var(--gold); } .cta h2 { font-family: var(--serif); font-size: clamp(1.45rem,6vw,2.1rem); font-weight: 400; color: #fff; line-height: 1.3; margin-bottom: 0.85rem; } .cta p { font-size: 0.9rem; color: rgba(255,255,255,0.52); margin-bottom: 1.75rem; } .btn-cta { display: inline-flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 1rem 2rem; border-radius: 2px; min-height: 52px; transition: all 0.3s; width: 100%; max-width: 260px; } .btn-cta:hover { background: #d4b892; transform: translateY(-2px); } /* FOOTER */ .footer { background: var(--dark); color: rgba(255,255,255,0.32); padding: 2rem 1.25rem; text-align: center; font-size: 0.76rem; } .footer__nav { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.85rem; flex-wrap: wrap; } .footer__nav button { background: none; border: none; cursor: pointer; font-size: 0.73rem; color: rgba(255,255,255,0.38); font-family: var(--sans); padding: 0.25rem 0; min-height: auto; transition: color 0.25s; text-decoration: underline; } .footer__nav button:hover { color: var(--gold); } .footer__affiliate { margin-top: 1rem; font-size: 0.66rem; opacity: 0.38; line-height: 1.6; } /* MODALS */ .modal-backdrop { position: fixed; inset: 0; z-index: 500; background: rgba(0,0,0,0.7); display: flex; align-items: flex-end; opacity: 0; pointer-events: none; transition: opacity 0.35s ease; } .modal-backdrop.open { opacity: 1; pointer-events: all; } .modal { background: var(--cream); width: 100%; max-height: 88vh; overflow-y: auto; border-radius: 16px 16px 0 0; padding: 2rem 1.5rem 3rem; transform: translateY(40px); transition: transform 0.35s ease; } .modal-backdrop.open .modal { transform: translateY(0); } .modal__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(46,74,62,0.1); } .modal__header h2 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--dark); } .modal__close { background: none; border: none; cursor: pointer; font-size: 1.4rem; color: var(--text-mid); min-height: auto; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background 0.2s; } .modal__close:hover { background: rgba(0,0,0,0.06); } .modal__body h3 { font-family: var(--serif); font-size: 1.05rem; color: var(--dark); margin: 1.5rem 0 0.5rem; font-weight: 600; } .modal__body p { font-size: 0.87rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 0.75rem; } .modal__body a { color: var(--sage); text-decoration: underline; } /* ANIMATIONS */ .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.75s ease, transform 0.75s ease; } .reveal.visible { opacity: 1; transform: translateY(0); } .reveal-d1 { transition-delay: 0.1s; } .reveal-d2 { transition-delay: 0.2s; } .reveal-d3 { transition-delay: 0.3s; } /* DESKTOP */ @media (min-width: 768px) { .nav { padding: 1.4rem 2rem; } .nav.scrolled { padding: 1rem 2rem; } .nav__burger { display: none; } .mobile-menu { display: none; } .nav__links { display: flex; gap: 2.5rem; list-style: none; } .nav__links a { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.7); transition: color 0.3s; display: flex; align-items: center; } .nav__links a:hover { color: #fff; } .nav__cta-desktop { display: flex; align-items: center; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--gold); padding: 0.55rem 1.2rem; border-radius: 2px; transition: background 0.3s; min-height: 36px; } .nav__cta-desktop:hover { background: #d4b892; } .hero { padding-bottom: 7rem; } .hero__overlay { background: linear-gradient(to right, rgba(18,36,28,0.88) 0%, rgba(18,36,28,0.5) 55%, rgba(18,36,28,0.08) 100%); } .hero__content { max-width: 1100px; margin: 0 auto; padding: 0 2rem; } .hero__title { font-size: clamp(2.2rem, 4vw, 3.5rem); } .hero__sub { max-width: 460px; } .reality { padding: 4.5rem 2rem; } .reality__items { flex-direction: row; justify-content: center; gap: 3.5rem; } .reality__item { border-left: none; padding-left: 0; border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; max-width: 260px; } .about { padding: 6rem 2rem; } .about__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; margin: 0 auto; } .about__img { height: 500px; margin-bottom: 0; } .vision { padding: 6rem 2rem; } .vision__story-img { height: 320px; margin-bottom: 2.5rem; } .vision__inner { max-width: 1100px; margin: 0 auto; } .vision__intro { margin-bottom: 3rem; } .vision__cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 2.5rem; } .vision__close { max-width: 1100px; margin: 0 auto; padding: 3rem; } .analyse { padding: 6rem 2rem; } .analyse__inner { max-width: 1100px; margin: 0 auto; } .analyse__intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 3rem; } .analyse__cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; } .analyse__card-img { height: 210px; } .webinare { padding: 6rem 2rem; } .webinare__inner { max-width: 1100px; margin: 0 auto; } .webinare__layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; } .webinare__cta { text-align: left; } .btn-whatsapp { width: auto; } .cta { padding: 6rem 2rem; } .btn-cta { width: auto; } .modal { max-width: 640px; margin: auto; border-radius: 8px; align-self: center; } .modal-backdrop { align-items: center; } } </style> </head> <body> <!-- IMPRESSUM MODAL --> <div class="modal-backdrop" id="impressumBackdrop"> <div class="modal" role="dialog" aria-modal="true"> <div class="modal__header"> <h2>Impressum</h2> <button class="modal__close" onclick="closeModal('impressum')" aria-label="Schließen">✕</button> </div> <div class="modal__body"> <h3>Angaben gemäß § 5 TMG</h3> <p>David Müller<br>Trillerstraße 10<br>08066 Zwickau</p> <h3>Kontakt</h3> <p>E-Mail: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a><br> WhatsApp: <a href="https://wa.me/4917622247477">+49 176 22247477</a></p> <h3>Tätigkeitshinweis</h3> <p>David Müller ist als selbstständiger Gesundheitscoach und unabhängiger Business Partner tätig. Die Inhalte dieser Website dienen ausschließlich der allgemeinen Information und stellen keine medizinische Beratung dar.</p> <h3>Haftung für Inhalte</h3> <p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p> <h3>Haftung für Links</h3> <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe.</p> <h3>Partnerlink-Hinweis</h3> <p>Diese Website enthält Affiliate-Links zu Eqology. Bei einem Kauf über diese Links erhalte ich eine Provision. Für den Käufer entstehen keine zusätzlichen Kosten.</p> </div> </div> </div> <!-- DATENSCHUTZ MODAL --> <div class="modal-backdrop" id="datenschutzBackdrop"> <div class="modal" role="dialog" aria-modal="true"> <div class="modal__header"> <h2>Datenschutzerklärung</h2> <button class="modal__close" onclick="closeModal('datenschutz')" aria-label="Schließen">✕</button> </div> <div class="modal__body"> <h3>1. Verantwortlicher</h3> <p>David Müller, Trillerstraße 10, 08066 Zwickau<br> E-Mail: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a></p> <h3>2. Erhebung personenbezogener Daten</h3> <p>Diese Website erhebt beim Besuch automatisch technische Daten (Server-Logfiles) wie IP-Adresse, Datum/Uhrzeit und Browsertyp. Diese Daten werden nicht mit anderen Quellen zusammengeführt.</p> <h3>3. Kontaktaufnahme per E-Mail oder WhatsApp</h3> <p>Wenn Sie mich kontaktieren, werden die übermittelten Daten zur Bearbeitung gespeichert. Eine Weitergabe an Dritte erfolgt nicht.</p> <h3>4. Terminbuchung</h3> <p>Für die Terminbuchung wird perspektivisch ein externes Tool eingebunden. Hierüber informieren wir gesondert.</p> <h3>5. Affiliate-Links</h3> <p>Diese Website enthält Links zum Eqology-Partnerprogramm. Beim Klick werden technische Daten an Eqology übertragen. Weitere Infos: <a href="https://www.eqology.com" target="_blank" rel="noopener">eqology.com</a>.</p> <h3>6. Google Fonts</h3> <p>Diese Website lädt Schriftarten von Google Fonts. Dabei wird Ihre IP-Adresse an Google übertragen. Infos: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p> <h3>7. Ihre Rechte</h3> <p>Sie haben das Recht auf Auskunft, Berichtigung und Löschung. Kontakt: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a></p> <h3>8. Keine Cookies / kein Tracking</h3> <p>Diese Website verwendet keine eigenen Cookies und kein Tracking.</p> <h3>9. Aktualität</h3> <p>Stand: Mai 2025.</p> </div> </div> </div> <!-- MOBILE MENU --> <div class="mobile-menu" id="mobileMenu" aria-hidden="true"> <p class="mobile-menu__label">Navigation</p> <ul class="mobile-menu__nav"> <li><a href="#vision" onclick="closeMenu()">Mein Angebot <span class="arrow">→</span></a></li> <li><a href="#ueber" onclick="closeMenu()">Über mich <span class="arrow">→</span></a></li> <li><a href="#webinare" onclick="closeMenu()">Gratis Webinare <span class="arrow">→</span></a></li> <li><a href="#analyse" onclick="closeMenu()">Nährstoffe <span class="arrow">→</span></a></li> </ul> <div class="mobile-menu__cta-wrap"> <a href="#kontakt" class="mobile-menu__cta" onclick="closeMenu()">Termin anfragen</a> </div> <div class="mobile-menu__footer">© 2026 David Müller</div> </div> <!-- NAV --> <nav class="nav" id="nav"> <div class="nav__logo">David Müller</div> <ul class="nav__links"> <li><a href="#vision">Mein Angebot</a></li> <li><a href="#ueber">Über mich</a></li> <li><a href="#webinare">Gratis Webinare</a></li> <li><a href="#analyse">Nährstoffe</a></li> </ul> <a href="#kontakt" class="nav__cta-desktop">Termin</a> <button class="nav__burger" id="burger" aria-label="Menü öffnen" aria-expanded="false"> <span></span><span></span><span></span> </button> </nav> <!-- HERO --> <section class="hero"> <img src="Hintergrund.png" alt="Natur" class="hero__bg"> <div class="hero__overlay"></div> <div class="hero__content reveal"> <div class="hero__words"> <span class="hero__word">Gesundheit</span> <span class="hero__word">Natur</span> <span class="hero__word">Freiheit</span> </div> <h1 class="hero__title"> Die meisten arbeiten ihr ganzes Leben<br> <em>für Ziele, die nicht ihre eigenen sind.</em> <span class="break"></span> Ich habe mich entschieden,<br> einen anderen Weg zu gehen. </h1> <p class="hero__sub"> Ich zeige dir, wie du mit einem bewährten Gesundheitskonzept ein eigenes Standbein aufbaust – ehrlich, strukturiert, ohne leere Versprechen. </p> <a href="#vision" class="btn-gold">Mehr erfahren</a> </div> <div class="scroll-hint" aria-hidden="true"> <div class="scroll-hint__line"></div> <span>Scroll</span> </div> </section> <!-- REALITY STRIP --> <div class="reality"> <p class="reality__label">Was viele kennen</p> <div class="reality__items"> <div class="reality__item">Arbeit, die Rechnungen bezahlt – aber keinen Sinn gibt.</div> <div class="reality__item">Finanzielle Sorgen, die sich direkt auf Gesundheit und Wohlbefinden auswirken.</div> <div class="reality__item">Das leise Gefühl: Da müsste noch mehr sein.</div> </div> </div> <!-- ÜBER MICH --> <section class="about" id="ueber"> <div class="about__inner"> <div class="reveal"> <img src="David Müller.jpg" alt="David Müller" class="about__img"> </div> <div class="reveal reveal-d1"> <div class="section-tag">Wer ich bin</div> <h2>Ich kenne dieses Gefühl.</h2> <p>Fast 20 Jahre in der Bankenwelt. Aufgestiegen, Verantwortung getragen, gut verdient. Und trotzdem: irgendwann war da mehr Zahlen als Mensch.</p> <p>Als meine Entscheidungen nicht mehr zu meinen Werten gepasst haben, habe ich die Reißleine gezogen.</p> <p>Heute arbeite ich aus dem Herzen – mit einem Konzept, das Gesundheit und <strong>echte finanzielle Freiheit</strong> verbindet. Und ich begleite Menschen, die denselben Schritt wagen wollen.</p> <div class="about__quote">„Ehrlich. Ohne Druck. Auf Augenhöhe."</div> </div> </div> </section> <!-- VISION / ANGEBOT --> <section class="vision" id="vision"> <div class="vision__inner"> <div class="vision__story reveal"> <img src="Verbindung.png" alt="Verwurzelt in der Natur" class="vision__story-img"> </div> <div class="vision__intro reveal"> <div class="section-tag section-tag--center">Was ich anbiete</div> <h2 class="vision__headline"> Ein Weg, der wirklich<br><em>dir gehört.</em> </h2> <p class="vision__lead">Kein Schema. Kein Druck. Nur deine Ziele.</p> </div> <div class="vision__cards"> <div class="vision__card reveal"> <div class="vision__card-num">01</div> <h4>Einstieg ohne Risiko.</h4> <p>Ein einmaliges Starterkit – keine laufenden Kosten. Dazu eine kostenlose Lernplattform und regelmäßige Seminare. Du startest mit allem, was du brauchst.</p> </div> <div class="vision__card reveal reveal-d1"> <div class="vision__card-num">02</div> <h4>Begleitung, die zu dir passt.</h4> <p>Ich arbeite mit dir – nicht für dich. Deine Ziele bestimmen den Weg. Ich bringe die Struktur, das Netzwerk und die Idee mit, die es dafür braucht.</p> </div> <div class="vision__card reveal reveal-d2"> <div class="vision__card-num">03</div> <h4>Freiheit als Ergebnis.</h4> <p>Kein Sprint. Aber ein stabiles, wiederkehrendes Einkommen, das dir Optionen gibt. Mehr Zeit. Mehr Entscheidungsfreiheit. Mehr Leben.</p> </div> </div> <div class="vision__close reveal"> <h3>Das ist kein schnelles Geld.<br><em>Es ist ein ehrlicher Marathon.</em></h3> <p>Für Menschen, die spüren, dass ihre Zeit für mehr da ist – und bereit sind, den ersten Schritt zu machen.</p> <a href="#kontakt" class="btn-outline-light">Lass uns sprechen</a> </div> </div> </section> <!-- NÄHRSTOFFANALYSE --> <section class="analyse" id="analyse"> <div class="analyse__inner"> <div class="analyse__intro reveal"> <div> <div class="section-tag">Das Produkt dahinter</div> <h2>Gesundheit beginnt<br>mit <em>Klarheit.</em></h2> </div> <div> <p class="analyse__lead">Das Konzept steht auf einem echten Fundament: messbare Nährstoffwerte, hochwertige Produkte und einfache Routinen für den Alltag.</p> <p class="analyse__lead">Kein Trend. Kein Hype. Sondern Wissenschaft, die man spürt.</p> </div> </div> <div class="analyse__cards"> <div class="analyse__card reveal"> <div class="analyse__card-img"><img src="TestOmega.jpg" alt="Omega-3 Analyse"></div> <div class="analyse__card-body"> <div class="analyse__card-tag">Schritt 1</div> <h3>Omega-3 Analyse</h3> <p>Misst deinen persönlichen Omega-3-Status – die Basis für Zellgesundheit, Entzündungsregulation und mentale Klarheit.</p> <div class="card-links"> <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Produkt ansehen →</a> <a href="https://eqology.com/de/lifestyle/theme/omega-3-more-info" target="_blank" rel="noopener" class="card-link card-link--info">Was ist Omega-3?</a> </div> </div> </div> <div class="analyse__card reveal reveal-d1"> <div class="analyse__card-img"><img src="Test K2D3.jpg" alt="Vitamin D3 & K2 Test"></div> <div class="analyse__card-body"> <div class="analyse__card-tag">Schritt 2</div> <h3>Vitamin D3 &amp; K2 Test</h3> <p>D3 und K2 – selten im Fokus, aber entscheidend für Knochen, Immunsystem und Energie.</p> <div class="card-links"> <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Produkt ansehen →</a> </div> </div> </div> <div class="analyse__card reveal reveal-d2"> <div class="analyse__card-img"><img src="Öle.jpg" alt="Umsetzung"></div> <div class="analyse__card-body"> <div class="analyse__card-tag">Schritt 3</div> <h3>Umsetzung im Alltag</h3> <p>Klare, alltagstaugliche Routinen – damit aus Wissen echte Veränderung wird.</p> <div class="card-links"> <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Produkte ansehen →</a> </div> </div> </div> </div> </div> </section> <!-- WEBINARE --> <section class="webinare" id="webinare"> <div class="webinare__inner"> <div class="webinare__layout"> <div class="reveal"> <div class="section-tag section-tag--light">Kostenloses Wissen</div> <div class="webinare__badge">🎁 Gratis · Keine Verpflichtung</div> <h2>Webinare von Experten –<br><em>für dich kostenlos.</em></h2> <p class="webinare__desc">Diese Webinare würden normalerweise viel Geld kosten. Wir verschenken sie – weil wir glauben, dass mehr Wissen über Gesundheit der Gesellschaft gut tut. Kein Haken. Schreib mir einfach.</p> </div> <div class="reveal reveal-d1"> <div class="webinare__topics"> <div class="webinare__topic"> <div class="webinare__topic-icon">❤️</div> <div> <h4>Herz &amp; Energie mit Omega-3</h4> <p>Wie Fettsäuren Herz und Vitalität schützen.</p> </div> </div> <div class="webinare__topic"> <div class="webinare__topic-icon">🌿</div> <div> <h4>Darmgesundheit</h4> <p>Warum der Darm das Zentrum deiner Gesundheit ist.</p> </div> </div> <div class="webinare__topic"> <div class="webinare__topic-icon">🦋</div> <div> <h4>Schilddrüsengesundheit</h4> <p>Symptome verstehen, natürlich unterstützen.</p> </div> </div> </div> <p class="webinare__more">+ Migräne, Rheuma, Wechseljahre, Energie, Kollagen, Kinder &amp; Nährstoffe u.v.m.</p> <div class="webinare__cta"> <h3>Welches Thema interessiert dich?</h3> <p>Ein kurzes WhatsApp – ich schicke dir das passende Video sofort und kostenlos.</p> <a href="https://wa.me/4917622247477" class="btn-whatsapp" target="_blank" rel="noopener"> <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Jetzt auf WhatsApp schreiben </a> </div> </div> </div> </div> </section> <!-- CTA --> <section class="cta" id="kontakt"> <div class="cta__label">Nächster Schritt</div> <h2>Wenn du spürst,<br>dass da mehr möglich ist</h2> <p>Ein Gespräch. Unverbindlich. Auf Augenhöhe.</p> <a href="mailto:eq-david@gmx.de" class="btn-cta">Termin anfragen</a> </section> <!-- FOOTER --> <footer class="footer"> <p>© 2026 David Müller · Independent Business Partner der Firma Eqology</p> <div class="footer__nav"> <button onclick="openModal('impressum')">Impressum</button> <button onclick="openModal('datenschutz')">Datenschutz</button> </div> <p class="footer__affiliate">* Partnerlinks: Bei einer Bestellung über diese Links erhalte ich eine Provision – für dich entstehen keine Mehrkosten.</p> </footer> <script> const nav = document.getElementById("nav"); window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", window.scrollY > 50); }, { passive: true }); const burger = document.getElementById("burger"); const mobileMenu = document.getElementById("mobileMenu"); function openMenu() { burger.classList.add("active"); mobileMenu.classList.add("open"); mobileMenu.setAttribute("aria-hidden", "false"); burger.setAttribute("aria-expanded", "true"); document.body.classList.add("menu-open"); } function closeMenu() { burger.classList.remove("active"); mobileMenu.classList.remove("open"); mobileMenu.setAttribute("aria-hidden", "true"); burger.setAttribute("aria-expanded", "false"); document.body.classList.remove("menu-open"); } burger.addEventListener("click", () => { mobileMenu.classList.contains("open") ? closeMenu() : openMenu(); }); function openModal(id) { document.getElementById(id + "Backdrop").classList.add("open"); document.body.classList.add("menu-open"); } function closeModal(id) { document.getElementById(id + "Backdrop").classList.remove("open"); document.body.classList.remove("menu-open"); } document.querySelectorAll(".modal-backdrop").forEach(backdrop => { backdrop.addEventListener("click", (e) => { if (e.target === backdrop) { backdrop.classList.remove("open"); document.body.classList.remove("menu-open"); } }); }); document.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeMenu(); closeModal("impressum"); closeModal("datenschutz"); } }); const revealEls = document.querySelectorAll(".reveal"); const ro = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); ro.unobserve(e.target); } }); }, { threshold: 0.1 }); revealEls.forEach(el => ro.observe(el)); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>David Müller – Gesundheit, Natur & Freiheit</title>
+<meta name="description" content="David Müller – Gesundheitscoach & Business Partner. Ein ehrlicher Weg zu mehr Gesundheit und Freiheit.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest: #2E4A3E; --sage: #4A6B5D; --mist: #8FA99E;
+  --cream: #F7F4EF; --warm: #EDE8DF; --dark: #1A2E26;
+  --gold: #C4A882; --text: #2C3830; --text-mid: #5A6E65;
+  --text-soft: #8FA99E;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--cream); color: var(--text);
+  font-family: var(--sans); line-height: 1.7;
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+img { display: block; width: 100%; }
+a { text-decoration: none; color: inherit; }
+a, button { min-height: 44px; }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.1rem 1.25rem;
+  transition: background 0.35s, padding 0.35s;
+}
+.nav.scrolled {
+  background: rgba(26,46,38,0.97);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  padding: 0.85rem 1.25rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+.nav__logo { font-family: var(--serif); font-size: 1.1rem; color: #fff; z-index: 310; position: relative; }
+.nav__links { display: none; }
+.nav__cta-desktop { display: none; }
+.nav__burger {
+  display: flex; flex-direction: column; justify-content: center; gap: 5px;
+  width: 44px; height: 44px; padding: 10px;
+  background: none; border: none; cursor: pointer; z-index: 310;
+}
+.nav__burger span {
+  display: block; width: 22px; height: 1.5px; background: #fff; border-radius: 2px;
+  transition: transform 0.35s ease, opacity 0.35s ease; transform-origin: center;
+}
+.nav__burger.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav__burger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav__burger.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 200;
+  background: var(--dark);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 2rem 2rem 4rem;
+  opacity: 0; pointer-events: none; transform: translateY(-12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.mobile-menu.open { opacity: 1; pointer-events: all; transform: translateY(0); }
+body.menu-open { overflow: hidden; }
+.mobile-menu__label {
+  font-size: 0.62rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--mist); margin-bottom: 2.5rem;
+}
+.mobile-menu__nav { list-style: none; }
+.mobile-menu__nav li {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  opacity: 0; transform: translateX(-16px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.mobile-menu__nav li:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.mobile-menu.open .mobile-menu__nav li:nth-child(1) { opacity:1; transform:none; transition-delay:0.10s; }
+.mobile-menu.open .mobile-menu__nav li:nth-child(2) { opacity:1; transform:none; transition-delay:0.17s; }
+.mobile-menu.open .mobile-menu__nav li:nth-child(3) { opacity:1; transform:none; transition-delay:0.24s; }
+.mobile-menu.open .mobile-menu__nav li:nth-child(4) { opacity:1; transform:none; transition-delay:0.31s; }
+.mobile-menu__nav a {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 0;
+  font-family: var(--serif); font-size: 1.55rem; color: rgba(255,255,255,0.85);
+  transition: color 0.25s;
+}
+.mobile-menu__nav a:hover { color: var(--gold); }
+.mobile-menu__nav .arrow { font-size: 1rem; color: var(--mist); transition: transform 0.25s, color 0.25s; }
+.mobile-menu__nav a:hover .arrow { transform: translateX(4px); color: var(--gold); }
+.mobile-menu__cta-wrap { opacity:0; transform:translateY(8px); transition: opacity 0.35s ease 0.35s, transform 0.35s ease 0.35s; }
+.mobile-menu.open .mobile-menu__cta-wrap { opacity:1; transform:none; }
+.mobile-menu__cta {
+  margin-top: 2.5rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--dark); background: var(--gold);
+  padding: 1rem 2rem; border-radius: 2px; min-height: 52px;
+  transition: background 0.3s; align-self: flex-start;
+}
+.mobile-menu__footer { margin-top: auto; padding-top: 2rem; font-size: 0.75rem; color: rgba(255,255,255,0.2); }
+
+/* HERO */
+.hero {
+  min-height: 100svh; position: relative;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding-bottom: 4.5rem;
+}
+.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(18,36,28,0.4) 0%, rgba(18,36,28,0.72) 45%, rgba(18,36,28,0.93) 100%);
+}
+.hero__content { position: relative; z-index: 2; padding: 5rem 1.25rem 0; }
+.hero__words {
+  display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 1.1rem;
+}
+.hero__word {
+  font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.hero__word + .hero__word::before { content: " · "; color: var(--gold); }
+.hero__title {
+  font-family: var(--serif); font-size: clamp(1.7rem, 6.5vw, 2.4rem);
+  font-weight: 400; line-height: 1.22; color: #fff; margin-bottom: 1.25rem;
+}
+.hero__title .break { display: block; margin: 1.2rem 0; }
+.hero__title em { font-style: italic; color: rgba(255,255,255,0.65); }
+.hero__sub {
+  font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.6);
+  margin-bottom: 2rem; line-height: 1.8; max-width: 340px;
+}
+.btn-gold {
+  display: inline-flex; align-items: center;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--dark); background: var(--gold);
+  padding: 0.9rem 1.8rem; border-radius: 2px; min-height: 48px; transition: all 0.3s;
+}
+.btn-gold:hover { background: #d4b892; transform: translateY(-2px); }
+.scroll-hint { display: none; }
+
+/* UTILITIES */
+.section-tag {
+  font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-soft); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.section-tag::before { content: ""; display: block; width: 1.25rem; height: 1px; background: var(--text-soft); flex-shrink: 0; }
+.section-tag--light { color: var(--mist); }
+.section-tag--light::before { background: var(--mist); }
+.section-tag--center { justify-content: center; }
+.section-tag--center::before { display: none; }
+
+/* REALITY STRIP */
+.reality { background: var(--dark); padding: 3rem 1.25rem; }
+.reality__label {
+  font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--mist); margin-bottom: 2rem;
+}
+.reality__items { display: flex; flex-direction: column; gap: 1.25rem; }
+.reality__item {
+  font-family: var(--serif); font-size: 1.35rem; font-weight: 400;
+  color: rgba(255,255,255,0.82); line-height: 1.3;
+  padding-left: 1rem; border-left: 2px solid var(--gold);
+}
+
+/* ÜBER MICH */
+.about { background: var(--cream); padding: 4rem 1.25rem; }
+.about__img {
+  width: 100%; height: 300px; border-radius: 4px;
+  object-fit: cover; object-position: top; margin-bottom: 2rem;
+}
+.about h2 {
+  font-family: var(--serif); font-size: clamp(1.6rem,5.5vw,2.2rem);
+  font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1.25rem;
+}
+.about p { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 1rem; line-height: 1.9; }
+.about p strong { color: var(--dark); font-weight: 600; }
+.about__quote {
+  margin-top: 1.75rem; padding-top: 1.75rem;
+  border-top: 1px solid rgba(46,74,62,0.12);
+  font-family: var(--serif); font-style: italic;
+  font-size: 1.05rem; color: var(--sage); line-height: 1.6;
+}
+
+/* VISION */
+.vision { background: var(--warm); padding: 4rem 1.25rem; }
+.vision__story-img {
+  width: 100%; height: auto; border-radius: 4px;
+  object-fit: contain; background: transparent;
+  margin-bottom: 2rem; display: block;
+}
+.vision__intro { text-align: center; margin-bottom: 2.5rem; }
+.vision__headline {
+  font-family: var(--serif); font-size: clamp(1.65rem,6vw,2.2rem);
+  font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1rem;
+}
+.vision__headline em { font-style: italic; color: var(--sage); }
+.vision__lead { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; max-width: 300px; margin: 0 auto; }
+.vision__cards { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+.vision__card {
+  background: #fff; border-radius: 4px; padding: 1.75rem 1.5rem;
+  border-left: 3px solid var(--gold); box-shadow: 0 2px 12px rgba(46,74,62,0.05);
+}
+.vision__card-num {
+  font-family: var(--serif); font-size: 1.6rem;
+  color: rgba(143,169,158,0.22); font-weight: 600; line-height: 1; margin-bottom: 0.75rem;
+}
+.vision__card h4 { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--dark); margin-bottom: 0.6rem; }
+.vision__card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.82; }
+.vision__close {
+  background: var(--dark); border-radius: 4px; padding: 2.25rem 1.5rem; text-align: center;
+}
+.vision__close h3 {
+  font-family: var(--serif); font-size: 1.4rem; font-weight: 400;
+  line-height: 1.35; color: #fff; margin-bottom: 0.85rem;
+}
+.vision__close h3 em { font-style: italic; color: var(--gold); }
+.vision__close p { font-size: 0.88rem; color: rgba(255,255,255,0.52); line-height: 1.85; margin-bottom: 1.5rem; }
+.btn-outline-light {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #fff; border: 1.5px solid rgba(255,255,255,0.35);
+  padding: 0.85rem 1.75rem; border-radius: 2px; min-height: 48px; transition: all 0.3s;
+}
+.btn-outline-light:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+
+/* NÄHRSTOFFANALYSE */
+.analyse { background: var(--cream); padding: 4rem 1.25rem; }
+.analyse__intro { margin-bottom: 2rem; }
+.analyse h2 {
+  font-family: var(--serif); font-size: clamp(1.65rem,6vw,2.3rem);
+  font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1rem;
+}
+.analyse h2 em { font-style: italic; color: var(--sage); }
+.analyse__lead { font-size: 0.93rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 0.65rem; }
+.analyse__cards { display: flex; flex-direction: column; gap: 1.25rem; }
+.analyse__card { background: #fff; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 16px rgba(46,74,62,0.07); }
+.analyse__card-img { width: 100%; height: 190px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 1rem; overflow: hidden; }
+.analyse__card-img img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s ease; }
+.analyse__card:hover .analyse__card-img img { transform: scale(1.04); }
+.analyse__card-body { padding: 1.3rem; }
+.analyse__card-tag { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mist); margin-bottom: 0.35rem; }
+.analyse__card-body h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--dark); margin-bottom: 0.45rem; }
+.analyse__card-body p { font-size: 0.84rem; color: var(--text-mid); line-height: 1.75; }
+.card-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.85rem; }
+.card-link {
+  display: inline-flex; align-items: center;
+  font-size: 0.76rem; font-weight: 600; letter-spacing: 0.06em;
+  color: var(--sage); border-bottom: 1px solid var(--mist); padding-bottom: 1px;
+  transition: color 0.25s, border-color 0.25s; min-height: auto;
+}
+.card-link:hover { color: var(--forest); border-color: var(--forest); }
+.card-link--info { color: var(--text-mid); border-color: rgba(143,169,158,0.35); }
+.card-link--info:hover { color: var(--forest); border-color: var(--forest); }
+
+/* WEBINARE */
+.webinare { background: var(--forest); padding: 4rem 1.25rem; color: #fff; }
+.webinare .section-tag { color: var(--mist); }
+.webinare .section-tag::before { background: var(--mist); }
+.webinare__badge {
+  display: inline-block; font-size: 0.7rem; font-weight: 600;
+  background: rgba(196,168,130,0.15); color: var(--gold);
+  border: 1px solid rgba(196,168,130,0.3);
+  padding: 0.3rem 0.85rem; border-radius: 20px; margin-bottom: 1.1rem;
+}
+.webinare h2 {
+  font-family: var(--serif); font-size: clamp(1.6rem,6vw,2.3rem);
+  font-weight: 400; line-height: 1.28; color: #fff; margin-bottom: 1rem;
+}
+.webinare h2 em { font-style: italic; color: var(--gold); }
+.webinare__desc { font-size: 0.93rem; color: rgba(255,255,255,0.58); line-height: 1.85; margin-bottom: 2rem; }
+.webinare__topics { display: flex; flex-direction: column; }
+.webinare__topic {
+  display: flex; gap: 0.85rem; align-items: flex-start;
+  padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.webinare__topic:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.webinare__topic-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.05rem; }
+.webinare__topic h4 { font-family: var(--serif); font-size: 0.97rem; font-weight: 600; color: #fff; margin-bottom: 0.15rem; }
+.webinare__topic p { font-size: 0.81rem; color: rgba(255,255,255,0.48); line-height: 1.6; }
+.webinare__more { font-size: 0.8rem; color: rgba(255,255,255,0.35); font-style: italic; margin: 1.5rem 0 2rem; line-height: 1.7; }
+.webinare__cta {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px; padding: 1.5rem; text-align: center;
+}
+.webinare__cta h3 { font-family: var(--serif); font-size: 1.2rem; color: #fff; margin-bottom: 0.6rem; font-weight: 400; }
+.webinare__cta p { font-size: 0.86rem; color: rgba(255,255,255,0.52); line-height: 1.8; margin-bottom: 1.25rem; }
+.btn-whatsapp {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #fff; background: #25D366;
+  padding: 1rem 1.5rem; border-radius: 2px; min-height: 52px;
+  transition: all 0.3s; width: 100%;
+}
+.btn-whatsapp:hover { background: #1fb855; transform: translateY(-2px); }
+
+/* CTA */
+.cta {
+  background: var(--sage); padding: 4rem 1.25rem;
+  text-align: center; position: relative; overflow: hidden;
+}
+.cta::before {
+  content: ""; position: absolute; top: -40%; left: -30%; width: 80%; height: 180%;
+  background: radial-gradient(ellipse, rgba(196,168,130,0.1) 0%, transparent 65%); pointer-events: none;
+}
+.cta__label {
+  font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.85rem;
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+}
+.cta__label::before, .cta__label::after { content: ""; display: block; width: 1.25rem; height: 1px; background: var(--gold); }
+.cta h2 {
+  font-family: var(--serif); font-size: clamp(1.45rem,6vw,2.1rem);
+  font-weight: 400; color: #fff; line-height: 1.3; margin-bottom: 0.85rem;
+}
+.cta p { font-size: 0.9rem; color: rgba(255,255,255,0.52); margin-bottom: 1.75rem; }
+.btn-cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--dark); background: var(--gold);
+  padding: 1rem 2rem; border-radius: 2px; min-height: 52px;
+  transition: all 0.3s; width: 100%; max-width: 260px;
+}
+.btn-cta:hover { background: #d4b892; transform: translateY(-2px); }
+
+/* FOOTER */
+.footer {
+  background: var(--dark); color: rgba(255,255,255,0.32);
+  padding: 2rem 1.25rem; text-align: center; font-size: 0.76rem;
+}
+.footer__nav { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.85rem; flex-wrap: wrap; }
+.footer__nav button {
+  background: none; border: none; cursor: pointer;
+  font-size: 0.73rem; color: rgba(255,255,255,0.38); font-family: var(--sans);
+  padding: 0.25rem 0; min-height: auto; transition: color 0.25s; text-decoration: underline;
+}
+.footer__nav button:hover { color: var(--gold); }
+.footer__affiliate { margin-top: 1rem; font-size: 0.66rem; opacity: 0.38; line-height: 1.6; }
+
+/* MODALS */
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,0.7);
+  display: flex; align-items: flex-end;
+  opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
+}
+.modal-backdrop.open { opacity: 1; pointer-events: all; }
+.modal {
+  background: var(--cream); width: 100%; max-height: 88vh; overflow-y: auto;
+  border-radius: 16px 16px 0 0; padding: 2rem 1.5rem 3rem;
+  transform: translateY(40px); transition: transform 0.35s ease;
+}
+.modal-backdrop.open .modal { transform: translateY(0); }
+.modal__header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 1.5rem; padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(46,74,62,0.1);
+}
+.modal__header h2 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--dark); }
+.modal__close {
+  background: none; border: none; cursor: pointer; font-size: 1.4rem;
+  color: var(--text-mid); min-height: auto; width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: background 0.2s;
+}
+.modal__close:hover { background: rgba(0,0,0,0.06); }
+.modal__body h3 { font-family: var(--serif); font-size: 1.05rem; color: var(--dark); margin: 1.5rem 0 0.5rem; font-weight: 600; }
+.modal__body p { font-size: 0.87rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 0.75rem; }
+.modal__body a { color: var(--sage); text-decoration: underline; }
+
+/* ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .nav { padding: 1.4rem 2rem; }
+  .nav.scrolled { padding: 1rem 2rem; }
+  .nav__burger { display: none; }
+  .mobile-menu { display: none; }
+  .nav__links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav__links a {
+    font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7); transition: color 0.3s; display: flex; align-items: center;
+  }
+  .nav__links a:hover { color: #fff; }
+  .nav__cta-desktop {
+    display: flex; align-items: center; font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--gold);
+    padding: 0.55rem 1.2rem; border-radius: 2px; transition: background 0.3s; min-height: 36px;
+  }
+  .nav__cta-desktop:hover { background: #d4b892; }
+
+  .hero { padding-bottom: 7rem; }
+  .hero__overlay { background: linear-gradient(to right, rgba(18,36,28,0.88) 0%, rgba(18,36,28,0.5) 55%, rgba(18,36,28,0.08) 100%); }
+  .hero__content { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .hero__title { font-size: clamp(2.2rem, 4vw, 3.5rem); }
+  .hero__sub { max-width: 460px; }
+
+  .reality { padding: 4.5rem 2rem; }
+  .reality__items { flex-direction: row; justify-content: center; gap: 3.5rem; }
+  .reality__item { border-left: none; padding-left: 0; border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; max-width: 260px; }
+
+  .about { padding: 6rem 2rem; }
+  .about__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+  .about__img { height: 500px; margin-bottom: 0; }
+
+  .vision { padding: 6rem 2rem; }
+  .vision__story-img { height: auto; margin-bottom: 2.5rem; }
+  .vision__inner { max-width: 1100px; margin: 0 auto; }
+  .vision__intro { margin-bottom: 3rem; }
+  .vision__cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 2.5rem; }
+  .vision__close { max-width: 1100px; margin: 0 auto; padding: 3rem; }
+
+  .analyse { padding: 6rem 2rem; }
+  .analyse__inner { max-width: 1100px; margin: 0 auto; }
+  .analyse__intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 3rem; }
+  .analyse__cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+  .analyse__card-img { height: 210px; }
+
+  .webinare { padding: 6rem 2rem; }
+  .webinare__inner { max-width: 1100px; margin: 0 auto; }
+  .webinare__layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .webinare__cta { text-align: left; }
+  .btn-whatsapp { width: auto; }
+
+  .cta { padding: 6rem 2rem; }
+  .btn-cta { width: auto; }
+
+  .modal { max-width: 640px; margin: auto; border-radius: 8px; align-self: center; }
+  .modal-backdrop { align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- IMPRESSUM MODAL -->
+<div class="modal-backdrop" id="impressumBackdrop">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal__header">
+      <h2>Impressum</h2>
+      <button class="modal__close" onclick="closeModal('impressum')" aria-label="Schließen">✕</button>
+    </div>
+    <div class="modal__body">
+      <h3>Angaben gemäß § 5 TMG</h3>
+      <p>David Müller<br>Trillerstraße 10<br>08066 Zwickau</p>
+      <h3>Kontakt</h3>
+      <p>E-Mail: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a><br>
+      WhatsApp: <a href="https://wa.me/4917622247477">+49 176 22247477</a></p>
+      <h3>Tätigkeitshinweis</h3>
+      <p>David Müller ist als selbstständiger Gesundheitscoach und unabhängiger Business Partner tätig. Die Inhalte dieser Website dienen ausschließlich der allgemeinen Information und stellen keine medizinische Beratung dar.</p>
+      <h3>Haftung für Inhalte</h3>
+      <p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
+      <h3>Haftung für Links</h3>
+      <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe.</p>
+      <h3>Partnerlink-Hinweis</h3>
+      <p>Diese Website enthält Affiliate-Links zu Eqology. Bei einem Kauf über diese Links erhalte ich eine Provision. Für den Käufer entstehen keine zusätzlichen Kosten.</p>
+    </div>
+  </div>
+</div>
+
+<!-- DATENSCHUTZ MODAL -->
+<div class="modal-backdrop" id="datenschutzBackdrop">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal__header">
+      <h2>Datenschutzerklärung</h2>
+      <button class="modal__close" onclick="closeModal('datenschutz')" aria-label="Schließen">✕</button>
+    </div>
+    <div class="modal__body">
+      <h3>1. Verantwortlicher</h3>
+      <p>David Müller, Trillerstraße 10, 08066 Zwickau<br>
+      E-Mail: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a></p>
+      <h3>2. Erhebung personenbezogener Daten</h3>
+      <p>Diese Website erhebt beim Besuch automatisch technische Daten (Server-Logfiles) wie IP-Adresse, Datum/Uhrzeit und Browsertyp. Diese Daten werden nicht mit anderen Quellen zusammengeführt.</p>
+      <h3>3. Kontaktaufnahme per E-Mail oder WhatsApp</h3>
+      <p>Wenn Sie mich kontaktieren, werden die übermittelten Daten zur Bearbeitung gespeichert. Eine Weitergabe an Dritte erfolgt nicht.</p>
+      <h3>4. Terminbuchung</h3>
+      <p>Für die Terminbuchung wird perspektivisch ein externes Tool eingebunden. Hierüber informieren wir gesondert.</p>
+      <h3>5. Affiliate-Links</h3>
+      <p>Diese Website enthält Links zum Eqology-Partnerprogramm. Beim Klick werden technische Daten an Eqology übertragen. Weitere Infos: <a href="https://www.eqology.com" target="_blank" rel="noopener">eqology.com</a>.</p>
+      <h3>6. Google Fonts</h3>
+      <p>Diese Website lädt Schriftarten von Google Fonts. Dabei wird Ihre IP-Adresse an Google übertragen. Infos: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+      <h3>7. Ihre Rechte</h3>
+      <p>Sie haben das Recht auf Auskunft, Berichtigung und Löschung. Kontakt: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a></p>
+      <h3>8. Keine Cookies / kein Tracking</h3>
+      <p>Diese Website verwendet keine eigenen Cookies und kein Tracking.</p>
+      <h3>9. Aktualität</h3>
+      <p>Stand: Mai 2025.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <p class="mobile-menu__label">Navigation</p>
+  <ul class="mobile-menu__nav">
+    <li><a href="#vision" onclick="closeMenu()">Mein Angebot <span class="arrow">→</span></a></li>
+    <li><a href="#ueber" onclick="closeMenu()">Über mich <span class="arrow">→</span></a></li>
+    <li><a href="#webinare" onclick="closeMenu()">Gratis Webinare <span class="arrow">→</span></a></li>
+    <li><a href="#analyse" onclick="closeMenu()">Nährstoffe <span class="arrow">→</span></a></li>
+  </ul>
+  <div class="mobile-menu__cta-wrap">
+    <a href="#kontakt" class="mobile-menu__cta" onclick="closeMenu()">Termin anfragen</a>
+  </div>
+  <div class="mobile-menu__footer">© 2026 David Müller</div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__logo">David Müller</div>
+  <ul class="nav__links">
+    <li><a href="#vision">Mein Angebot</a></li>
+    <li><a href="#ueber">Über mich</a></li>
+    <li><a href="#webinare">Gratis Webinare</a></li>
+    <li><a href="#analyse">Nährstoffe</a></li>
+  </ul>
+  <a href="#kontakt" class="nav__cta-desktop">Termin</a>
+  <button class="nav__burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="Hintergrund.png" alt="Natur" class="hero__bg">
+  <div class="hero__overlay"></div>
+  <div class="hero__content reveal">
+    <div class="hero__words">
+      <span class="hero__word">Gesundheit</span>
+      <span class="hero__word">Natur</span>
+      <span class="hero__word">Freiheit</span>
+    </div>
+    <h1 class="hero__title">
+      Die meisten arbeiten ihr ganzes Leben<br>
+      <em>für Ziele, die nicht ihre eigenen sind.</em>
+      <span class="break"></span>
+      Ich habe mich entschieden,<br>
+      einen anderen Weg zu gehen.
+    </h1>
+    <p class="hero__sub">
+      Ich zeige dir, wie du mit einem bewährten Gesundheitskonzept
+      ein eigenes Standbein aufbaust –
+      ehrlich, strukturiert, ohne leere Versprechen.
+    </p>
+    <a href="#vision" class="btn-gold">Mehr erfahren</a>
+  </div>
+</section>
+
+<!-- REALITY STRIP -->
+<div class="reality">
+  <p class="reality__label">Was viele kennen</p>
+  <div class="reality__items">
+    <div class="reality__item">Arbeit, die Rechnungen bezahlt – aber keinen Sinn gibt.</div>
+    <div class="reality__item">Finanzielle Sorgen, die sich direkt auf Gesundheit und Wohlbefinden auswirken.</div>
+    <div class="reality__item">Das leise Gefühl: Da müsste noch mehr sein.</div>
+  </div>
+</div>
+
+<!-- ÜBER MICH -->
+<section class="about" id="ueber">
+  <div class="about__inner">
+    <div class="reveal">
+      <img src="David Müller.jpg" alt="David Müller" class="about__img">
+    </div>
+    <div class="reveal reveal-d1">
+      <div class="section-tag">Wer ich bin</div>
+      <h2>Ich kenne dieses Gefühl.</h2>
+      <p>Fast 20 Jahre in der Bankenwelt. Aufgestiegen, Verantwortung getragen, gut verdient. Und trotzdem: irgendwann war da mehr Zahlen als Mensch.</p>
+      <p>Als meine Entscheidungen nicht mehr zu meinen Werten gepasst haben, habe ich die Reißleine gezogen.</p>
+      <p>Heute arbeite ich aus dem Herzen – mit einem Konzept, das Gesundheit und <strong>echte finanzielle Freiheit</strong> verbindet. Und ich begleite Menschen, die denselben Schritt wagen wollen.</p>
+      <div class="about__quote">„Ehrlich. Ohne Druck. Auf Augenhöhe."</div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION / ANGEBOT -->
+<section class="vision" id="vision">
+  <div class="vision__inner">
+    <div class="vision__story reveal">
+      <img src="Verbindung.png" alt="Verwurzelt in der Natur" class="vision__story-img">
+    </div>
+    <div class="vision__intro reveal">
+      <div class="section-tag section-tag--center">Was ich anbiete</div>
+      <h2 class="vision__headline">
+        Ein Weg, der wirklich<br><em>dir gehört.</em>
+      </h2>
+      <p class="vision__lead">Kein Schema. Kein Druck. Nur deine Ziele.</p>
+    </div>
+
+    <div class="vision__cards">
+      <div class="vision__card reveal">
+        <div class="vision__card-num">01</div>
+        <h4>Einstieg ohne Risiko.</h4>
+        <p>Ein einmaliges Starterkit – keine laufenden Kosten. Dazu eine kostenlose Lernplattform und regelmäßige Seminare. Du startest mit allem, was du brauchst.</p>
+      </div>
+      <div class="vision__card reveal reveal-d1">
+        <div class="vision__card-num">02</div>
+        <h4>Begleitung, die zu dir passt.</h4>
+        <p>Ich arbeite mit dir – nicht für dich. Deine Ziele bestimmen den Weg. Ich bringe die Struktur, das Netzwerk und die Idee mit, die es dafür braucht.</p>
+      </div>
+      <div class="vision__card reveal reveal-d2">
+        <div class="vision__card-num">03</div>
+        <h4>Freiheit als Ergebnis.</h4>
+        <p>Kein Sprint. Aber ein stabiles, wiederkehrendes Einkommen, das dir Optionen gibt. Mehr Zeit. Mehr Entscheidungsfreiheit. Mehr Leben.</p>
+      </div>
+    </div>
+
+    <div class="vision__close reveal">
+      <h3>Das ist kein schnelles Geld.<br><em>Es ist ein ehrlicher Marathon.</em></h3>
+      <p>Für Menschen, die spüren, dass ihre Zeit für mehr da ist – und bereit sind, den ersten Schritt zu machen.</p>
+      <a href="#kontakt" class="btn-outline-light">Lass uns sprechen</a>
+    </div>
+  </div>
+</section>
+
+<!-- NÄHRSTOFFANALYSE -->
+<section class="analyse" id="analyse">
+  <div class="analyse__inner">
+    <div class="analyse__intro reveal">
+      <div>
+        <div class="section-tag">Das Produkt dahinter</div>
+        <h2>Gesundheit beginnt<br>mit <em>Klarheit.</em></h2>
+      </div>
+      <div>
+        <p class="analyse__lead">Das Konzept steht auf einem echten Fundament: messbare Nährstoffwerte, hochwertige Produkte und einfache Routinen für den Alltag.</p>
+        <p class="analyse__lead">Kein Trend. Kein Hype. Sondern Wissenschaft, die man spürt.</p>
+      </div>
+    </div>
+
+    <div class="analyse__cards">
+      <div class="analyse__card reveal">
+        <div class="analyse__card-img"><img src="TestOmega.jpg" alt="Omega-3 Analyse"></div>
+        <div class="analyse__card-body">
+          <div class="analyse__card-tag">Schritt 1</div>
+          <h3>Omega-3 Analyse</h3>
+          <p>Misst deinen persönlichen Omega-3-Status – die Basis für Zellgesundheit, Entzündungsregulation und mentale Klarheit.</p>
+          <div class="card-links">
+            <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Produkt ansehen →</a>
+            <a href="https://eqology.com/de/lifestyle/theme/omega-3-more-info" target="_blank" rel="noopener" class="card-link card-link--info">Was ist Omega-3?</a>
+          </div>
+        </div>
+      </div>
+      <div class="analyse__card reveal reveal-d1">
+        <div class="analyse__card-img"><img src="Test K2D3.jpg" alt="Vitamin D3 & K2 Test"></div>
+        <div class="analyse__card-body">
+          <div class="analyse__card-tag">Schritt 2</div>
+          <h3>Vitamin D3 &amp; K2 Test</h3>
+          <p>D3 und K2 – selten im Fokus, aber entscheidend für Knochen, Immunsystem und Energie.</p>
+          <div class="card-links">
+            <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Produkt ansehen →</a>
+          </div>
+        </div>
+      </div>
+      <div class="analyse__card reveal reveal-d2">
+        <div class="analyse__card-img"><img src="Öle.jpg" alt="Umsetzung"></div>
+        <div class="analyse__card-body">
+          <div class="analyse__card-tag">Schritt 3</div>
+          <h3>Umsetzung im Alltag</h3>
+          <p>Klare, alltagstaugliche Routinen – damit aus Wissen echte Veränderung wird.</p>
+          <div class="card-links">
+            <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Produkte ansehen →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEBINARE -->
+<section class="webinare" id="webinare">
+  <div class="webinare__inner">
+    <div class="webinare__layout">
+      <div class="reveal">
+        <div class="section-tag section-tag--light">Kostenloses Wissen</div>
+        <div class="webinare__badge">🎁 Gratis · Keine Verpflichtung</div>
+        <h2>Webinare von Experten –<br><em>für dich kostenlos.</em></h2>
+        <p class="webinare__desc">Diese Webinare würden normalerweise viel Geld kosten. Wir verschenken sie – weil wir glauben, dass mehr Wissen über Gesundheit der Gesellschaft gut tut. Kein Haken. Schreib mir einfach.</p>
+      </div>
+
+      <div class="reveal reveal-d1">
+        <div class="webinare__topics">
+          <div class="webinare__topic">
+            <div class="webinare__topic-icon">❤️</div>
+            <div>
+              <h4>Herz &amp; Energie mit Omega-3</h4>
+              <p>Wie Fettsäuren Herz und Vitalität schützen.</p>
+            </div>
+          </div>
+          <div class="webinare__topic">
+            <div class="webinare__topic-icon">🌿</div>
+            <div>
+              <h4>Darmgesundheit</h4>
+              <p>Warum der Darm das Zentrum deiner Gesundheit ist.</p>
+            </div>
+          </div>
+          <div class="webinare__topic">
+            <div class="webinare__topic-icon">🦋</div>
+            <div>
+              <h4>Schilddrüsengesundheit</h4>
+              <p>Symptome verstehen, natürlich unterstützen.</p>
+            </div>
+          </div>
+        </div>
+        <p class="webinare__more">+ Migräne, Rheuma, Wechseljahre, Energie, Kollagen, Kinder &amp; Nährstoffe u.v.m.</p>
+
+        <div class="webinare__cta">
+          <h3>Welches Thema interessiert dich?</h3>
+          <p>Ein kurzes WhatsApp – ich schicke dir das passende Video sofort und kostenlos.</p>
+          <a href="https://wa.me/4917622247477" class="btn-whatsapp" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Jetzt auf WhatsApp schreiben
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="kontakt">
+  <div class="cta__label">Nächster Schritt</div>
+  <h2>Wenn du spürst,<br>dass da mehr möglich ist</h2>
+  <p>Ein Gespräch. Unverbindlich. Auf Augenhöhe.</p>
+  <a href="mailto:eq-david@gmx.de" class="btn-cta">Termin anfragen</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 David Müller · Independent Business Partner der Firma Eqology</p>
+  <div class="footer__nav">
+    <button onclick="openModal('impressum')">Impressum</button>
+    <button onclick="openModal('datenschutz')">Datenschutz</button>
+  </div>
+  <p class="footer__affiliate">* Partnerlinks: Bei einer Bestellung über diese Links erhalte ich eine Provision – für dich entstehen keine Mehrkosten.</p>
+</footer>
+
+<script>
+  const nav = document.getElementById("nav");
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("scrolled", window.scrollY > 50);
+  }, { passive: true });
+
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  function openMenu() {
+    burger.classList.add("active");
+    mobileMenu.classList.add("open");
+    mobileMenu.setAttribute("aria-hidden", "false");
+    burger.setAttribute("aria-expanded", "true");
+    document.body.classList.add("menu-open");
+  }
+  function closeMenu() {
+    burger.classList.remove("active");
+    mobileMenu.classList.remove("open");
+    mobileMenu.setAttribute("aria-hidden", "true");
+    burger.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
+  }
+  burger.addEventListener("click", () => {
+    mobileMenu.classList.contains("open") ? closeMenu() : openMenu();
+  });
+
+  function openModal(id) {
+    document.getElementById(id + "Backdrop").classList.add("open");
+    document.body.classList.add("menu-open");
+  }
+  function closeModal(id) {
+    document.getElementById(id + "Backdrop").classList.remove("open");
+    document.body.classList.remove("menu-open");
+  }
+
+  document.querySelectorAll(".modal-backdrop").forEach(backdrop => {
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop) {
+        backdrop.classList.remove("open");
+        document.body.classList.remove("menu-open");
+      }
+    });
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeMenu();
+      closeModal("impressum");
+      closeModal("datenschutz");
+    }
+  });
+
+  const revealEls = document.querySelectorAll(".reveal");
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("visible"); ro.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => ro.observe(el));
+</script>
+</body>
+</html>
