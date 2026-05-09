@@ -126,6 +126,7 @@ body.menu-open { overflow: hidden; }
   font-family: var(--serif); font-size: clamp(1.7rem, 6.5vw, 2.4rem);
   font-weight: 400; line-height: 1.22; color: #fff; margin-bottom: 1.25rem;
 }
+.hero__title .break { display: block; margin: 1.2rem 0; }
 .hero__title em { font-style: italic; color: rgba(255,255,255,0.65); }
 .hero__sub {
   font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.6);
@@ -196,6 +197,11 @@ body.menu-open { overflow: hidden; }
 
 /* VISION */
 .vision { background: var(--warm); padding: 4rem 1.25rem; }
+.vision__story-img {
+  width: 100%; height: 220px; border-radius: 4px;
+  object-fit: cover; object-position: center 40%;
+  margin-bottom: 2rem; display: block;
+}
 .vision__intro { text-align: center; margin-bottom: 2.5rem; }
 .vision__headline {
   font-family: var(--serif); font-size: clamp(1.65rem,6vw,2.2rem);
@@ -416,6 +422,7 @@ body.menu-open { overflow: hidden; }
   .about__img { height: 500px; margin-bottom: 0; }
 
   .vision { padding: 6rem 2rem; }
+  .vision__story-img { height: 320px; margin-bottom: 2.5rem; }
   .vision__inner { max-width: 1100px; margin: 0 auto; }
   .vision__intro { margin-bottom: 3rem; }
   .vision__cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 2.5rem; }
@@ -511,7 +518,7 @@ body.menu-open { overflow: hidden; }
   <div class="mobile-menu__cta-wrap">
     <a href="#kontakt" class="mobile-menu__cta" onclick="closeMenu()">Termin anfragen</a>
   </div>
-  <div class="mobile-menu__footer">© 2025 David Müller</div>
+  <div class="mobile-menu__footer">© 2026 David Müller</div>
 </div>
 
 <!-- NAV -->
@@ -541,7 +548,8 @@ body.menu-open { overflow: hidden; }
     </div>
     <h1 class="hero__title">
       Die meisten arbeiten ihr ganzes Leben<br>
-      <em>für Ziele, die nicht ihre eigenen sind.</em><br><br>
+      <em>für Ziele, die nicht ihre eigenen sind.</em>
+      <span class="break"></span>
       Ich habe mich entschieden,<br>
       einen anderen Weg zu gehen.
     </h1>
@@ -563,6 +571,7 @@ body.menu-open { overflow: hidden; }
   <p class="reality__label">Was viele kennen</p>
   <div class="reality__items">
     <div class="reality__item">Arbeit, die Rechnungen bezahlt – aber keinen Sinn gibt.</div>
+    <div class="reality__item">Finanzielle Sorgen, die sich direkt auf Gesundheit und Wohlbefinden auswirken.</div>
     <div class="reality__item">Das leise Gefühl: Da müsste noch mehr sein.</div>
   </div>
 </div>
@@ -587,12 +596,15 @@ body.menu-open { overflow: hidden; }
 <!-- VISION / ANGEBOT -->
 <section class="vision" id="vision">
   <div class="vision__inner">
+    <div class="vision__story reveal">
+      <img src="Verbindung.png" alt="Verwurzelt in der Natur" class="vision__story-img">
+    </div>
     <div class="vision__intro reveal">
       <div class="section-tag section-tag--center">Was ich anbiete</div>
       <h2 class="vision__headline">
         Ein Weg, der wirklich<br><em>dir gehört.</em>
       </h2>
-      <p class="vision__lead">Kein Schema. Kein Druck. Nur ein ehrlicher Aufbau – gemeinsam.</p>
+      <p class="vision__lead">Kein Schema. Kein Druck. Nur deine Ziele.</p>
     </div>
 
     <div class="vision__cards">
@@ -604,7 +616,7 @@ body.menu-open { overflow: hidden; }
       <div class="vision__card reveal reveal-d1">
         <div class="vision__card-num">02</div>
         <h4>Begleitung, die zu dir passt.</h4>
-        <p>Ich arbeite mit dir – nicht für dich. Deine Ziele bestimmen den Weg. Ich bringe die Struktur, das Netzwerk und die Ehrlichkeit mit, die es dafür braucht.</p>
+        <p>Ich arbeite mit dir – nicht für dich. Deine Ziele bestimmen den Weg. Ich bringe die Struktur, das Netzwerk und die Idee mit, die es dafür braucht.</p>
       </div>
       <div class="vision__card reveal reveal-d2">
         <div class="vision__card-num">03</div>
@@ -734,7 +746,7 @@ body.menu-open { overflow: hidden; }
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2025 David Müller · Gesundheitscoach &amp; Business Partner</p>
+  <p>© 2026 David Müller · Independent Business Partner der Firma Eqology</p>
   <div class="footer__nav">
     <button onclick="openModal('impressum')">Impressum</button>
     <button onclick="openModal('datenschutz')">Datenschutz</button>
