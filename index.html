@@ -147,7 +147,8 @@ body.menu-open { overflow: hidden; }
 .hero__title { font-family: var(--serif); font-size: clamp(1.7rem, 6.5vw, 2.4rem); font-weight: 400; line-height: 1.22; color: #fff; margin-bottom: 1.25rem; }
 .hero__title .break { display: block; margin: 1.2rem 0; }
 .hero__title em { font-style: italic; color: rgba(255,255,255,0.65); }
-.hero__sub { font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.6); margin-bottom: 2rem; line-height: 1.8; max-width: 340px; }
+.hero__sub { font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.6); margin-bottom: 1rem; line-height: 1.8; max-width: 340px; }
+.hero__desc { font-size: 0.88rem; font-weight: 300; color: rgba(255,255,255,0.45); margin-bottom: 2rem; line-height: 1.85; max-width: 360px; }
 .btn-gold { display: inline-flex; align-items: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 0.9rem 1.8rem; border-radius: 2px; min-height: 48px; transition: all 0.3s; }
 .btn-gold:hover { background: #d4b892; transform: translateY(-2px); }
 .scroll-hint { display: none; }
@@ -310,6 +311,7 @@ body.menu-open { overflow: hidden; }
   .hero__content { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
   .hero__title { font-size: clamp(2.2rem, 4vw, 3.5rem); }
   .hero__sub { max-width: 460px; }
+  .hero__desc { max-width: 520px; }
   .reality { padding: 4.5rem 2rem; }
   .reality__items { flex-direction: row; justify-content: center; gap: 3.5rem; }
   .reality__item { border-left: none; padding-left: 0; border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; max-width: 260px; }
@@ -457,6 +459,7 @@ body.menu-open { overflow: hidden; }
       <span class="hero__word">Gesundheit</span>
       <span class="hero__word">Natur</span>
       <span class="hero__word">Freiheit</span>
+      <span class="hero__word">Eqology</span>
     </div>
     <h1 class="hero__title">
       Die meisten arbeiten ihr ganzes Leben<br>
@@ -468,6 +471,11 @@ body.menu-open { overflow: hidden; }
     <p class="hero__sub">
       Für deine eigenen Ziele. Ehrlich. Strukturiert. Ohne leere Versprechen.<br>
       Ich zeige dir, wie es geht.
+    </p>
+    <p class="hero__desc">
+      Ich bin unabhängiger Business Partner der Firma Eqology – überzeugt von deren Produkten,
+      und ich zeige Menschen, wie sie mit diesem Konzept ein stabiles Standbein aufbauen
+      und dabei Mehrwert für alle schaffen.
     </p>
     <a href="#vision" class="btn-gold">Mehr erfahren</a>
   </div>
@@ -498,7 +506,7 @@ body.menu-open { overflow: hidden; }
       <div class="vision__card reveal">
         <div class="vision__card-num">01</div>
         <h4>Einstieg ohne Risiko.</h4>
-        <p>Ein einmaliges Starterkit – keine laufenden Kosten. Dazu eine kostenlose Lernplattform und regelmäßige Seminare. Du startest mit allem, was du brauchst.</p>
+        <p>Ein einmaliges Eqology-Starterkit – keine laufenden Kosten. Dazu eine kostenlose Lernplattform und regelmäßige Seminare. Du startest mit allem, was du brauchst.</p>
       </div>
       <div class="vision__card reveal reveal-d1">
         <div class="vision__card-num">02</div>
@@ -513,7 +521,7 @@ body.menu-open { overflow: hidden; }
     </div>
     <div class="vision__close reveal">
       <h3>Das ist kein schnelles Geld.<br><em>Es ist ein ehrlicher Marathon.</em></h3>
-      <p>Ich suche die Richtigen – Menschen, die für sich und andere etwas bewegen wollen.</p>
+      <p>Ich suche die Richtigen – Menschen, die mit dem Eqology-Konzept für sich und andere etwas bewegen wollen. Wenn du dich angesprochen fühlst, lass uns reden.</p>
       <a href="#kontakt" class="btn-outline-light">Lass uns sprechen</a>
     </div>
   </div>
@@ -530,7 +538,8 @@ body.menu-open { overflow: hidden; }
       <h2>Ich kenne dieses Gefühl.</h2>
       <p>Fast 20 Jahre in der Bankenwelt. Aufgestiegen, Verantwortung getragen, gut verdient. Und trotzdem: irgendwann war da mehr Zahlen als Mensch.</p>
       <p>Als meine Entscheidungen nicht mehr zu meinen Werten gepasst haben, habe ich die Reißleine gezogen.</p>
-      <p>Heute zeige ich Menschen, wie sie sich mit einem bewährten Gesundheitskonzept ein <strong>stabiles Standbein aufbauen</strong> – und dabei Mehrwert für alle schaffen. Ich suche Menschen, die nicht nur konsumieren wollen, sondern bereit sind, selbst etwas aufzubauen.</p>
+      <p>Heute arbeite ich aus dem Herzen – als <strong>unabhängiger Business Partner der Firma Eqology</strong>. Bewusst. Überzeugt. Weil ich die Produkte selbst nutze und an das Konzept glaube.</p>
+      <p>Ich suche Menschen, die nicht nur konsumieren wollen, sondern bereit sind, selbst etwas aufzubauen. Menschen mit Haltung.</p>
       <div class="about__quote">„Ehrlich. Ohne Druck. Auf Augenhöhe."</div>
     </div>
   </div>
@@ -631,11 +640,11 @@ body.menu-open { overflow: hidden; }
   <div class="analyse__inner">
     <div class="analyse__intro reveal">
       <div>
-        <div class="section-tag">Das Fundament – die Produkte</div>
+        <div class="section-tag">Das Fundament – Eqology Produkte</div>
         <h2>Gesundheit beginnt<br>mit <em>Klarheit.</em></h2>
       </div>
       <div>
-        <p class="analyse__lead">Hinter jedem starken Angebot steht ein starkes Produkt. Das Fundament hier: messbare Nährstoffwerte, wissenschaftlich entwickelte Produkte und Routinen, die Menschen wirklich helfen.</p>
+        <p class="analyse__lead">Hinter diesem Konzept steht Eqology – ein norwegisches Unternehmen, das seit Jahren auf wissenschaftlich fundierte Nährstoffversorgung setzt. Messbar. Transparent. Wirksam.</p>
         <p class="analyse__lead">Kein Trend. Kein Hype. Wissenschaft, die man spürt – und mit der du glaubwürdig arbeitest.</p>
       </div>
     </div>
@@ -703,12 +712,9 @@ body.menu-open { overflow: hidden; }
     <button class="video-modal__close" onclick="closeVideo()" aria-label="Video schließen">✕</button>
     <div id="videoTitle" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.6);padding:0.6rem 1rem 0;letter-spacing:0.05em;"></div>
     <div class="video-modal__iframe-wrap">
-      <iframe id="videoFrame"
-        src=""
-        title="Gesundheitsvideo"
+      <iframe id="videoFrame" src="" title="Gesundheitsvideo"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+        allowfullscreen></iframe>
     </div>
   </div>
 </div>
