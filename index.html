@@ -19,7 +19,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "David Müller",
-  "jobTitle": "Gesundheitscoach & Eqology Independent Business Partner",
+  "jobTitle": "Gesundheitscoach & Eqology Business Partner",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Trillerstraße 10",
@@ -30,7 +30,7 @@
   "email": "eq-david@gmx.de",
   "url": "https://davidmeetsnature.github.io/",
   "sameAs": [],
-  "description": "Selbstständiger Gesundheitscoach und unabhängiger Eqology Business Partner aus Zwickau."
+  "description": "Gesundheitscoach und unabhängiger Eqology Business Partner aus Zwickau. Spezialisiert auf Omega-3 Beratung, Nährstoffanalyse und nachhaltigen Aufbau eines eigenen Standeins im Gesundheitsbereich."
 }
 </script>
 <style>
@@ -142,84 +142,127 @@ body.menu-open { overflow: hidden; }
 }
 .hero__content { position: relative; z-index: 2; padding: 5rem 1.25rem 0; }
 .hero__words { display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 1.1rem; }
-.hero__word { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.hero__word {
+  font-size: 0.6rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
 .hero__word + .hero__word::before { content: " · "; color: var(--gold); }
-.hero__title { font-family: var(--serif); font-size: clamp(1.7rem, 6.5vw, 2.4rem); font-weight: 400; line-height: 1.22; color: #fff; margin-bottom: 1.25rem; }
+.hero__title {
+  font-family: var(--serif); font-size: clamp(1.7rem, 6.5vw, 2.4rem);
+  font-weight: 400; line-height: 1.22; color: #fff; margin-bottom: 1.25rem;
+}
 .hero__title .break { display: block; margin: 1.2rem 0; }
 .hero__title em { font-style: italic; color: rgba(255,255,255,0.65); }
-.hero__sub { font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.6); margin-bottom: 1rem; line-height: 1.8; max-width: 340px; }
-.hero__desc { font-size: 0.88rem; font-weight: 300; color: rgba(255,255,255,0.45); margin-bottom: 2rem; line-height: 1.85; max-width: 360px; }
-.btn-gold { display: inline-flex; align-items: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 0.9rem 1.8rem; border-radius: 2px; min-height: 48px; transition: all 0.3s; }
+.hero__sub {
+  font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.6);
+  margin-bottom: 2rem; line-height: 1.8; max-width: 340px;
+}
+.btn-gold {
+  display: inline-flex; align-items: center;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--dark); background: var(--gold);
+  padding: 0.9rem 1.8rem; border-radius: 2px; min-height: 48px; transition: all 0.3s;
+}
 .btn-gold:hover { background: #d4b892; transform: translateY(-2px); }
 .scroll-hint { display: none; }
+.scroll-hint__line {
+  width: 1px; height: 2.5rem;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.28), transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }
 
 /* UTILITIES */
-.section-tag { font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-soft); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem; }
+.section-tag {
+  font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-soft); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
 .section-tag::before { content: ""; display: block; width: 1.25rem; height: 1px; background: var(--text-soft); flex-shrink: 0; }
 .section-tag--light { color: var(--mist); }
 .section-tag--light::before { background: var(--mist); }
 .section-tag--center { justify-content: center; }
 .section-tag--center::before { display: none; }
 
-/* REALITY */
+/* REALITY STRIP */
 .reality { background: var(--dark); padding: 3rem 1.25rem; }
-.reality__label { font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mist); margin-bottom: 2rem; }
+.reality__label {
+  font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--mist); margin-bottom: 2rem;
+}
 .reality__items { display: flex; flex-direction: column; gap: 1.25rem; }
-.reality__item { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; color: rgba(255,255,255,0.82); line-height: 1.3; padding-left: 1rem; border-left: 2px solid var(--gold); }
+.reality__item {
+  font-family: var(--serif); font-size: 1.35rem; font-weight: 400;
+  color: rgba(255,255,255,0.82); line-height: 1.3;
+  padding-left: 1rem; border-left: 2px solid var(--gold);
+}
+
+/* ÜBER MICH */
+.about { background: var(--cream); padding: 4rem 1.25rem; }
+.about__img {
+  width: 100%; height: auto; border-radius: 4px;
+  object-fit: contain; margin-bottom: 2rem; display: block;
+}
+.about h2 {
+  font-family: var(--serif); font-size: clamp(1.6rem,5.5vw,2.2rem);
+  font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1.25rem;
+}
+.about p { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 1rem; line-height: 1.9; }
+.about p strong { color: var(--dark); font-weight: 600; }
+.about__quote {
+  margin-top: 1.75rem; padding-top: 1.75rem;
+  border-top: 1px solid rgba(46,74,62,0.12);
+  font-family: var(--serif); font-style: italic;
+  font-size: 1.05rem; color: var(--sage); line-height: 1.6;
+}
 
 /* VISION */
 .vision { background: var(--warm); padding: 4rem 1.25rem; }
-.vision__story-img { width: 100%; height: auto; border-radius: 4px; object-fit: contain; background: transparent; margin-bottom: 2rem; display: block; }
+.vision__story-img {
+  width: 100%; height: auto; border-radius: 4px;
+  object-fit: contain; background: transparent;
+  margin-bottom: 2rem; display: block;
+}
 .vision__intro { text-align: center; margin-bottom: 2.5rem; }
-.vision__headline { font-family: var(--serif); font-size: clamp(1.65rem,6vw,2.2rem); font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1rem; }
+.vision__headline {
+  font-family: var(--serif); font-size: clamp(1.65rem,6vw,2.2rem);
+  font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1rem;
+}
 .vision__headline em { font-style: italic; color: var(--sage); }
-.vision__lead { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; max-width: 320px; margin: 0 auto; }
+.vision__lead { font-size: 0.95rem; color: var(--text-mid); line-height: 1.85; max-width: 300px; margin: 0 auto; }
 .vision__cards { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
-.vision__card { background: #fff; border-radius: 4px; padding: 1.75rem 1.5rem; border-left: 3px solid var(--gold); box-shadow: 0 2px 12px rgba(46,74,62,0.05); }
-.vision__card-num { font-family: var(--serif); font-size: 1.6rem; color: rgba(143,169,158,0.22); font-weight: 600; line-height: 1; margin-bottom: 0.75rem; }
+.vision__card {
+  background: #fff; border-radius: 4px; padding: 1.75rem 1.5rem;
+  border-left: 3px solid var(--gold); box-shadow: 0 2px 12px rgba(46,74,62,0.05);
+}
+.vision__card-num {
+  font-family: var(--serif); font-size: 1.6rem;
+  color: rgba(143,169,158,0.22); font-weight: 600; line-height: 1; margin-bottom: 0.75rem;
+}
 .vision__card h4 { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--dark); margin-bottom: 0.6rem; }
 .vision__card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.82; }
 .vision__close { background: var(--dark); border-radius: 4px; padding: 2.25rem 1.5rem; text-align: center; }
-.vision__close h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; line-height: 1.35; color: #fff; margin-bottom: 0.85rem; }
+.vision__close h3 {
+  font-family: var(--serif); font-size: 1.4rem; font-weight: 400;
+  line-height: 1.35; color: #fff; margin-bottom: 0.85rem;
+}
 .vision__close h3 em { font-style: italic; color: var(--gold); }
 .vision__close p { font-size: 0.88rem; color: rgba(255,255,255,0.52); line-height: 1.85; margin-bottom: 1.5rem; }
-.btn-outline-light { display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; border: 1.5px solid rgba(255,255,255,0.35); padding: 0.85rem 1.75rem; border-radius: 2px; min-height: 48px; transition: all 0.3s; }
+.btn-outline-light {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #fff; border: 1.5px solid rgba(255,255,255,0.35);
+  padding: 0.85rem 1.75rem; border-radius: 2px; min-height: 48px; transition: all 0.3s;
+}
 .btn-outline-light:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
 
-/* ABOUT */
-.about { background: var(--cream); padding: 4rem 1.25rem; }
-.about__img { width: 100%; height: auto; border-radius: 4px; object-fit: contain; margin-bottom: 2rem; display: block; }
-.about h2 { font-family: var(--serif); font-size: clamp(1.6rem,5.5vw,2.2rem); font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1.25rem; }
-.about p { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 1rem; line-height: 1.9; }
-.about p strong { color: var(--dark); font-weight: 600; }
-.about__quote { margin-top: 1.75rem; padding-top: 1.75rem; border-top: 1px solid rgba(46,74,62,0.12); font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--sage); line-height: 1.6; }
-
-/* WEBINARE */
-.webinare { background: var(--forest); padding: 4rem 1.25rem; color: #fff; }
-.webinare .section-tag { color: var(--mist); }
-.webinare .section-tag::before { background: var(--mist); }
-.webinare__badge { display: inline-block; font-size: 0.7rem; font-weight: 600; background: rgba(196,168,130,0.15); color: var(--gold); border: 1px solid rgba(196,168,130,0.3); padding: 0.3rem 0.85rem; border-radius: 20px; margin-bottom: 1.1rem; }
-.webinare h2 { font-family: var(--serif); font-size: clamp(1.6rem,6vw,2.3rem); font-weight: 400; line-height: 1.28; color: #fff; margin-bottom: 1rem; }
-.webinare h2 em { font-style: italic; color: var(--gold); }
-.webinare__desc { font-size: 0.93rem; color: rgba(255,255,255,0.58); line-height: 1.85; margin-bottom: 2rem; }
-.webinare__topics { display: flex; flex-direction: column; }
-.webinare__topic { display: flex; gap: 0.85rem; align-items: flex-start; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
-.webinare__topic:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
-.webinare__topic-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.05rem; }
-.webinare__topic h4 { font-family: var(--serif); font-size: 0.97rem; font-weight: 600; color: #fff; margin-bottom: 0.15rem; }
-.webinare__topic p { font-size: 0.81rem; color: rgba(255,255,255,0.48); line-height: 1.6; }
-.webinare__topic-link { display: inline-block; margin-top: 0.4rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em; color: var(--gold); border-bottom: 1px solid rgba(196,168,130,0.4); padding-bottom: 1px; transition: color 0.25s, border-color 0.25s; min-height: auto; }
-.webinare__topic-link:hover { color: #fff; border-color: #fff; }
-.webinare__cta { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1.5rem; text-align: center; margin-top: 1.5rem; }
-.webinare__cta h3 { font-family: var(--serif); font-size: 1.2rem; color: #fff; margin-bottom: 0.6rem; font-weight: 400; }
-.webinare__cta p { font-size: 0.86rem; color: rgba(255,255,255,0.52); line-height: 1.8; margin-bottom: 1.25rem; }
-.btn-whatsapp { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: #25D366; padding: 1rem 1.5rem; border-radius: 2px; min-height: 52px; transition: all 0.3s; width: 100%; }
-.btn-whatsapp:hover { background: #1fb855; transform: translateY(-2px); }
-
-/* ANALYSE */
+/* NÄHRSTOFFANALYSE */
 .analyse { background: var(--cream); padding: 4rem 1.25rem; }
 .analyse__intro { margin-bottom: 2rem; }
-.analyse h2 { font-family: var(--serif); font-size: clamp(1.65rem,6vw,2.3rem); font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1rem; }
+.analyse h2 {
+  font-family: var(--serif); font-size: clamp(1.65rem,6vw,2.3rem);
+  font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1rem;
+}
 .analyse h2 em { font-style: italic; color: var(--sage); }
 .analyse__lead { font-size: 0.93rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 0.65rem; }
 .analyse__cards { display: flex; flex-direction: column; gap: 1.25rem; }
@@ -232,47 +275,143 @@ body.menu-open { overflow: hidden; }
 .analyse__card-body h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--dark); margin-bottom: 0.45rem; }
 .analyse__card-body p { font-size: 0.84rem; color: var(--text-mid); line-height: 1.75; }
 .card-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.85rem; }
-.card-link { display: inline-flex; align-items: center; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.06em; color: var(--sage); border-bottom: 1px solid var(--mist); padding-bottom: 1px; transition: color 0.25s, border-color 0.25s; min-height: auto; }
+.card-link {
+  display: inline-flex; align-items: center;
+  font-size: 0.76rem; font-weight: 600; letter-spacing: 0.06em;
+  color: var(--sage); border-bottom: 1px solid var(--mist); padding-bottom: 1px;
+  transition: color 0.25s, border-color 0.25s; min-height: auto;
+}
 .card-link:hover { color: var(--forest); border-color: var(--forest); }
 .card-link--info { color: var(--text-mid); border-color: rgba(143,169,158,0.35); }
 .card-link--info:hover { color: var(--forest); border-color: var(--forest); }
-.card-link__ad { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-soft); border: 1px solid rgba(143,169,158,0.3); border-radius: 2px; padding: 0.1rem 0.35rem; margin-left: 0.4rem; vertical-align: middle; }
 
 /* VIDEO MODAL */
-.video-modal-backdrop { position: fixed; inset: 0; z-index: 600; background: rgba(0,0,0,0.88); display: flex; align-items: center; justify-content: center; padding: 1.25rem; opacity: 0; pointer-events: none; transition: opacity 0.35s ease; }
+.video-modal-backdrop {
+  position: fixed; inset: 0; z-index: 600;
+  background: rgba(0,0,0,0.88);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.25rem; opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
+}
 .video-modal-backdrop.open { opacity: 1; pointer-events: all; }
 .video-modal { position: relative; width: 100%; max-width: 720px; background: #000; border-radius: 4px; overflow: hidden; }
-.video-modal__close { position: absolute; top: 0.75rem; right: 0.75rem; z-index: 10; background: rgba(0,0,0,0.6); border: none; cursor: pointer; color: #fff; font-size: 1.2rem; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background 0.2s; min-height: auto; }
+.video-modal__close {
+  position: absolute; top: 0.75rem; right: 0.75rem; z-index: 10;
+  background: rgba(0,0,0,0.6); border: none; cursor: pointer;
+  color: #fff; font-size: 1.2rem; width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: background 0.2s; min-height: auto;
+}
 .video-modal__close:hover { background: rgba(0,0,0,0.9); }
 .video-modal__iframe-wrap { position: relative; padding-top: 56.25%; }
 .video-modal__iframe-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
+.card-link__ad {
+  font-size: 0.58rem; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-soft);
+  border: 1px solid rgba(143,169,158,0.3); border-radius: 2px;
+  padding: 0.1rem 0.35rem; margin-left: 0.4rem; vertical-align: middle;
+}
+
+/* WEBINARE */
+.webinare { background: var(--forest); padding: 4rem 1.25rem; color: #fff; }
+.webinare .section-tag { color: var(--mist); }
+.webinare .section-tag::before { background: var(--mist); }
+.webinare__badge {
+  display: inline-block; font-size: 0.7rem; font-weight: 600;
+  background: rgba(196,168,130,0.15); color: var(--gold);
+  border: 1px solid rgba(196,168,130,0.3);
+  padding: 0.3rem 0.85rem; border-radius: 20px; margin-bottom: 1.1rem;
+}
+.webinare h2 { font-family: var(--serif); font-size: clamp(1.6rem,6vw,2.3rem); font-weight: 400; line-height: 1.28; color: #fff; margin-bottom: 1rem; }
+.webinare h2 em { font-style: italic; color: var(--gold); }
+.webinare__desc { font-size: 0.93rem; color: rgba(255,255,255,0.58); line-height: 1.85; margin-bottom: 2rem; }
+.webinare__topics { display: flex; flex-direction: column; }
+.webinare__topic { display: flex; gap: 0.85rem; align-items: flex-start; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.webinare__topic:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.webinare__topic-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.05rem; }
+.webinare__topic h4 { font-family: var(--serif); font-size: 0.97rem; font-weight: 600; color: #fff; margin-bottom: 0.15rem; }
+.webinare__topic p { font-size: 0.81rem; color: rgba(255,255,255,0.48); line-height: 1.6; }
+.webinare__topic-link {
+  display: inline-block; margin-top: 0.4rem;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em;
+  color: var(--gold); border-bottom: 1px solid rgba(196,168,130,0.4);
+  padding-bottom: 1px; transition: color 0.25s, border-color 0.25s; min-height: auto;
+}
+.webinare__topic-link:hover { color: #fff; border-color: #fff; }
+.webinare__cta {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px; padding: 1.5rem; text-align: center; margin-top: 1.5rem;
+}
+.webinare__cta h3 { font-family: var(--serif); font-size: 1.2rem; color: #fff; margin-bottom: 0.6rem; font-weight: 400; }
+.webinare__cta p { font-size: 0.86rem; color: rgba(255,255,255,0.52); line-height: 1.8; margin-bottom: 1.25rem; }
+.btn-whatsapp {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #fff; background: #25D366;
+  padding: 1rem 1.5rem; border-radius: 2px; min-height: 52px;
+  transition: all 0.3s; width: 100%;
+}
+.btn-whatsapp:hover { background: #1fb855; transform: translateY(-2px); }
+
 /* CTA */
-.cta { background: var(--sage); padding: 4rem 1.25rem; text-align: center; position: relative; overflow: hidden; }
-.cta::before { content: ""; position: absolute; top: -40%; left: -30%; width: 80%; height: 180%; background: radial-gradient(ellipse, rgba(196,168,130,0.1) 0%, transparent 65%); pointer-events: none; }
-.cta__label { font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+.cta {
+  background: var(--sage); padding: 4rem 1.25rem;
+  text-align: center; position: relative; overflow: hidden;
+}
+.cta::before {
+  content: ""; position: absolute; top: -40%; left: -30%; width: 80%; height: 180%;
+  background: radial-gradient(ellipse, rgba(196,168,130,0.1) 0%, transparent 65%); pointer-events: none;
+}
+.cta__label {
+  font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.85rem;
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+}
 .cta__label::before, .cta__label::after { content: ""; display: block; width: 1.25rem; height: 1px; background: var(--gold); }
 .cta h2 em { font-style: italic; color: var(--gold); }
 .cta h2 { font-family: var(--serif); font-size: clamp(1.45rem,6vw,2.1rem); font-weight: 400; color: #fff; line-height: 1.3; margin-bottom: 0.85rem; }
 .cta p { font-size: 0.9rem; color: rgba(255,255,255,0.52); margin-bottom: 1.75rem; }
-.btn-cta { display: inline-flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 1rem 2rem; border-radius: 2px; min-height: 52px; transition: all 0.3s; width: 100%; max-width: 260px; }
+.btn-cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--dark); background: var(--gold);
+  padding: 1rem 2rem; border-radius: 2px; min-height: 52px;
+  transition: all 0.3s; width: 100%; max-width: 260px;
+}
 .btn-cta:hover { background: #d4b892; transform: translateY(-2px); }
 
 /* FOOTER */
 .footer { background: var(--dark); color: rgba(255,255,255,0.32); padding: 2rem 1.25rem; text-align: center; font-size: 0.76rem; }
 .footer__nav { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.85rem; flex-wrap: wrap; }
-.footer__nav button { background: none; border: none; cursor: pointer; font-size: 0.73rem; color: rgba(255,255,255,0.38); font-family: var(--sans); padding: 0.25rem 0; min-height: auto; transition: color 0.25s; text-decoration: underline; }
+.footer__nav button {
+  background: none; border: none; cursor: pointer;
+  font-size: 0.73rem; color: rgba(255,255,255,0.38); font-family: var(--sans);
+  padding: 0.25rem 0; min-height: auto; transition: color 0.25s; text-decoration: underline;
+}
 .footer__nav button:hover { color: var(--gold); }
 .footer__affiliate { margin-top: 1rem; font-size: 0.66rem; opacity: 0.38; line-height: 1.6; }
 
 /* MODALS */
-.modal-backdrop { position: fixed; inset: 0; z-index: 500; background: rgba(0,0,0,0.7); display: flex; align-items: flex-end; opacity: 0; pointer-events: none; transition: opacity 0.35s ease; }
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,0.7); display: flex; align-items: flex-end;
+  opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
+}
 .modal-backdrop.open { opacity: 1; pointer-events: all; }
-.modal { background: var(--cream); width: 100%; max-height: 88vh; overflow-y: auto; border-radius: 16px 16px 0 0; padding: 2rem 1.5rem 3rem; transform: translateY(40px); transition: transform 0.35s ease; }
+.modal {
+  background: var(--cream); width: 100%; max-height: 88vh; overflow-y: auto;
+  border-radius: 16px 16px 0 0; padding: 2rem 1.5rem 3rem;
+  transform: translateY(40px); transition: transform 0.35s ease;
+}
 .modal-backdrop.open .modal { transform: translateY(0); }
 .modal__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(46,74,62,0.1); }
 .modal__header h2 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--dark); }
-.modal__close { background: none; border: none; cursor: pointer; font-size: 1.4rem; color: var(--text-mid); min-height: auto; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: background 0.2s; }
+.modal__close {
+  background: none; border: none; cursor: pointer; font-size: 1.4rem;
+  color: var(--text-mid); min-height: auto; width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: background 0.2s;
+}
 .modal__close:hover { background: rgba(0,0,0,0.06); }
 .modal__body h3 { font-family: var(--serif); font-size: 1.05rem; color: var(--dark); margin: 1.5rem 0 0.5rem; font-weight: 600; }
 .modal__body p { font-size: 0.87rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 0.75rem; }
@@ -280,20 +419,27 @@ body.menu-open { overflow: hidden; }
 .modal__body ul { padding-left: 1.25rem; margin-bottom: 0.75rem; }
 .modal__body ul li { font-size: 0.87rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 0.25rem; }
 
-/* FLOATING WA */
-.wa-float { position: fixed; bottom: 1.5rem; right: 1.25rem; z-index: 250; display: flex; align-items: center; gap: 0.6rem; background: #25D366; color: #fff; border-radius: 50px; padding: 0.75rem 1.1rem; box-shadow: 0 4px 20px rgba(37,211,102,0.4); font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; text-decoration: none; transition: all 0.3s ease; min-height: auto; }
-.wa-float:hover { background: #1fb855; transform: translateY(-3px); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
-.wa-float svg { flex-shrink: 0; }
-.wa-float__text { display: none; }
-@media (min-width: 480px) { .wa-float__text { display: inline; } }
-
 /* ANIMATIONS */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.75s ease, transform 0.75s ease; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-d1 { transition-delay: 0.1s; }
 .reveal-d2 { transition-delay: 0.2s; }
 .reveal-d3 { transition-delay: 0.3s; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* FLOATING WHATSAPP BUTTON */
+.wa-float {
+  position: fixed; bottom: 1.5rem; right: 1.25rem; z-index: 250;
+  display: flex; align-items: center; gap: 0.6rem;
+  background: #25D366; color: #fff; border-radius: 50px; padding: 0.75rem 1.1rem;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.05em; text-decoration: none; transition: all 0.3s ease; min-height: auto;
+}
+.wa-float:hover { background: #1fb855; transform: translateY(-3px); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
+.wa-float svg { flex-shrink: 0; }
+.wa-float__text { display: none; }
+@media (min-width: 480px) { .wa-float__text { display: inline; } }
 
 /* DESKTOP */
 @media (min-width: 768px) {
@@ -315,25 +461,25 @@ body.menu-open { overflow: hidden; }
   .reality { padding: 4.5rem 2rem; }
   .reality__items { flex-direction: row; justify-content: center; gap: 3.5rem; }
   .reality__item { border-left: none; padding-left: 0; border-bottom: 2px solid var(--gold); padding-bottom: 0.5rem; max-width: 260px; }
-  .vision { padding: 6rem 2rem; }
-  .vision__inner { max-width: 1100px; margin: 0 auto; }
-  .vision__intro { margin-bottom: 3rem; }
-  .vision__story-img { height: auto; margin-bottom: 2.5rem; }
-  .vision__cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 2.5rem; }
-  .vision__close { max-width: 1100px; margin: 0 auto; padding: 3rem; }
   .about { padding: 6rem 2rem; }
   .about__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1100px; margin: 0 auto; }
   .about__img { height: auto; margin-bottom: 0; }
-  .webinare { padding: 6rem 2rem; }
-  .webinare__inner { max-width: 1100px; margin: 0 auto; }
-  .webinare__layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-  .webinare__cta { text-align: left; }
-  .btn-whatsapp { width: auto; }
+  .vision { padding: 6rem 2rem; }
+  .vision__story-img { height: 380px; object-fit: cover; object-position: center; margin-bottom: 2.5rem; }
+  .vision__inner { max-width: 1100px; margin: 0 auto; }
+  .vision__intro { margin-bottom: 3rem; }
+  .vision__cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 2.5rem; }
+  .vision__close { max-width: 1100px; margin: 0 auto; padding: 3rem; }
   .analyse { padding: 6rem 2rem; }
   .analyse__inner { max-width: 1100px; margin: 0 auto; }
-  .analyse__intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 3rem; }
+  .analyse__intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 3rem; }
   .analyse__cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
   .analyse__card-img { height: 210px; }
+  .webinare { padding: 6rem 2rem; }
+  .webinare__inner { max-width: 1100px; margin: 0 auto; }
+  .webinare__layout { display: grid; grid-template-columns: 2fr 3fr; gap: 4rem; align-items: start; }
+  .webinare__cta { text-align: left; }
+  .btn-whatsapp { width: auto; }
   .cta { padding: 6rem 2rem; }
   .btn-cta { width: auto; }
   .modal { max-width: 640px; margin: auto; border-radius: 8px; align-self: center; }
@@ -364,11 +510,11 @@ body.menu-open { overflow: hidden; }
       <h3>Haftung für Inhalte</h3>
       <p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
       <h3>Haftung für Links</h3>
-      <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Inhalte verlinkter Seiten ist stets der jeweilige Anbieter verantwortlich.</p>
+      <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Inhalte verlinkter Seiten ist stets der jeweilige Anbieter verantwortlich. Eine dauerhafte inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.</p>
       <h3>Partnerlink-Hinweis</h3>
       <p>Diese Website enthält als Werbung gekennzeichnete Affiliate-Links zu Eqology. Bei einem Kauf über diese Links erhalte ich eine Provision. Für den Käufer entstehen keine zusätzlichen Kosten.</p>
       <h3>Urheberrecht</h3>
-      <p>Die durch den Seitenbetreiber erstellten Inhalte unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung und Verbreitung bedürfen der schriftlichen Zustimmung des jeweiligen Autors.</p>
+      <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors.</p>
     </div>
   </div>
 </div>
@@ -386,37 +532,45 @@ body.menu-open { overflow: hidden; }
       E-Mail: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a><br>
       WhatsApp: <a href="https://wa.me/4917622247477">+49 176 22247477</a></p>
       <h3>2. Grundsätze der Datenverarbeitung</h3>
-      <p>Personenbezogene Daten werden nur erhoben, soweit dies zur Bereitstellung der Website oder zur Bearbeitung von Anfragen erforderlich ist. Rechtsgrundlage ist jeweils Art. 6 DSGVO.</p>
+      <p>Personenbezogene Daten werden nur erhoben, soweit dies zur Bereitstellung der Website oder zur Bearbeitung von Anfragen erforderlich ist. Eine Weitergabe an Dritte erfolgt nur, soweit dies gesetzlich erlaubt oder zur Vertragserfüllung notwendig ist. Rechtsgrundlage ist jeweils Art. 6 DSGVO.</p>
       <h3>3. Server-Logfiles</h3>
-      <p>Beim Besuch werden automatisch technische Daten erhoben (IP-Adresse, Datum/Uhrzeit, Browsertyp). Diese werden nach spätestens 7 Tagen gelöscht.<br><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.</p>
+      <p>Beim Besuch dieser Website werden automatisch technische Daten erhoben (IP-Adresse, Datum/Uhrzeit, Browsertyp, Betriebssystem, aufgerufene Seite). Diese Daten werden nicht mit anderen Quellen zusammengeführt und nach spätestens 7 Tagen gelöscht.<br>
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an technisch sicherem Betrieb).</p>
       <h3>4. Kontaktaufnahme per E-Mail</h3>
-      <p>Bei E-Mail-Kontakt werden die übermittelten Daten zur Bearbeitung gespeichert und nach Abschluss gelöscht.<br><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+      <p>Wenn Sie mich per E-Mail kontaktieren, werden Name, E-Mail-Adresse und Nachrichteninhalt zur Bearbeitung Ihrer Anfrage gespeichert. Die Daten werden nach abschließender Bearbeitung gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.<br>
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. lit. f DSGVO (berechtigtes Interesse).</p>
       <h3>5. Kontaktaufnahme per WhatsApp</h3>
-      <p>WhatsApp-Nachrichten werden an WhatsApp Ireland Ltd. (Meta Platforms) übertragen und auf US-Servern verarbeitet. Meta ist unter dem EU-US Data Privacy Framework zertifiziert.<br><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO.<br>
-      <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">whatsapp.com/legal/privacy-policy</a></p>
-      <h3>6. Eingebettete Videos (YouTube)</h3>
-      <p>Diese Website bettet Videos von YouTube (Google Ireland Ltd.) ein. Beim Abspielen werden Daten an YouTube/Google übertragen. Google ist unter dem EU-US Data Privacy Framework zertifiziert.<br><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.<br>
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
-      <h3>7. Terminbuchung (Calendly – geplant)</h3>
-      <p>Perspektivisch wird eine Verlinkung zu Calendly (USA) eingebunden. Diese Erklärung wird dann aktualisiert.<br>
-      <a href="https://calendly.com/privacy" target="_blank" rel="noopener">calendly.com/privacy</a></p>
-      <h3>8. Affiliate-Links (Eqology)</h3>
-      <p>Partnerlinks übertragen technische Daten an Eqology zur Provisionsnachverfolgung.<br><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.</p>
-      <h3>9. Google Fonts</h3>
-      <p>Schriftarten von Google Fonts übertragen die IP-Adresse an Google.<br><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.<br>
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
-      <h3>10. Keine Cookies / kein Tracking</h3>
-      <p>Diese Website setzt keine eigenen Cookies und verwendet kein Tracking. Hinweis: YouTube-Videos können beim Abspielen Cookies setzen.</p>
-      <h3>11. Ihre Rechte nach DSGVO</h3>
+      <p>Wenn Sie mich über WhatsApp kontaktieren, werden Ihre Nachricht und Ihre Telefonnummer an die WhatsApp Ireland Ltd. (Meta Platforms) übertragen und auf Servern in den USA verarbeitet. Meta ist unter dem EU-US Data Privacy Framework zertifiziert, was eine rechtmäßige Drittlandübertragung ermöglicht.</p>
+      <p>Durch die aktive Kontaktaufnahme per WhatsApp willigen Sie in diese Verarbeitung ein. Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage genutzt und nicht an weitere Dritte weitergegeben.<br>
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch aktive Kontaktaufnahme).<br>
+      Datenschutzerklärung WhatsApp/Meta: <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">whatsapp.com/legal/privacy-policy</a></p>
+      <h3>6. Terminbuchung (Calendly – geplant)</h3>
+      <p>Für die Terminbuchung ist perspektivisch eine Verlinkung zu Calendly (Calendly LLC, USA) vorgesehen. Der Link öffnet die externe Calendly-Website, auf der Calendly eigene Daten erhebt. Es werden keine Calendly-Skripte auf dieser Website eingebettet. Bei Nutzung von Calendly gelten deren eigene Datenschutzbestimmungen: <a href="https://calendly.com/privacy" target="_blank" rel="noopener">calendly.com/privacy</a>. Diese Datenschutzerklärung wird aktualisiert, sobald die Verlinkung aktiv ist.</p>
+      <h3>7. Affiliate-Links (Eqology)</h3>
+      <p>Diese Website enthält als Werbung gekennzeichnete Partnerlinks zum Eqology-Partnerprogramm. Beim Klick auf einen solchen Link werden technische Daten (u. a. IP-Adresse, Zeitstempel) an Eqology übertragen, um die Vermittlung nachzuverfolgen. Für den Käufer entstehen keine zusätzlichen Kosten.<br>
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Provisionsnachverfolgung).<br>
+      Datenschutz Eqology: <a href="https://www.eqology.com" target="_blank" rel="noopener">eqology.com</a></p>
+      <h3>8. Google Fonts</h3>
+      <p>Diese Website lädt Schriftarten von Google Fonts (Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4). Dabei wird Ihre IP-Adresse an Google übertragen. Google ist unter dem EU-US Data Privacy Framework zertifiziert.<br>
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einheitlicher Darstellung).<br>
+      Datenschutz Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+      <h3>9. Keine Cookies / kein Tracking</h3>
+      <p>Diese Website setzt keine eigenen Cookies und verwendet keine Analyse- oder Tracking-Dienste (z. B. Google Analytics, Facebook Pixel). Es findet kein Profiling statt.</p>
+      <h3>10. Ihre Rechte nach DSGVO</h3>
+      <p>Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
       <ul>
-        <li>Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17)</li>
-        <li>Einschränkung (Art. 18), Übertragbarkeit (Art. 20), Widerspruch (Art. 21)</li>
-        <li>Widerruf einer Einwilligung (Art. 7 Abs. 3)</li>
+        <li>Auskunft (Art. 15 DSGVO)</li>
+        <li>Berichtigung (Art. 16 DSGVO)</li>
+        <li>Löschung (Art. 17 DSGVO)</li>
+        <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+        <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+        <li>Widerspruch (Art. 21 DSGVO)</li>
+        <li>Widerruf einer Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
       </ul>
-      <p>Kontakt: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a><br>
-      Aufsichtsbehörde: <a href="https://www.saechsdsb.de" target="_blank" rel="noopener">saechsdsb.de</a></p>
-      <h3>12. Aktualität</h3>
-      <p>Stand: Mai 2025.</p>
+      <p>Zur Ausübung Ihrer Rechte wenden Sie sich an: <a href="mailto:eq-david@gmx.de">eq-david@gmx.de</a></p>
+      <p>Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist der Sächsische Datenschutzbeauftragte: <a href="https://www.saechsdsb.de" target="_blank" rel="noopener">saechsdsb.de</a></p>
+      <h3>11. Aktualität dieser Erklärung</h3>
+      <p>Stand: Mai 2025. Diese Erklärung wird bei Änderungen des Angebots (z. B. Einbindung Terminbuchungstool) aktualisiert.</p>
     </div>
   </div>
 </div>
@@ -481,6 +635,10 @@ body.menu-open { overflow: hidden; }
     </p>
     <a href="#vision" class="btn-gold">Mehr erfahren</a>
   </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-hint__line"></div>
+    <span>Scroll</span>
+  </div>
 </section>
 
 <!-- REALITY STRIP -->
@@ -501,7 +659,9 @@ body.menu-open { overflow: hidden; }
     </div>
     <div class="vision__intro reveal">
       <div class="section-tag section-tag--center">Was ich anbiete</div>
-      <h2 class="vision__headline">Ein Weg, der wirklich<br><em>dir gehört.</em></h2>
+      <h2 class="vision__headline">
+        Ein Weg, der wirklich<br><em>dir gehört.</em>
+      </h2>
       <p class="vision__lead">Für Menschen, die mehr wollen als einen Job – und bereit sind, dafür den ersten Schritt zu machen.</p>
     </div>
     <div class="vision__cards">
@@ -518,7 +678,7 @@ body.menu-open { overflow: hidden; }
       <div class="vision__card reveal reveal-d2">
         <div class="vision__card-num">03</div>
         <h4>Freiheit als Ergebnis.</h4>
-        <p>Kein Sprint. Aber ein stabiles, wiederkehrendes Einkommen, das dir Optionen gibt. Mehr Zeit. Mehr Entscheidungsfreiheit. Mehr Leben.</p>
+        <p>Kein Sprint. Kein Versprechen ins Blaue. Aber wer dran bleibt, baut sich etwas auf, das bleibt – wiederkehrendes Einkommen, echte Optionen, selbstbestimmte Zeit. Das ist Freiheit. Nicht als Wort. Als Ergebnis.</p>
       </div>
     </div>
     <div class="vision__close reveal">
@@ -540,7 +700,7 @@ body.menu-open { overflow: hidden; }
       <h2>Ich kenne dieses Gefühl.</h2>
       <p>Fast 20 Jahre in der Bankenwelt. Aufgestiegen, Verantwortung getragen, gut verdient. Und trotzdem: irgendwann war da mehr Zahlen als Mensch.</p>
       <p>Als meine Entscheidungen nicht mehr zu meinen Werten gepasst haben, habe ich die Reißleine gezogen.</p>
-      <p>Heute arbeite ich aus dem Herzen – als <strong>unabhängiger Business Partner der Firma Eqology</strong>. Bewusst. Überzeugt. Weil ich die Produkte selbst nutze, weil sie seit über 20 Jahren testbasiert und in der reinen norwegischen Natur verwurzelt sind – und weil dieses Konzept zu dem passt, wofür ich stehe.</p>
+      <p>Heute tue ich, wofür ich brenne – als <strong>unabhängiger Business Partner der Firma Eqology</strong>. Nicht weil ich musste. Weil ich die Produkte kenne, ihnen vertraue und weiß, was sie bewirken. Seit über 20 Jahren testbasiert, in der reinen norwegischen Natur verwurzelt. Das ist kein Zufall – das ist Haltung.</p>
       <p>Ich suche Menschen, die nicht nur konsumieren wollen, sondern bereit sind, mit dem Eqology-Konzept selbst etwas aufzubauen. Menschen mit Haltung.</p>
       <div class="about__quote">„Ehrlich. Ohne Druck. Auf Augenhöhe."</div>
     </div>
@@ -671,7 +831,7 @@ body.menu-open { overflow: hidden; }
           <p>D3 und K2 – selten im Fokus, aber entscheidend für Knochen, Immunsystem und Energie.</p>
           <div class="card-links">
             <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="card-link">Produkt ansehen → <span class="card-link__ad">Werbung</span></a>
-            <button onclick="openVideo('Swy6kQYGrWM', 'Was ist Vitamin D3 &amp; K2?')" class="card-link card-link--info" style="background:none;border:none;cursor:pointer;padding-bottom:1px;">▶ Was ist D3 &amp; K2? (Video)</button>
+            <button onclick="openVideo('Swy6kQYGrWM', 'Was ist Vitamin D3 & K2?')" class="card-link card-link--info" style="background:none;border:none;cursor:pointer;padding-bottom:1px;">▶ Was ist D3 &amp; K2? (Video)</button>
           </div>
         </div>
       </div>
@@ -694,7 +854,7 @@ body.menu-open { overflow: hidden; }
 <section class="cta" id="kontakt">
   <div class="cta__label">Nächster Schritt</div>
   <h2>Bereit für<br><em>deinen eigenen Weg?</em></h2>
-  <p>Ein erstes Gespräch. Kein Druck. Ich höre zu – und wir schauen gemeinsam ob es passt.</p>
+  <p>Kein Pitch. Kein Druck. Nur ein offenes Gespräch – und wir sehen gemeinsam, ob der Weg für dich Sinn ergibt.</p>
   <a href="mailto:eq-david@gmx.de" class="btn-cta">Termin anfragen</a>
 </section>
 
@@ -714,7 +874,7 @@ body.menu-open { overflow: hidden; }
     <button class="video-modal__close" onclick="closeVideo()" aria-label="Video schließen">✕</button>
     <div id="videoTitle" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.6);padding:0.6rem 1rem 0;letter-spacing:0.05em;"></div>
     <div class="video-modal__iframe-wrap">
-      <iframe id="videoFrame" src="" title="Gesundheitsvideo"
+      <iframe id="videoFrame" src="" title="Omega-3 – Was du wissen solltest"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     </div>
