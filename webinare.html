@@ -15,80 +15,80 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
- --forest: #2E4A3E; --sage: #4A6B5D; --mist: #8FA99E;
- --cream: #F7F4EF; --warm: #EDE8DF; --dark: #1A2E26;
- --gold: #C4A882; --text: #2C3830; --text-mid: #5A6E65;
- --text-soft: #8FA99E;
- --serif: "Playfair Display", Georgia, serif;
- --sans: "DM Sans", sans-serif;
+  --forest: #2E4A3E; --sage: #4A6B5D; --mist: #8FA99E;
+  --cream: #F7F4EF; --warm: #EDE8DF; --dark: #1A2E26;
+  --gold: #C4A882; --text: #2C3830; --text-mid: #5A6E65;
+  --text-soft: #8FA99E;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
- background: var(--cream); color: var(--text);
- font-family: var(--sans); line-height: 1.7;
- overflow-x: hidden; -webkit-font-smoothing: antialiased;
+  background: var(--cream); color: var(--text);
+  font-family: var(--sans); line-height: 1.7;
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
 }
 a { text-decoration: none; color: inherit; }
 a, button { min-height: 44px; }
 
 /* NAV */
 .nav {
- position: fixed; top: 0; left: 0; right: 0; z-index: 300;
- display: flex; justify-content: space-between; align-items: center;
- padding: 1.1rem 1.25rem;
- background: rgba(26,46,38,0.97);
- backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
- box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.1rem 1.25rem;
+  background: rgba(26,46,38,0.97);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
 }
 .nav__logo { font-family: var(--serif); font-size: 1.1rem; color: #fff; }
 .nav__back {
- display: inline-flex; align-items: center; gap: 0.5rem;
- font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em;
- color: rgba(255,255,255,0.7); transition: color 0.25s;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.7); transition: color 0.25s;
 }
 .nav__back:hover { color: var(--gold); }
 .nav__cta {
- display: inline-flex; align-items: center;
- font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
- color: #fff; background: var(--gold);
- padding: 0.55rem 1.2rem; border-radius: 2px; min-height: 36px;
- transition: background 0.3s;
+  display: inline-flex; align-items: center;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #fff; background: var(--gold);
+  padding: 0.55rem 1.2rem; border-radius: 2px; min-height: 36px;
+  transition: background 0.3s;
 }
 .nav__cta:hover { background: #d4b892; }
 
 /* HERO */
 .hero {
- background: var(--dark); padding: 7rem 1.25rem 3.5rem;
- text-align: center; position: relative; overflow: hidden;
+  background: var(--dark); padding: 7rem 1.25rem 3.5rem;
+  text-align: center; position: relative; overflow: hidden;
 }
 .hero::before {
- content: ""; position: absolute; top: -50%; left: -20%; width: 140%; height: 200%;
- background: radial-gradient(ellipse at center, rgba(196,168,130,0.08) 0%, transparent 60%);
- pointer-events: none;
+  content: ""; position: absolute; top: -50%; left: -20%; width: 140%; height: 200%;
+  background: radial-gradient(ellipse at center, rgba(196,168,130,0.08) 0%, transparent 60%);
+  pointer-events: none;
 }
 .hero__badge {
- display: inline-block; font-size: 0.7rem; font-weight: 600;
- background: rgba(196,168,130,0.15); color: var(--gold);
- border: 1px solid rgba(196,168,130,0.3);
- padding: 0.3rem 0.85rem; border-radius: 20px; margin-bottom: 1.25rem;
+  display: inline-block; font-size: 0.7rem; font-weight: 600;
+  background: rgba(196,168,130,0.15); color: var(--gold);
+  border: 1px solid rgba(196,168,130,0.3);
+  padding: 0.3rem 0.85rem; border-radius: 20px; margin-bottom: 1.25rem;
 }
 .hero h1 {
- font-family: var(--serif); font-size: clamp(1.8rem, 6vw, 2.8rem);
- font-weight: 400; line-height: 1.22; color: #fff; margin-bottom: 1rem;
+  font-family: var(--serif); font-size: clamp(1.8rem, 6vw, 2.8rem);
+  font-weight: 400; line-height: 1.22; color: #fff; margin-bottom: 1rem;
 }
 .hero h1 em { font-style: italic; color: var(--gold); }
 .hero__desc {
- font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.85;
- max-width: 480px; margin: 0 auto 2rem;
+  font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.85;
+  max-width: 480px; margin: 0 auto 2rem;
 }
 .hero__stats {
- display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
+  display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
 }
 .hero__stat { text-align: center; }
 .hero__stat-num {
- font-family: var(--serif); font-size: 2rem; font-weight: 600;
- color: var(--gold); line-height: 1;
+  font-family: var(--serif); font-size: 2rem; font-weight: 600;
+  color: var(--gold); line-height: 1;
 }
 .hero__stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.25rem; }
 
@@ -98,71 +98,71 @@ a, button { min-height: 44px; }
 /* CATEGORY */
 .category { margin-bottom: 3rem; }
 .category__header {
- display: flex; align-items: center; gap: 0.85rem;
- margin-bottom: 1.25rem; padding-bottom: 0.85rem;
- border-bottom: 1px solid rgba(46,74,62,0.12);
+  display: flex; align-items: center; gap: 0.85rem;
+  margin-bottom: 1.25rem; padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(46,74,62,0.12);
 }
 .category__icon { font-size: 1.35rem; }
 .category__title {
- font-family: var(--serif); font-size: 1.25rem; font-weight: 600;
- color: var(--dark);
+  font-family: var(--serif); font-size: 1.25rem; font-weight: 600;
+  color: var(--dark);
 }
 .category__count {
- font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em;
- text-transform: uppercase; color: var(--mist);
- background: rgba(143,169,158,0.12); border-radius: 20px;
- padding: 0.2rem 0.6rem; margin-left: auto;
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--mist);
+  background: rgba(143,169,158,0.12); border-radius: 20px;
+  padding: 0.2rem 0.6rem; margin-left: auto;
 }
 
 /* WEBINAR ITEMS */
 .webinar-list { display: flex; flex-direction: column; gap: 0.75rem; }
 .webinar-item {
- background: #fff; border-radius: 4px;
- border-left: 3px solid var(--gold);
- box-shadow: 0 2px 12px rgba(46,74,62,0.05);
- display: flex; align-items: center; justify-content: space-between;
- padding: 1.1rem 1.25rem; gap: 1rem;
- transition: box-shadow 0.25s, transform 0.25s;
+  background: #fff; border-radius: 4px;
+  border-left: 3px solid var(--gold);
+  box-shadow: 0 2px 12px rgba(46,74,62,0.05);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.1rem 1.25rem; gap: 1rem;
+  transition: box-shadow 0.25s, transform 0.25s;
 }
 .webinar-item:hover { box-shadow: 0 4px 20px rgba(46,74,62,0.12); transform: translateX(3px); }
 .webinar-item__title {
- font-family: var(--serif); font-size: 0.97rem; font-weight: 600;
- color: var(--dark); line-height: 1.35;
+  font-family: var(--serif); font-size: 0.97rem; font-weight: 600;
+  color: var(--dark); line-height: 1.35;
 }
 .webinar-item__link {
- display: inline-flex; align-items: center; gap: 0.4rem; flex-shrink: 0;
- font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em;
- color: var(--gold); border-bottom: 1px solid rgba(196,168,130,0.4);
- padding-bottom: 1px; transition: color 0.25s, border-color 0.25s; min-height: auto;
- white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 0.4rem; flex-shrink: 0;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em;
+  color: var(--gold); border-bottom: 1px solid rgba(196,168,130,0.4);
+  padding-bottom: 1px; transition: color 0.25s, border-color 0.25s; min-height: auto;
+  white-space: nowrap;
 }
 .webinar-item__link:hover { color: var(--forest); border-color: var(--forest); }
 
 /* BOTTOM CTA */
 .bottom-cta {
- background: var(--forest); border-radius: 4px;
- padding: 2.5rem 1.5rem; text-align: center; margin-top: 1rem;
+  background: var(--forest); border-radius: 4px;
+  padding: 2.5rem 1.5rem; text-align: center; margin-top: 1rem;
 }
 .bottom-cta h2 {
- font-family: var(--serif); font-size: clamp(1.3rem, 5vw, 1.75rem);
- font-weight: 400; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;
+  font-family: var(--serif); font-size: clamp(1.3rem, 5vw, 1.75rem);
+  font-weight: 400; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;
 }
 .bottom-cta h2 em { font-style: italic; color: var(--gold); }
 .bottom-cta p { font-size: 0.88rem; color: rgba(255,255,255,0.52); line-height: 1.85; margin-bottom: 1.5rem; }
 .btn-whatsapp {
- display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
- font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
- color: #fff; background: #25D366;
- padding: 1rem 2rem; border-radius: 2px; min-height: 52px;
- transition: all 0.3s; width: 100%; max-width: 320px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #fff; background: #25D366;
+  padding: 1rem 2rem; border-radius: 2px; min-height: 52px;
+  transition: all 0.3s; width: 100%; max-width: 320px;
 }
 .btn-whatsapp:hover { background: #1fb855; transform: translateY(-2px); }
 
 /* BACK LINK */
 .back-wrap { text-align: center; margin-top: 3rem; }
 .back-link {
- display: inline-flex; align-items: center; gap: 0.5rem;
- font-size: 0.8rem; color: var(--text-soft); transition: color 0.25s;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.8rem; color: var(--text-soft); transition: color 0.25s;
 }
 .back-link:hover { color: var(--sage); }
 
@@ -171,19 +171,37 @@ a, button { min-height: 44px; }
 .footer__nav { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
 .footer__nav a { color: rgba(255,255,255,0.38); text-decoration: underline; font-size: 0.73rem; transition: color 0.25s; min-height: auto; }
 .footer__nav a:hover { color: var(--gold); }
+.footer__disclaimer {
+  margin-top: 1rem; font-size: 0.66rem; color: rgba(255,255,255,0.28);
+  line-height: 1.65; max-width: 600px; margin-left: auto; margin-right: auto;
+}
 
 /* FLOATING WHATSAPP */
 .wa-float {
- position: fixed; bottom: 1.5rem; right: 1.25rem; z-index: 250;
- display: flex; align-items: center; gap: 0.6rem;
- background: #25D366; color: #fff; border-radius: 50px; padding: 0.75rem 1.1rem;
- box-shadow: 0 4px 20px rgba(37,211,102,0.4);
- font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
- letter-spacing: 0.05em; text-decoration: none; transition: all 0.3s ease; min-height: auto;
+  position: fixed; bottom: 1.5rem; right: 1.25rem; z-index: 250;
+  display: flex; align-items: center; gap: 0.6rem;
+  background: #25D366; color: #fff; border-radius: 50px; padding: 0.75rem 1.1rem;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.05em; text-decoration: none; transition: all 0.3s ease; min-height: auto;
 }
 .wa-float:hover { background: #1fb855; transform: translateY(-3px); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
 .wa-float__text { display: none; }
 @media (min-width: 480px) { .wa-float__text { display: inline; } }
+
+/* DISCLAIMER */
+.disclaimer {
+  background: rgba(196,168,130,0.08); border: 1px solid rgba(196,168,130,0.25);
+  border-left: 3px solid var(--gold); border-radius: 4px;
+  padding: 1.25rem 1.5rem; margin: 2rem 0 0;
+}
+.disclaimer__title {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--text-soft); margin-bottom: 0.5rem;
+}
+.disclaimer__text {
+  font-size: 0.78rem; color: var(--text-mid); line-height: 1.75;
+}
 
 /* ANIMATIONS */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.65s ease, transform 0.65s ease; }
@@ -192,12 +210,12 @@ a, button { min-height: 44px; }
 
 /* DESKTOP */
 @media (min-width: 768px) {
- .nav { padding: 1.1rem 2rem; }
- .hero { padding: 7rem 2rem 4rem; }
- .content { padding: 4rem 2rem 6rem; }
- .webinar-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
- .bottom-cta { padding: 3rem 2.5rem; }
- .btn-whatsapp { width: auto; }
+  .nav { padding: 1.1rem 2rem; }
+  .hero { padding: 7rem 2rem 4rem; }
+  .content { padding: 4rem 2rem 6rem; }
+  .webinar-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .bottom-cta { padding: 3rem 2.5rem; }
+  .btn-whatsapp { width: auto; }
 }
 </style>
 </head>
@@ -205,283 +223,289 @@ a, button { min-height: 44px; }
 
 <!-- NAV -->
 <nav class="nav">
- <a href="https://davidmeetsnature.de" class="nav__back">← Zurück zur Website</a>
- <div class="nav__logo">David Müller</div>
- <a href="https://wa.me/4917622247477" class="nav__cta" target="_blank" rel="noopener">Kontakt</a>
+  <a href="https://davidmeetsnature.de" class="nav__back">← Zurück zur Website</a>
+  <div class="nav__logo">David Müller</div>
+  <a href="https://wa.me/4917622247477" class="nav__cta" target="_blank" rel="noopener">Kontakt</a>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
- <div class="hero__badge">🎁 Alle Webinare kostenlos · Keine Verpflichtung</div>
- <h1>Expertenwissen –<br><em>für dich kostenlos.</em></h1>
- <p class="hero__desc">Diese Webinare würden anderswo viel Geld kosten. Hier bekommst du sie gratis. Einfach das gewünschte Thema antippen und per WhatsApp anfordern.</p>
- <div class="hero__stats">
-   <div class="hero__stat">
-     <div class="hero__stat-num">27</div>
-     <div class="hero__stat-label">Webinare</div>
-   </div>
-   <div class="hero__stat">
-     <div class="hero__stat-num">8</div>
-     <div class="hero__stat-label">Themenbereiche</div>
-   </div>
-   <div class="hero__stat">
-     <div class="hero__stat-num">0€</div>
-     <div class="hero__stat-label">Kosten</div>
-   </div>
- </div>
+  <div class="hero__badge">🎁 Alle Webinare kostenlos · Keine Verpflichtung</div>
+  <h1>Expertenwissen –<br><em>für dich kostenlos.</em></h1>
+  <p class="hero__desc">Diese Webinare würden anderswo viel Geld kosten. Hier bekommst du sie gratis. Einfach das gewünschte Thema antippen und per WhatsApp anfordern.</p>
+  <div class="hero__stats">
+    <div class="hero__stat">
+      <div class="hero__stat-num">27</div>
+      <div class="hero__stat-label">Webinare</div>
+    </div>
+    <div class="hero__stat">
+      <div class="hero__stat-num">8</div>
+      <div class="hero__stat-label">Themenbereiche</div>
+    </div>
+    <div class="hero__stat">
+      <div class="hero__stat-num">0€</div>
+      <div class="hero__stat-label">Kosten</div>
+    </div>
+  </div>
 </div>
 
 <!-- CONTENT -->
 <div class="content">
 
- <!-- HERZ, BLUT & ENERGIE -->
- <div class="category reveal">
-   <div class="category__header">
-     <span class="category__icon">🫀</span>
-     <h2 class="category__title">Herz, Blut & Energie</h2>
-     <span class="category__count">3 Webinare</span>
-   </div>
-   <div class="webinar-list">
-     <div class="webinar-item">
-       <div class="webinar-item__title">Herz & Energie mit Omega-3 und Q10</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Herz+%26+Energie+mit+Omega-3+und+Q10%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Bluthochdruck – Was Nährstoffe wirklich bewirken können</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Bluthochdruck%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Mehr Energie im Alltag – Was wirklich dahinter steckt</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Mehr+Energie+im+Alltag%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-   </div>
- </div>
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <div class="disclaimer__title">⚠ Rechtlicher Hinweis</div>
+    <p class="disclaimer__text">Die angebotenen Webinare dienen ausschließlich der allgemeinen Information und Wissensvermittlung. Sie basieren auf Erfahrungsberichten und aktuellen Studienlagen. Die Inhalte stellen keine medizinische Beratung dar, ersetzen keinen Arztbesuch und erheben keinen Anspruch auf Vollständigkeit oder therapeutische Wirksamkeit. Es werden weder Diagnosen gestellt noch Heilversprechen gegeben. Bei gesundheitlichen Beschwerden wende dich bitte an einen Arzt oder Heilpraktiker.</p>
+  </div>
 
- <!-- GEHIRN, NERVEN & PSYCHE -->
- <div class="category reveal">
-   <div class="category__header">
-     <span class="category__icon">🧠</span>
-     <h2 class="category__title">Gehirn, Nerven & Psyche</h2>
-     <span class="category__count">4 Webinare</span>
-   </div>
-   <div class="webinar-list">
-     <div class="webinar-item">
-       <div class="webinar-item__title">Gehirn & Lernen – Wie Nährstoffe das Denken fördern</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Gehirn+%26+Lernen%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Psyche & Gehirn – Nährstoffe bei neuropsychiatrischen Erkrankungen</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Psyche+%26+Gehirn%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Migräne ganzheitlich verstehen & lindern</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Migr%C3%A4ne+ganzheitlich%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Multiple Sklerose – Naturheilkundliche Ansätze</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Multiple+Sklerose%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-   </div>
- </div>
+  <!-- HERZ, BLUT & ENERGIE -->
+  <div class="category reveal">
+    <div class="category__header">
+      <span class="category__icon">🫀</span>
+      <h2 class="category__title">Herz, Blut & Energie</h2>
+      <span class="category__count">3 Webinare</span>
+    </div>
+    <div class="webinar-list">
+      <div class="webinar-item">
+        <div class="webinar-item__title">Herz & Energie mit Omega-3 und Q10</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Herz+%26+Energie+mit+Omega-3+und+Q10%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Bluthochdruck – Was Nährstoffe wirklich bewirken können</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Bluthochdruck%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Mehr Energie im Alltag – Was wirklich dahinter steckt</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Mehr+Energie+im+Alltag%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+    </div>
+  </div>
 
- <!-- HORMONE & STOFFWECHSEL -->
- <div class="category reveal">
-   <div class="category__header">
-     <span class="category__icon">🦋</span>
-     <h2 class="category__title">Hormone & Stoffwechsel</h2>
-     <span class="category__count">3 Webinare</span>
-   </div>
-   <div class="webinar-list">
-     <div class="webinar-item">
-       <div class="webinar-item__title">Schilddrüse – Symptome verstehen, natürlich unterstützen</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Schilddr%C3%BCse%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Wechseljahre verstehen & Beschwerden natürlich lindern</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Wechseljahre%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Männergesundheit – Was Männer wirklich brauchen</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22M%C3%A4nnergesundheit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-   </div>
- </div>
+  <!-- GEHIRN, NERVEN & PSYCHE -->
+  <div class="category reveal">
+    <div class="category__header">
+      <span class="category__icon">🧠</span>
+      <h2 class="category__title">Gehirn, Nerven & Psyche</h2>
+      <span class="category__count">4 Webinare</span>
+    </div>
+    <div class="webinar-list">
+      <div class="webinar-item">
+        <div class="webinar-item__title">Gehirn & Lernen – Wie Nährstoffe das Denken fördern</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Gehirn+%26+Lernen%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Psyche & Gehirn – Nährstoffe bei neuropsychiatrischen Erkrankungen</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Psyche+%26+Gehirn%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Migräne ganzheitlich verstehen & lindern</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Migr%C3%A4ne+ganzheitlich%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Multiple Sklerose – Naturheilkundliche Ansätze</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Multiple+Sklerose%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+    </div>
+  </div>
 
- <!-- DARM, ENTGIFTUNG & IMMUNSYSTEM -->
- <div class="category reveal">
-   <div class="category__header">
-     <span class="category__icon">🌿</span>
-     <h2 class="category__title">Darm, Entgiftung & Immunsystem</h2>
-     <span class="category__count">3 Webinare</span>
-   </div>
-   <div class="webinar-list">
-     <div class="webinar-item">
-       <div class="webinar-item__title">Darmgesundheit – Das Fundament deiner Gesundheit</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Darmgesundheit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Entgiftung – Wie der Körper sich selbst befreit</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Entgiftung%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Allergien & Heuschnupfen – Ursachen verstehen, natürlich lindern</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Allergien+%26+Heuschnupfen%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-   </div>
- </div>
+  <!-- HORMONE & STOFFWECHSEL -->
+  <div class="category reveal">
+    <div class="category__header">
+      <span class="category__icon">🦋</span>
+      <h2 class="category__title">Hormone & Stoffwechsel</h2>
+      <span class="category__count">3 Webinare</span>
+    </div>
+    <div class="webinar-list">
+      <div class="webinar-item">
+        <div class="webinar-item__title">Schilddrüse – Symptome verstehen, natürlich unterstützen</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Schilddr%C3%BCse%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Wechseljahre verstehen & Beschwerden natürlich lindern</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Wechseljahre%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Männergesundheit – Was Männer wirklich brauchen</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22M%C3%A4nnergesundheit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+    </div>
+  </div>
 
- <!-- GELENKE, MUSKELN & BEWEGUNG -->
- <div class="category reveal">
-   <div class="category__header">
-     <span class="category__icon">🦴</span>
-     <h2 class="category__title">Gelenke, Muskeln & Bewegung</h2>
-     <span class="category__count">4 Webinare</span>
-   </div>
-   <div class="webinar-list">
-     <div class="webinar-item">
-       <div class="webinar-item__title">Gesunde Gelenke – Beweglich bleiben mit den richtigen Nährstoffen</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Gesunde+Gelenke%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Kollagen – Was der Körper wirklich braucht</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Kollagen%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Rheuma & Arthrose – Nährstoffe als natürlicher Ansatz</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Rheuma+%26+Arthrose%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Sport & Nährstoffe – Leistung nachhaltig steigern</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Sport+%26+N%C3%A4hrstoffe%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-   </div>
- </div>
+  <!-- DARM, ENTGIFTUNG & IMMUNSYSTEM -->
+  <div class="category reveal">
+    <div class="category__header">
+      <span class="category__icon">🌿</span>
+      <h2 class="category__title">Darm, Entgiftung & Immunsystem</h2>
+      <span class="category__count">3 Webinare</span>
+    </div>
+    <div class="webinar-list">
+      <div class="webinar-item">
+        <div class="webinar-item__title">Darmgesundheit – Das Fundament deiner Gesundheit</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Darmgesundheit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Entgiftung – Wie der Körper sich selbst befreit</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Entgiftung%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Allergien & Heuschnupfen – Ursachen verstehen, natürlich lindern</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Allergien+%26+Heuschnupfen%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+    </div>
+  </div>
 
- <!-- HAUT, ZÄHNE & ÄUSSERE GESUNDHEIT -->
- <div class="category reveal">
-   <div class="category__header">
-     <span class="category__icon">✨</span>
-     <h2 class="category__title">Haut, Zähne & äußere Gesundheit</h2>
-     <span class="category__count">2 Webinare</span>
-   </div>
-   <div class="webinar-list">
-     <div class="webinar-item">
-       <div class="webinar-item__title">Strahlende Haut – Die 5 Regeln für echte Schönheit von innen</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Strahlende+Haut%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Zahngesundheit – Mehr als Putzen und Zahnarzt</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Zahngesundheit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-   </div>
- </div>
+  <!-- GELENKE, MUSKELN & BEWEGUNG -->
+  <div class="category reveal">
+    <div class="category__header">
+      <span class="category__icon">🦴</span>
+      <h2 class="category__title">Gelenke, Muskeln & Bewegung</h2>
+      <span class="category__count">4 Webinare</span>
+    </div>
+    <div class="webinar-list">
+      <div class="webinar-item">
+        <div class="webinar-item__title">Gesunde Gelenke – Beweglich bleiben mit den richtigen Nährstoffen</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Gesunde+Gelenke%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Kollagen – Was der Körper wirklich braucht</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Kollagen%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Rheuma & Arthrose – Nährstoffe als natürlicher Ansatz</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Rheuma+%26+Arthrose%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Sport & Nährstoffe – Leistung nachhaltig steigern</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Sport+%26+N%C3%A4hrstoffe%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+    </div>
+  </div>
 
- <!-- FAMILIE, KINDER & KINDERWUNSCH -->
- <div class="category reveal">
-   <div class="category__header">
-     <span class="category__icon">👶</span>
-     <h2 class="category__title">Familie, Kinder & Kinderwunsch</h2>
-     <span class="category__count">4 Webinare</span>
-   </div>
-   <div class="webinar-list">
-     <div class="webinar-item">
-       <div class="webinar-item__title">Nährstoffe für Kinder – Was sie wirklich brauchen</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22N%C3%A4hrstoffe+f%C3%BCr+Kinder%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Gesunde Familie – Eltern und Kinder gemeinsam stärken</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Gesunde+Familie%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Schwangerschaft & Stillzeit – Optimal versorgt von Anfang an</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Schwangerschaft+%26+Stillzeit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Kinderwunsch – Natürliche Unterstützung auf dem Weg zum Kind</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Kinderwunsch%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-   </div>
- </div>
+  <!-- HAUT, ZÄHNE & ÄUSSERE GESUNDHEIT -->
+  <div class="category reveal">
+    <div class="category__header">
+      <span class="category__icon">✨</span>
+      <h2 class="category__title">Haut, Zähne & äußere Gesundheit</h2>
+      <span class="category__count">2 Webinare</span>
+    </div>
+    <div class="webinar-list">
+      <div class="webinar-item">
+        <div class="webinar-item__title">Strahlende Haut – Die 5 Regeln für echte Schönheit von innen</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Strahlende+Haut%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Zahngesundheit – Mehr als Putzen und Zahnarzt</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Zahngesundheit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+    </div>
+  </div>
 
- <!-- SCHWERE ERKRANKUNGEN & PRÄVENTION -->
- <div class="category reveal">
-   <div class="category__header">
-     <span class="category__icon">🎗️</span>
-     <h2 class="category__title">Schwere Erkrankungen & Prävention</h2>
-     <span class="category__count">2 Webinare</span>
-   </div>
-   <div class="webinar-list">
-     <div class="webinar-item">
-       <div class="webinar-item__title">Nährstoffe und Krebs – Ein ganzheitlicher Blick</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22N%C3%A4hrstoffe+und+Krebs%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Gesund alt werden – möglichst lange</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Gesund+alt+werden%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-   </div>
- </div>
+  <!-- FAMILIE, KINDER & KINDERWUNSCH -->
+  <div class="category reveal">
+    <div class="category__header">
+      <span class="category__icon">👶</span>
+      <h2 class="category__title">Familie, Kinder & Kinderwunsch</h2>
+      <span class="category__count">4 Webinare</span>
+    </div>
+    <div class="webinar-list">
+      <div class="webinar-item">
+        <div class="webinar-item__title">Nährstoffe für Kinder – Was sie wirklich brauchen</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22N%C3%A4hrstoffe+f%C3%BCr+Kinder%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Gesunde Familie – Eltern und Kinder gemeinsam stärken</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Gesunde+Familie%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Schwangerschaft & Stillzeit – Optimal versorgt von Anfang an</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Schwangerschaft+%26+Stillzeit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Kinderwunsch – Natürliche Unterstützung auf dem Weg zum Kind</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Kinderwunsch%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+    </div>
+  </div>
 
- <!-- WISSEN & HINTERGRUND -->
- <div class="category reveal">
-   <div class="category__header">
-     <span class="category__icon">🌊</span>
-     <h2 class="category__title">Wissen & Hintergrund</h2>
-     <span class="category__count">2 Webinare</span>
-   </div>
-   <div class="webinar-list">
-     <div class="webinar-item">
-       <div class="webinar-item__title">Nordic Health – Gesund wie die Skandinavier</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Nordic+Health%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-     <div class="webinar-item">
-       <div class="webinar-item__title">Ökosysteme der Ozeane – Warum Herkunft bei Omega-3 zählt</div>
-       <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22%C3%96kosysteme+der+Ozeane%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
-     </div>
-   </div>
- </div>
+  <!-- SCHWERE ERKRANKUNGEN & PRÄVENTION -->
+  <div class="category reveal">
+    <div class="category__header">
+      <span class="category__icon">🎗️</span>
+      <h2 class="category__title">Schwere Erkrankungen & Prävention</h2>
+      <span class="category__count">2 Webinare</span>
+    </div>
+    <div class="webinar-list">
+      <div class="webinar-item">
+        <div class="webinar-item__title">Nährstoffe und Krebs – Ein ganzheitlicher Blick</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22N%C3%A4hrstoffe+und+Krebs%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Gesund alt werden – möglichst lange</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Gesund+alt+werden%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+    </div>
+  </div>
 
- <!-- BOTTOM CTA -->
- <div class="bottom-cta reveal">
-   <h2>Kein passendes Thema dabei?<br><em>Frag einfach.</em></h2>
-   <p>Ich habe noch weitere Webinare – schreib mir einfach welches Thema dich bewegt. Kein Haken, keine Verpflichtung.</p>
-   <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+interessiere+mich+f%C3%BCr+ein+kostenloses+Webinar+zu+folgendem+Thema%3A+" class="btn-whatsapp" target="_blank" rel="noopener">
-     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-     Thema anfragen
-   </a>
- </div>
+  <!-- WISSEN & HINTERGRUND -->
+  <div class="category reveal">
+    <div class="category__header">
+      <span class="category__icon">🌊</span>
+      <h2 class="category__title">Wissen & Hintergrund</h2>
+      <span class="category__count">2 Webinare</span>
+    </div>
+    <div class="webinar-list">
+      <div class="webinar-item">
+        <div class="webinar-item__title">Nordic Health – Gesund wie die Skandinavier</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Nordic+Health%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Ökosysteme der Ozeane – Warum Herkunft bei Omega-3 zählt</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22%C3%96kosysteme+der+Ozeane%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+    </div>
+  </div>
 
- <!-- BACK LINK -->
- <div class="back-wrap">
-   <a href="https://davidmeetsnature.de" class="back-link">← Zurück zur Hauptseite</a>
- </div>
+  <!-- BOTTOM CTA -->
+  <div class="bottom-cta reveal">
+    <h2>Kein passendes Thema dabei?<br><em>Frag einfach.</em></h2>
+    <p>Ich habe noch weitere Webinare – schreib mir einfach welches Thema dich bewegt. Kein Haken, keine Verpflichtung.</p>
+    <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+interessiere+mich+f%C3%BCr+ein+kostenloses+Webinar+zu+folgendem+Thema%3A+" class="btn-whatsapp" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Thema anfragen
+    </a>
+  </div>
+
+  <!-- BACK LINK -->
+  <div class="back-wrap">
+    <a href="https://davidmeetsnature.de" class="back-link">← Zurück zur Hauptseite</a>
+  </div>
 
 </div>
 
 <!-- FOOTER -->
 <footer class="footer">
- <p>© 2026 David Müller · Independent Business Partner der Firma Eqology</p>
- <div class="footer__nav">
-   <a href="https://davidmeetsnature.de#impressum">Impressum</a>
-   <a href="https://davidmeetsnature.de#datenschutz">Datenschutz</a>
- </div>
+  <p>© 2026 David Müller · Independent Business Partner der Firma Eqology</p>
+  <div class="footer__nav">
+    <a href="https://davidmeetsnature.de#impressum">Impressum</a>
+    <a href="https://davidmeetsnature.de#datenschutz">Datenschutz</a>
+  </div>
+  <p class="footer__disclaimer">Die Webinare dienen der allgemeinen Information und Wissensvermittlung. Kein Ersatz für medizinische Beratung. Keine Diagnosen, keine Heilversprechen. Bei Beschwerden bitte einen Arzt aufsuchen.</p>
 </footer>
 
 <!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/4917622247477" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp Kontakt">
- <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
- <span class="wa-float__text">Schreib mir</span>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-float__text">Schreib mir</span>
 </a>
 
 <script>
- const revealEls = document.querySelectorAll(".reveal");
- const ro = new IntersectionObserver((entries) => {
-   entries.forEach(e => {
-     if (e.isIntersecting) { e.target.classList.add("visible"); ro.unobserve(e.target); }
-   });
- }, { threshold: 0.08 });
- revealEls.forEach(el => ro.observe(el));
+  const revealEls = document.querySelectorAll(".reveal");
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("visible"); ro.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => ro.observe(el));
 </script>
 </body>
 </html>
-
