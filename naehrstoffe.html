@@ -1,1 +1,625 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eqology Nährstoffe – Omega-3, D3 & K2 | David Müller</title>
+<meta name="description" content="Die Nährstoffe von Eqology – testbasiert, natürlich, aus Norwegen. Omega-3, Vitamin D3 & K2, Kollagen und mehr. David Müller erklärt was dahinter steckt.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://davidmeetsnature.de/naehrstoffe">
+<meta property="og:title" content="Eqology Nährstoffe – Was dahinter steckt">
+<meta property="og:description" content="Testbasierte Nährstoffversorgung aus Norwegen. Omega-3, D3 & K2, Kollagen – und warum Messen vor Handeln entscheidend ist.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://davidmeetsnature.de/naehrstoffe">
+<meta property="og:image" content="https://davidmeetsnature.de/og-bild.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest: #2E4A3E; --sage: #4A6B5D; --mist: #8FA99E;
+  --cream: #F7F4EF; --warm: #EDE8DF; --dark: #1A2E26;
+  --gold: #C4A882; --text: #2C3830; --text-mid: #5A6E65;
+  --text-soft: #8FA99E;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--cream); color: var(--text);
+  font-family: var(--sans); line-height: 1.7;
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+a, button { min-height: 44px; }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.1rem 1.25rem;
+  background: rgba(26,46,38,0.97);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+.nav__logo { font-family: var(--serif); font-size: 1.1rem; color: #fff; }
+.nav__back {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.7); transition: color 0.25s; min-height: auto;
+}
+.nav__back:hover { color: var(--gold); }
+.nav__cta {
+  display: inline-flex; align-items: center;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--dark); background: var(--gold);
+  padding: 0.55rem 1.2rem; border-radius: 2px; min-height: 36px;
+  transition: background 0.3s;
+}
+.nav__cta:hover { background: #d4b892; }
+
+/* HERO */
+.hero {
+  background: var(--dark); padding: 7rem 1.25rem 4rem;
+  position: relative; overflow: hidden;
+}
+.hero__bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center center;
+  z-index: 0;
+}
+.hero__overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg,
+    rgba(18,36,28,0.55) 0%,
+    rgba(18,36,28,0.75) 50%,
+    rgba(18,36,28,0.92) 100%);
+}
+.hero__logo-wrap,
+.hero__tag,
+.hero h1,
+.hero__lead,
+.hero__facts,
+.hero .btn-gold {
+  position: relative; z-index: 2;
+}
+.hero__logo-wrap { margin-bottom: 2rem; }
+.hero__eq-logo {
+  height: 60px; width: auto; max-width: 280px;
+  object-fit: contain; display: block;
+  filter: brightness(0) invert(1); opacity: 0.9;
+}
+.hero__tag {
+  font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.hero__tag::before { content: ""; display: block; width: 1.25rem; height: 1px; background: var(--gold); }
+.hero h1 {
+  font-family: var(--serif); font-size: clamp(1.9rem, 7vw, 3rem);
+  font-weight: 400; line-height: 1.2; color: #fff; margin-bottom: 1.25rem;
+}
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero__lead {
+  font-size: 0.97rem; color: rgba(255,255,255,0.55); line-height: 1.85;
+  max-width: 520px; margin-bottom: 2rem;
+}
+.hero__facts {
+  display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;
+}
+.hero__fact {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.78rem; color: rgba(255,255,255,0.6);
+}
+.hero__fact-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--dark); background: var(--gold);
+  padding: 0.9rem 1.8rem; border-radius: 2px; min-height: 48px; transition: all 0.3s;
+}
+.btn-gold:hover { background: #d4b892; transform: translateY(-2px); }
+
+/* PHILOSOPHY */
+.philosophy { background: var(--warm); padding: 4rem 1.25rem; }
+.philosophy__inner { max-width: 900px; margin: 0 auto; }
+.section-tag {
+  font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-soft); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.section-tag::before { content: ""; display: block; width: 1.25rem; height: 1px; background: var(--text-soft); flex-shrink: 0; }
+.philosophy h2 {
+  font-family: var(--serif); font-size: clamp(1.6rem,5.5vw,2.2rem);
+  font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 1.25rem;
+}
+.philosophy h2 em { font-style: italic; color: var(--sage); }
+.philosophy p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.9; margin-bottom: 1rem; }
+.philosophy__steps { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.philosophy__step {
+  background: #fff; border-radius: 4px; padding: 1.5rem;
+  border-left: 3px solid var(--gold);
+  box-shadow: 0 2px 12px rgba(46,74,62,0.05);
+  display: flex; gap: 1.25rem; align-items: flex-start;
+}
+.philosophy__step-num {
+  font-family: var(--serif); font-size: 1.75rem; font-weight: 600;
+  color: rgba(143,169,158,0.25); line-height: 1; flex-shrink: 0; margin-top: -0.1rem;
+}
+.philosophy__step h4 {
+  font-family: var(--serif); font-size: 1rem; font-weight: 600;
+  color: var(--dark); margin-bottom: 0.35rem;
+}
+.philosophy__step p { font-size: 0.86rem; color: var(--text-mid); line-height: 1.75; margin: 0; }
+
+/* PRODUCTS */
+.products { background: var(--cream); padding: 4rem 1.25rem; }
+.products__inner { max-width: 900px; margin: 0 auto; }
+.products h2 {
+  font-family: var(--serif); font-size: clamp(1.6rem,5.5vw,2.2rem);
+  font-weight: 400; line-height: 1.28; color: var(--dark); margin-bottom: 0.75rem;
+}
+.products h2 em { font-style: italic; color: var(--sage); }
+.products__lead { font-size: 0.93rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 2.5rem; }
+.products__grid { display: flex; flex-direction: column; gap: 1.5rem; }
+.product-card {
+  background: #fff; border-radius: 4px; overflow: hidden;
+  box-shadow: 0 2px 16px rgba(46,74,62,0.07);
+}
+.product-card__img {
+  height: 200px; background: #f9f7f4;
+  display: flex; align-items: center; justify-content: center; padding: 1.5rem;
+}
+.product-card__img img { width: 100%; height: 100%; object-fit: contain; }
+.product-card__body { padding: 1.5rem; }
+.product-card__tag {
+  font-size: 0.6rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--mist); margin-bottom: 0.4rem;
+}
+.product-card__body h3 {
+  font-family: var(--serif); font-size: 1.2rem; font-weight: 600;
+  color: var(--dark); margin-bottom: 0.6rem;
+}
+.product-card__body p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 1rem; }
+.product-card__bullets { list-style: none; margin-bottom: 1.25rem; }
+.product-card__bullets li {
+  font-size: 0.83rem; color: var(--text-mid); padding: 0.3rem 0;
+  display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.6;
+}
+.product-card__bullets li::before { content: "→"; color: var(--gold); flex-shrink: 0; font-size: 0.75rem; margin-top: 0.1rem; }
+.product-card__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--dark); background: var(--gold);
+  padding: 0.75rem 1.25rem; border-radius: 2px; min-height: 44px; transition: all 0.3s;
+}
+.btn-primary:hover { background: #d4b892; }
+.btn-secondary {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--sage); border: 1.5px solid var(--mist);
+  padding: 0.75rem 1.25rem; border-radius: 2px; min-height: 44px; transition: all 0.3s;
+}
+.btn-secondary:hover { border-color: var(--sage); color: var(--forest); }
+.ad-label {
+  font-size: 0.58rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-soft); border: 1px solid rgba(143,169,158,0.3);
+  border-radius: 2px; padding: 0.1rem 0.35rem; margin-left: 0.4rem; vertical-align: middle;
+}
+
+/* WHY EQOLOGY */
+.why { background: var(--forest); padding: 4rem 1.25rem; color: #fff; }
+.why__inner { max-width: 900px; margin: 0 auto; }
+.why .section-tag { color: var(--mist); }
+.why .section-tag::before { background: var(--mist); }
+.why h2 {
+  font-family: var(--serif); font-size: clamp(1.6rem,5.5vw,2.2rem);
+  font-weight: 400; line-height: 1.28; color: #fff; margin-bottom: 1rem;
+}
+.why h2 em { font-style: italic; color: var(--gold); }
+.why__lead { font-size: 0.93rem; color: rgba(255,255,255,0.55); line-height: 1.85; margin-bottom: 2rem; }
+.why__points { display: flex; flex-direction: column; gap: 0; }
+.why__point {
+  display: flex; gap: 1rem; align-items: flex-start;
+  padding: 1.1rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.why__point:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.why__point-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+.why__point-text h4 {
+  font-family: var(--serif); font-size: 0.97rem; font-weight: 600;
+  color: #fff; margin-bottom: 0.2rem;
+}
+.why__point-text p { font-size: 0.82rem; color: rgba(255,255,255,0.48); line-height: 1.65; }
+
+/* DISCLAIMER */
+.disclaimer {
+  background: rgba(196,168,130,0.08); border: 1px solid rgba(196,168,130,0.2);
+  border-left: 3px solid var(--gold); border-radius: 4px;
+  padding: 1.25rem 1.5rem; margin: 2rem 0 0;
+}
+.disclaimer__title {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--text-soft); margin-bottom: 0.5rem;
+}
+.disclaimer p { font-size: 0.78rem; color: var(--text-mid); line-height: 1.75; }
+
+/* CTA */
+.cta { background: var(--sage); padding: 4rem 1.25rem; text-align: center; position: relative; overflow: hidden; }
+.cta::before {
+  content: ""; position: absolute; top: -40%; left: -30%; width: 80%; height: 180%;
+  background: radial-gradient(ellipse, rgba(196,168,130,0.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+.cta__label {
+  font-size: 0.63rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.85rem;
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+}
+.cta__label::before, .cta__label::after { content: ""; display: block; width: 1.25rem; height: 1px; background: var(--gold); }
+.cta h2 {
+  font-family: var(--serif); font-size: clamp(1.45rem,6vw,2.1rem);
+  font-weight: 400; color: #fff; line-height: 1.3; margin-bottom: 0.85rem;
+}
+.cta h2 em { font-style: italic; color: var(--gold); }
+.cta p { font-size: 0.9rem; color: rgba(255,255,255,0.52); margin-bottom: 1.75rem; line-height: 1.8; }
+.cta__buttons { display: flex; flex-direction: column; gap: 0.85rem; align-items: center; }
+.btn-cta-gold {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--dark); background: var(--gold);
+  padding: 1rem 2rem; border-radius: 2px; min-height: 52px; transition: all 0.3s;
+  width: 100%; max-width: 300px;
+}
+.btn-cta-gold:hover { background: #d4b892; transform: translateY(-2px); }
+.btn-cta-outline {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #fff; border: 1.5px solid rgba(255,255,255,0.35);
+  padding: 1rem 2rem; border-radius: 2px; min-height: 52px; transition: all 0.3s;
+  width: 100%; max-width: 300px;
+}
+.btn-cta-outline:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+
+/* FOOTER */
+.footer { background: var(--dark); color: rgba(255,255,255,0.32); padding: 1.75rem 1.25rem; text-align: center; font-size: 0.76rem; }
+.footer__nav { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
+.footer__nav a { color: rgba(255,255,255,0.38); text-decoration: underline; font-size: 0.73rem; transition: color 0.25s; min-height: auto; }
+.footer__nav a:hover { color: var(--gold); }
+.footer__social { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
+.footer__social-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: rgba(255,255,255,0.45); transition: color 0.25s; min-height: auto; }
+.footer__social-link:hover { color: var(--gold); }
+
+/* FLOATING WHATSAPP */
+.wa-float {
+  position: fixed; bottom: 1.5rem; right: 1.25rem; z-index: 250;
+  display: flex; align-items: center; gap: 0.6rem;
+  background: #25D366; color: #fff; border-radius: 50px; padding: 0.75rem 1.1rem;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.05em; text-decoration: none; transition: all 0.3s ease; min-height: auto;
+}
+.wa-float:hover { background: #1fb855; transform: translateY(-3px); }
+.wa-float__text { display: none; }
+@media (min-width: 480px) { .wa-float__text { display: inline; } }
+
+/* VIDEO MODAL */
+.video-modal-backdrop {
+  position: fixed; inset: 0; z-index: 600; background: rgba(0,0,0,0.88);
+  display: flex; align-items: center; justify-content: center; padding: 1.25rem;
+  opacity: 0; pointer-events: none; transition: opacity 0.35s ease;
+}
+.video-modal-backdrop.open { opacity: 1; pointer-events: all; }
+.video-modal { position: relative; width: 100%; max-width: 720px; background: #000; border-radius: 4px; overflow: hidden; }
+.video-modal__close {
+  position: absolute; top: 0.75rem; right: 0.75rem; z-index: 10;
+  background: rgba(0,0,0,0.6); border: none; cursor: pointer; color: #fff;
+  font-size: 1.2rem; width: 36px; height: 36px; display: flex; align-items: center;
+  justify-content: center; border-radius: 50%; transition: background 0.2s; min-height: auto;
+}
+.video-modal__close:hover { background: rgba(0,0,0,0.9); }
+.video-modal__iframe-wrap { position: relative; padding-top: 56.25%; }
+.video-modal__iframe-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+
+/* ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .nav { padding: 1.1rem 2rem; }
+  .hero { padding: 7rem 2rem 5rem; }
+  .hero__lead { font-size: 1.05rem; }
+  .philosophy { padding: 6rem 2rem; }
+  .philosophy__steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+  .products { padding: 6rem 2rem; }
+  .products__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+  .product-card__img { height: 180px; }
+  .why { padding: 6rem 2rem; }
+  .why__points { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .why__point { border-right: none; }
+  .cta { padding: 6rem 2rem; }
+  .cta__buttons { flex-direction: row; justify-content: center; }
+  .btn-cta-gold, .btn-cta-outline { width: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="https://davidmeetsnature.de" class="nav__back">← Zurück zur Website</a>
+  <div class="nav__logo">David Müller</div>
+  <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+interessiere+mich+f%C3%BCr+die+Eqology+N%C3%A4hrstoffe." class="nav__cta" target="_blank" rel="noopener">Kontakt</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="hintergrund-naehrstoffe.png" alt="Norwegischer Fjord – Natur und Reinheit" class="hero__bg">
+  <div class="hero__overlay"></div>
+  <div class="hero__logo-wrap">
+    <img src="Eqology Independent Businesspartner.png" alt="Eqology Independent Business Partner – David Müller" class="hero__eq-logo">
+  </div>
+  <div class="hero__tag">Eqology Nährstoffe</div>
+  <h1>Nicht raten.<br><em>Messen. Handeln.</em></h1>
+  <p class="hero__lead">Die meisten nehmen Nährstoffe ins Blaue hinein. Eqology macht es anders – erst testen, dann gezielt versorgen. Natürlich, testbasiert, seit über 20 Jahren aus Norwegen.</p>
+  <div class="hero__facts">
+    <div class="hero__fact"><div class="hero__fact-dot"></div>Über 20 Jahre Erfahrung</div>
+    <div class="hero__fact"><div class="hero__fact-dot"></div>Testbasiert & messbar</div>
+    <div class="hero__fact"><div class="hero__fact-dot"></div>Natürliche Inhaltsstoffe</div>
+    <div class="hero__fact"><div class="hero__fact-dot"></div>Nachhaltig & zertifiziert</div>
+  </div>
+  <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+mehr+%C3%BCber+die+Eqology+N%C3%A4hrstoffe+erfahren." class="btn-gold" target="_blank" rel="noopener">Jetzt mehr erfahren</a>
+</div>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <div class="philosophy__inner">
+    <div class="section-tag reveal">Das Prinzip</div>
+    <h2 class="reveal">Warum Messen vor<br><em>Handeln kommt.</em></h2>
+    <p class="reveal">Du würdest kein Medikament nehmen ohne zu wissen ob du es brauchst. Bei Nährstoffen machen die meisten Menschen genau das. Eqology setzt auf einen anderen Ansatz – einen der wirklich funktioniert.</p>
+    <div class="philosophy__steps">
+      <div class="philosophy__step reveal">
+        <div class="philosophy__step-num">01</div>
+        <div>
+          <h4>Testen</h4>
+          <p>Ein einfacher Bluttest zuhause zeigt deinen persönlichen Nährstoffstatus – konkret und messbar.</p>
+        </div>
+      </div>
+      <div class="philosophy__step reveal reveal-d1">
+        <div class="philosophy__step-num">02</div>
+        <div>
+          <h4>Verstehen</h4>
+          <p>Das Ergebnis wird verständlich aufbereitet. Du weißt genau wo du stehst und was dein Körper braucht.</p>
+        </div>
+      </div>
+      <div class="philosophy__step reveal reveal-d2">
+        <div class="philosophy__step-num">03</div>
+        <div>
+          <h4>Handeln</h4>
+          <p>Gezielte Versorgung mit hochwertigen Nährstoffen – genau dort wo dein Körper sie wirklich benötigt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="products__inner">
+    <div class="section-tag reveal">Die Produkte</div>
+    <h2 class="reveal">Was Eqology<br><em>unterscheidet.</em></h2>
+    <p class="products__lead reveal">Jedes Produkt hat einen klaren Zweck. Keine Füllstoffe, keine leeren Versprechen. Nur was dein Körper wirklich braucht – in der Qualität die es verdient.</p>
+
+    <div class="products__grid">
+
+      <!-- Omega-3 -->
+      <div class="product-card reveal">
+        <div class="product-card__img">
+          <img src="TestOmega.jpg" alt="Eqology Omega-3 Test und Pure Arctic Oil">
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__tag">Basisversorgung</div>
+          <h3>Omega-3 & Pure Arctic Oil</h3>
+          <p>Das Fundament. Omega-3-Fettsäuren aus reinem norwegischen Fischöl – für Zellen, Herz, Gehirn und Entzündungsregulation.</p>
+          <ul class="product-card__bullets">
+            <li>Persönlicher Omega-3-Test per Blutprobe</li>
+            <li>Messbare Verbesserung des Omega-3-Index</li>
+            <li>Reinheit geprüft & zertifiziert</li>
+            <li>Für Kinder & Erwachsene geeignet</li>
+          </ul>
+          <div class="product-card__actions">
+            <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="btn-primary">Produkt ansehen <span class="ad-label">Werbung</span></a>
+            <button onclick="openVideo('kz_SfqnEa-0', 'Was ist Omega-3?')" class="btn-secondary" style="background:none;cursor:pointer;font-family:var(--sans);">▶ Video</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- D3 K2 -->
+      <div class="product-card reveal reveal-d1">
+        <div class="product-card__img">
+          <img src="Test K2D3.jpg" alt="Eqology Vitamin D3 und K2 Test">
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__tag">Immunsystem & Knochen</div>
+          <h3>Vitamin D3 & K2</h3>
+          <p>Das unterschätzte Duo. D3 für Immunsystem und Energie – K2 damit Calcium dorthin kommt wo es hingehört: in die Knochen, nicht die Arterien.</p>
+          <ul class="product-card__bullets">
+            <li>Testbasierte Bestimmung des D3-Spiegels</li>
+            <li>Besonders wichtig in Herbst & Winter</li>
+            <li>Unterstützt Knochen und Kalziumverwertung</li>
+            <li>Häufig massiv unterschätzt</li>
+          </ul>
+          <div class="product-card__actions">
+            <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="btn-primary">Produkt ansehen <span class="ad-label">Werbung</span></a>
+            <button onclick="openVideo('Swy6kQYGrWM', 'Was ist Vitamin D3 & K2?')" class="btn-secondary" style="background:none;cursor:pointer;font-family:var(--sans);">▶ Video</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Öle -->
+      <div class="product-card reveal reveal-d2">
+        <div class="product-card__img">
+          <img src="Öle.jpg" alt="Eqology Pure Arctic Oil Produktpalette">
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__tag">Alltag & Routine</div>
+          <h3>Die Produktpalette</h3>
+          <p>Von Omega-3 über Kollagen bis hin zu weiteren Mikronährstoffen – Eqology bietet ein durchdachtes System das aufeinander aufbaut.</p>
+          <ul class="product-card__bullets">
+            <li>Aufeinander abgestimmte Produkte</li>
+            <li>Für jeden Lebensabschnitt geeignet</li>
+            <li>Einfach in den Alltag integrierbar</li>
+            <li>Nachhaltig produziert & verpackt</li>
+          </ul>
+          <div class="product-card__actions">
+            <a href="https://partner.eqology.com/eq-david" target="_blank" rel="noopener" class="btn-primary">Alle Produkte <span class="ad-label">Werbung</span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer reveal">
+      <div class="disclaimer__title">⚠ Rechtlicher Hinweis</div>
+      <p>Die Informationen auf dieser Seite dienen ausschließlich der allgemeinen Information. Sie basieren auf Studienlagen und Erfahrungen. Es werden keine Diagnosen gestellt und keine Heilversprechen gegeben. Nahrungsergänzungsmittel ersetzen keine ausgewogene Ernährung und keinen Arztbesuch. Bei gesundheitlichen Beschwerden wende dich bitte an einen Arzt.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY EQOLOGY -->
+<section class="why">
+  <div class="why__inner">
+    <div class="section-tag reveal">Warum Eqology</div>
+    <h2 class="reveal">Natur und Wissenschaft –<br><em>kein Widerspruch.</em></h2>
+    <p class="why__lead reveal">Eqology kommt aus Norwegen – einem Land das für Reinheit, Natur und Qualität steht. Das spiegelt sich in jedem Produkt wider.</p>
+    <div class="why__points">
+      <div class="why__point reveal">
+        <div class="why__point-icon">🌊</div>
+        <div class="why__point-text">
+          <h4>Norwegische Herkunft</h4>
+          <p>Reine Meeresgebiete, strenge Qualitätskontrollen, nachhaltige Fischerei.</p>
+        </div>
+      </div>
+      <div class="why__point reveal reveal-d1">
+        <div class="why__point-icon">🔬</div>
+        <div class="why__point-text">
+          <h4>Testbasiert</h4>
+          <p>Kein Raten. Jedes Produkt begleitet von messbaren Ergebnissen.</p>
+        </div>
+      </div>
+      <div class="why__point reveal">
+        <div class="why__point-icon">🌿</div>
+        <div class="why__point-text">
+          <h4>Natürliche Inhaltsstoffe</h4>
+          <p>Keine unnötigen Zusatzstoffe. Was drin steht, steckt auch drin.</p>
+        </div>
+      </div>
+      <div class="why__point reveal reveal-d1">
+        <div class="why__point-icon">♻️</div>
+        <div class="why__point-text">
+          <h4>Nachhaltigkeit</h4>
+          <p>Verantwortungsvoller Umgang mit Ressourcen – für heute und morgen.</p>
+        </div>
+      </div>
+      <div class="why__point reveal">
+        <div class="why__point-icon">📊</div>
+        <div class="why__point-text">
+          <h4>Über 20 Jahre Erfahrung</h4>
+          <p>Nicht neu auf dem Markt – bewährt, weiterentwickelt, vertrauenswürdig.</p>
+        </div>
+      </div>
+      <div class="why__point reveal reveal-d1">
+        <div class="why__point-icon">🤝</div>
+        <div class="why__point-text">
+          <h4>Persönliche Begleitung</h4>
+          <p>Du bist nicht allein. Ich begleite dich durch den Prozess – ehrlich und ohne Druck.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta__label">Nächster Schritt</div>
+  <h2>Neugierig geworden?<br><em>Lass uns reden.</em></h2>
+  <p>Kein Pitch. Kein Druck. Einfach ein offenes Gespräch – oder direkt ein kostenloses Webinar anfordern und dich erst mal informieren.</p>
+  <div class="cta__buttons">
+    <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+mehr+%C3%BCber+die+Eqology+N%C3%A4hrstoffe+erfahren." class="btn-cta-gold" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Per WhatsApp schreiben
+    </a>
+    <a href="https://davidmeetsnature.de/webinare" class="btn-cta-outline">
+      Kostenloses Webinar ansehen →
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 David Müller · Independent Business Partner der Firma Eqology</p>
+  <div class="footer__social">
+    <a href="https://www.instagram.com/davidmeetsnature" target="_blank" rel="noopener" class="footer__social-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </a>
+    <a href="https://whatsapp.com/channel/0029VbAes4k6LwHohrCwvo1E" target="_blank" rel="noopener" class="footer__social-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Kanal
+    </a>
+  </div>
+  <div class="footer__nav">
+    <a href="https://davidmeetsnature.de#impressum">Impressum</a>
+    <a href="https://davidmeetsnature.de#datenschutz">Datenschutz</a>
+  </div>
+</footer>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal-backdrop" id="videoBackdrop">
+  <div class="video-modal">
+    <button class="video-modal__close" onclick="closeVideo()" aria-label="Video schließen">✕</button>
+    <div id="videoTitle" style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:rgba(255,255,255,0.6);padding:0.6rem 1rem 0;"></div>
+    <div class="video-modal__iframe-wrap">
+      <iframe id="videoFrame" src="" title="Eqology Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/4917622247477" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp Kontakt">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-float__text">Schreib mir</span>
+</a>
+
+<script>
+  function openVideo(videoId, title) {
+    document.getElementById('videoTitle').textContent = title || '';
+    document.getElementById('videoFrame').src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+    document.getElementById('videoBackdrop').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideo() {
+    document.getElementById('videoFrame').src = '';
+    document.getElementById('videoBackdrop').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('videoBackdrop').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('videoBackdrop')) closeVideo();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideo(); });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => ro.observe(el));
+</script>
+</body>
+</html>
 
