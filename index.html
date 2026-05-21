@@ -153,7 +153,7 @@ a, button { min-height: 44px; }
   padding: 0.85rem 1.25rem;
   box-shadow: 0 2px 20px rgba(0,0,0,0.2);
 }
-.nav__logo { font-family: var(--serif); font-size: 1.1rem; color: #fff; z-index: 310; position: relative; }
+.nav__logo { font-family: var(--serif); font-size: 1.1rem; color: #fff; z-index: 310; position: relative; transition: opacity 0.3s; }
 .nav__links { display: none; }
 .nav__cta-desktop { display: none; }
 .nav__burger {
@@ -180,6 +180,7 @@ a, button { min-height: 44px; }
 }
 .mobile-menu.open { opacity: 1; pointer-events: all; transform: translateY(0); }
 body.menu-open { overflow: hidden; }
+body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
 .mobile-menu__label {
   font-size: 0.62rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--mist); margin-bottom: 2.5rem;
@@ -195,6 +196,7 @@ body.menu-open { overflow: hidden; }
 .mobile-menu.open .mobile-menu__nav li:nth-child(2) { opacity:1; transform:none; transition-delay:0.17s; }
 .mobile-menu.open .mobile-menu__nav li:nth-child(3) { opacity:1; transform:none; transition-delay:0.24s; }
 .mobile-menu.open .mobile-menu__nav li:nth-child(4) { opacity:1; transform:none; transition-delay:0.31s; }
+.mobile-menu.open .mobile-menu__nav li:nth-child(5) { opacity:1; transform:none; transition-delay:0.38s; }
 .mobile-menu__nav a {
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.25rem 0;
@@ -840,7 +842,7 @@ body.menu-open { overflow: hidden; }
     <li><a href="https://davidmeetsnature.de/naehrstoffe" onclick="closeMenu()">Eqology Produkte <span class="arrow">→</span></a></li>
   </ul>
   <div class="mobile-menu__cta-wrap">
-    <a href="#kontakt" class="mobile-menu__cta" onclick="closeMenu()">Termin anfragen</a>
+    <a href="#kontakt" class="mobile-menu__cta" onclick="closeMenu()">Lass uns sprechen</a>
   </div>
   <div class="mobile-menu__footer">© 2026 David Müller</div>
 </div>
