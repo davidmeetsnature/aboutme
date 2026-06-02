@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kostenlose Gesundheitswebinare | David Müller – davidmeetsnature.de</title>
-<meta name="description" content="27 kostenlose Expertenwebinare zu Gesundheitsthemen – von Herz & Energie bis Kinderwunsch. Einfach per WhatsApp anfordern.">
+<title>29 kostenlose Gesundheitswebinare | David Müller Zwickau</title>
+<meta name="description" content="29 kostenlose Expertenwebinare zu Gesundheitsthemen – von Herz & Energie bis Kinderwunsch. Einfach per WhatsApp anfordern.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://davidmeetsnature.de/webinare">
-<meta property="og:title" content="27 kostenlose Gesundheitswebinare – David Müller">
+<meta property="og:title" content="29 kostenlose Gesundheitswebinare – David Müller">
 <meta property="og:description" content="Von Migräne bis Zahngesundheit – kostenlose Expertenwebinare zu über 27 Gesundheitsthemen. Einfach anfordern.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://davidmeetsnature.de/webinare">
@@ -171,10 +171,6 @@ a, button { min-height: 44px; }
 .footer__nav { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
 .footer__nav a { color: rgba(255,255,255,0.38); text-decoration: underline; font-size: 0.73rem; transition: color 0.25s; min-height: auto; }
 .footer__nav a:hover { color: var(--gold); }
-.footer__disclaimer {
-  margin-top: 1rem; font-size: 0.66rem; color: rgba(255,255,255,0.28);
-  line-height: 1.65; max-width: 600px; margin-left: auto; margin-right: auto;
-}
 
 /* FLOATING WHATSAPP */
 .wa-float {
@@ -189,6 +185,12 @@ a, button { min-height: 44px; }
 .wa-float__text { display: none; }
 @media (min-width: 480px) { .wa-float__text { display: inline; } }
 
+/* ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+
 /* DISCLAIMER */
 .disclaimer {
   background: rgba(196,168,130,0.08); border: 1px solid rgba(196,168,130,0.25);
@@ -202,11 +204,10 @@ a, button { min-height: 44px; }
 .disclaimer__text {
   font-size: 0.78rem; color: var(--text-mid); line-height: 1.75;
 }
-
-/* ANIMATIONS */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.65s ease, transform 0.65s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+.footer__disclaimer {
+  margin-top: 1rem; font-size: 0.66rem; color: rgba(255,255,255,0.28);
+  line-height: 1.65; max-width: 600px; margin-left: auto; margin-right: auto;
+}
 
 /* DESKTOP */
 @media (min-width: 768px) {
@@ -235,7 +236,7 @@ a, button { min-height: 44px; }
   <p class="hero__desc">Diese Webinare würden anderswo viel Geld kosten. Hier bekommst du sie gratis. Einfach das gewünschte Thema antippen und per WhatsApp anfordern.</p>
   <div class="hero__stats">
     <div class="hero__stat">
-      <div class="hero__stat-num">27</div>
+      <div class="hero__stat-num">29</div>
       <div class="hero__stat-label">Webinare</div>
     </div>
     <div class="hero__stat">
@@ -255,7 +256,7 @@ a, button { min-height: 44px; }
   <!-- DISCLAIMER -->
   <div class="disclaimer">
     <div class="disclaimer__title">⚠ Rechtlicher Hinweis</div>
-    <p class="disclaimer__text">Die angebotenen Webinare dienen ausschließlich der allgemeinen Information und Wissensvermittlung. Sie basieren auf Erfahrungsberichten und aktuellen Studienlagen. Die Inhalte stellen keine medizinische Beratung dar, ersetzen keinen Arztbesuch und erheben keinen Anspruch auf Vollständigkeit oder therapeutische Wirksamkeit. Es werden weder Diagnosen gestellt noch Heilversprechen gegeben. Bei gesundheitlichen Beschwerden wende dich bitte an einen Arzt oder Heilpraktiker.</p>
+    <p class="disclaimer__text">Die angebotenen Webinare wurden von unabhängigen Experten erstellt und werden mit deren Genehmigung geteilt. Sie dienen ausschließlich der allgemeinen Information und Wissensvermittlung. Die Inhalte stellen keine medizinische Beratung dar, ersetzen keinen Arztbesuch und erheben keinen Anspruch auf Vollständigkeit oder therapeutische Wirksamkeit. Es werden weder Diagnosen gestellt noch Heilversprechen gegeben. Bei gesundheitlichen Beschwerden wende dich bitte an einen Arzt oder Heilpraktiker.</p>
   </div>
 
   <!-- HERZ, BLUT & ENERGIE -->
@@ -313,7 +314,7 @@ a, button { min-height: 44px; }
     <div class="category__header">
       <span class="category__icon">🦋</span>
       <h2 class="category__title">Hormone & Stoffwechsel</h2>
-      <span class="category__count">3 Webinare</span>
+      <span class="category__count">4 Webinare</span>
     </div>
     <div class="webinar-list">
       <div class="webinar-item">
@@ -327,6 +328,10 @@ a, button { min-height: 44px; }
       <div class="webinar-item">
         <div class="webinar-item__title">Männergesundheit – Was Männer wirklich brauchen</div>
         <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22M%C3%A4nnergesundheit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Blutzucker & Insulinresistenz – Diabetes verstehen und vorbeugen</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Blutzucker+%26+Insulinresistenz%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
       </div>
     </div>
   </div>
@@ -386,7 +391,7 @@ a, button { min-height: 44px; }
     <div class="category__header">
       <span class="category__icon">✨</span>
       <h2 class="category__title">Haut, Zähne & äußere Gesundheit</h2>
-      <span class="category__count">2 Webinare</span>
+      <span class="category__count">3 Webinare</span>
     </div>
     <div class="webinar-list">
       <div class="webinar-item">
@@ -396,6 +401,10 @@ a, button { min-height: 44px; }
       <div class="webinar-item">
         <div class="webinar-item__title">Zahngesundheit – Mehr als Putzen und Zahnarzt</div>
         <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Zahngesundheit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
+      </div>
+      <div class="webinar-item">
+        <div class="webinar-item__title">Augengesundheit – Was deine Augen wirklich brauchen</div>
+        <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+das+Webinar+%22Augengesundheit%22+kostenlos+erhalten." class="webinar-item__link" target="_blank" rel="noopener">Anfordern →</a>
       </div>
     </div>
   </div>
@@ -489,7 +498,7 @@ a, button { min-height: 44px; }
     <a href="https://davidmeetsnature.de#impressum">Impressum</a>
     <a href="https://davidmeetsnature.de#datenschutz">Datenschutz</a>
   </div>
-  <p class="footer__disclaimer">Die Webinare dienen der allgemeinen Information und Wissensvermittlung. Kein Ersatz für medizinische Beratung. Keine Diagnosen, keine Heilversprechen. Bei Beschwerden bitte einen Arzt aufsuchen.</p>
+  <p class="footer__disclaimer">Die Webinare dienen der allgemeinen Information. Kein Ersatz für medizinische Beratung. Keine Diagnosen, keine Heilversprechen.</p>
 </footer>
 
 <!-- FLOATING WHATSAPP -->
