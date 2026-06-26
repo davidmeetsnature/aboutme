@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://davidmeetsnature.de/naehrstoffe">
 <meta property="og:image" content="https://davidmeetsnature.de/og-bild.jpeg">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.bunny.net/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --forest: #2E4A3E; --sage: #4A6B5D; --mist: #8FA99E;
@@ -427,17 +427,75 @@ a, button { min-height: 44px; }
   .cta__buttons { flex-direction: row; justify-content: center; }
   .btn-cta-gold, .btn-cta-outline { width: auto; }
 }
+
+/* FULL NAV */
+.nav__links { display: none; list-style: none; gap: 2rem; align-items: center; }
+.nav__links a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; color: rgba(255,255,255,0.75); transition: color 0.25s; min-height: auto; }
+.nav__links a:hover, .nav__links a.active { color: #fff; }
+.nav__cta-desktop { display: none; align-items: center; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 0.55rem 1.2rem; border-radius: 2px; min-height: 36px; transition: background 0.3s; }
+.nav__cta-desktop:hover { background: #d4b892; }
+.nav__burger { background: none; border: none; cursor: pointer; padding: 0.5rem; display: flex; flex-direction: column; gap: 5px; min-height: auto; }
+.nav__burger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.3s; }
+body.menu-open .nav__burger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+body.menu-open .nav__burger span:nth-child(2) { opacity: 0; }
+body.menu-open .nav__burger span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+body.menu-open { overflow: hidden; }
+body.menu-open .nav__logo { opacity: 0; pointer-events: none; }
+.mobile-menu { position: fixed; inset: 0; z-index: 200; background: var(--dark); display: flex; flex-direction: column; justify-content: center; padding: 2rem 1.5rem; opacity: 0; pointer-events: none; transition: opacity 0.35s ease; }
+.mobile-menu.open { opacity: 1; pointer-events: all; }
+.mobile-menu__nav { list-style: none; margin-bottom: 2rem; }
+.mobile-menu__nav li { border-bottom: 1px solid rgba(255,255,255,0.07); opacity: 0; transform: translateX(-16px); transition: opacity 0.35s ease, transform 0.35s ease; }
+.mobile-menu__nav li:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.mobile-menu.open .mobile-menu__nav li:nth-child(1) { opacity:1; transform:none; transition-delay:0.10s; }
+.mobile-menu.open .mobile-menu__nav li:nth-child(2) { opacity:1; transform:none; transition-delay:0.17s; }
+.mobile-menu.open .mobile-menu__nav li:nth-child(3) { opacity:1; transform:none; transition-delay:0.24s; }
+.mobile-menu.open .mobile-menu__nav li:nth-child(4) { opacity:1; transform:none; transition-delay:0.31s; }
+.mobile-menu__nav a { display: flex; align-items: center; justify-content: space-between; font-family: var(--serif); font-size: 1.5rem; font-weight: 400; color: #fff; padding: 1rem 0; min-height: auto; }
+.mobile-menu__nav a.active { color: var(--gold); }
+.arrow { color: var(--gold); font-size: 1rem; }
+.mobile-menu__cta { display: inline-flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 1rem 2rem; border-radius: 2px; min-height: 52px; width: 100%; transition: background 0.3s; margin-top: 1rem; }
+.mobile-menu__cta:hover { background: #d4b892; }
+@media (min-width: 768px) {
+  .nav__links { display: flex; }
+  .nav__cta-desktop { display: inline-flex; }
+  .nav__burger { display: none; }
+}
 </style>
 </head>
 <body>
 <a href="#main" class="skip-link">Zum Hauptinhalt springen</a>
 
 <!-- NAV -->
-<nav class="nav">
-  <a href="https://davidmeetsnature.de" class="nav__back">← Zurück</a>
-  <a href="https://davidmeetsnature.de" class="nav__logo" style="text-decoration:none;">David Müller</a>
-  <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+interessiere+mich+f%C3%BCr+die+Eqology+N%C3%A4hrstoffe." class="nav__cta" target="_blank" rel="noopener">Kontakt</a>
+<a href="#main" class="skip-link">Zum Hauptinhalt springen</a>
+
+<nav class="nav" aria-label="Hauptnavigation">
+  <a href="https://davidmeetsnature.de" class="nav__logo">David Müller</a>
+  <ul class="nav__links">
+    <li><a href="https://davidmeetsnature.de/uebermich">Über mich</a></li>
+    <li><a href="https://davidmeetsnature.de/Eqology">Mein Angebot</a></li>
+    <li><a href="https://davidmeetsnature.de/webinare">Webinare</a></li>
+    <li><a href="https://davidmeetsnature.de/naehrstoffe" class="active">Nährstoffe</a></li>
+  </ul>
+  <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+mehr+erfahren." class="nav__cta-desktop" target="_blank" rel="noopener">Kontakt</a>
+  <button class="nav__burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <ul class="mobile-menu__nav">
+    <li><a href="https://davidmeetsnature.de/uebermich">Über mich <span class="arrow">→</span></a></li>
+    <li><a href="https://davidmeetsnature.de/Eqology">Mein Angebot <span class="arrow">→</span></a></li>
+    <li><a href="https://davidmeetsnature.de/webinare">Webinare <span class="arrow">→</span></a></li>
+    <li><a href="https://davidmeetsnature.de/naehrstoffe" class="active">Nährstoffe <span class="arrow">→</span></a></li>
+  </ul>
+  <a href="https://wa.me/4917622247477?text=Hallo+David%2C+ich+m%C3%B6chte+mehr+erfahren." class="mobile-menu__cta" target="_blank" rel="noopener">Lass uns sprechen</a>
+</div>
+
+<!-- AFFILIATE HINWEIS -->
+<div style="background:var(--dark);padding:0.6rem 1.25rem;text-align:center;border-bottom:1px solid rgba(196,168,130,0.2);">
+  <p style="font-size:0.7rem;color:rgba(255,255,255,0.45);letter-spacing:0.08em;">Diese Seite enthält Affiliate-Links zu Eqology. Bei einer Bestellung erhalte ich eine Provision – für dich ohne Mehrkosten.</p>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -787,6 +845,22 @@ a, button { min-height: 44px; }
     });
   }, { threshold: 0.08 });
   revealEls.forEach(el => ro.observe(el));
+
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  }
+  burger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    burger.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('menu-open', isOpen);
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 </script>
 </body>
 </html>
